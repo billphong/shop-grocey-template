@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+
+    <com.grocery.service.comman.SlidingLinearLayout
+        android:id="@+id/activity_register_llContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginEnd="@dimen/_25sdp"
+       android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/ic_logo_login" />
+
+
+        <com.grocery.service.customecomponent.CustomEdittext
+            android:id="@+id/activity_register_etUsername"
+            style="@style/register_edittext"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:hint="@string/user_name"
+            android:inputType="text"
+            app:font_name="UBUNTU-MEDIUM.TTF"/>
+
+
+
+        <com.grocery.service.customecomponent.CustomEdittext
+            android:id="@+id/activity_register_etEmail"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            style="@style/register_edittext"
+            app:font_name="UBUNTU-MEDIUM.TTF"/>
+
+
+
+        <com.grocery.service.customecomponent.CustomEdittext
+            android:id="@+id/activity_register_etPassword"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            style="@style/register_edittext"
+            app:font_name="UBUNTU-MEDIUM.TTF" />
+
+        <com.grocery.service.customecomponent.CustomEdittext
+            android:id="@+id/activity_register_etConfrimPassword"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            style="@style/register_edittext"
+            app:font_name="UBUNTU-MEDIUM.TTF"/>
+
+
+        <com.grocery.service.customecomponent.CustomEdittext
+            android:id="@+id/activity_register_etPhone"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:hint="@string/phone"
+            android:inputType="text"
+            style="@style/register_edittext"
+            app:font_name="UBUNTU-MEDIUM.TTF" />
+
+
+        <RelativeLayout
+            android:id="@+id/activity_register_rlSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/login_shape"
+            android:padding="@dimen/_8sdp">
+
+
+            <com.grocery.service.customecomponent.CustomTextView
+                android:id="@+id/activity_register_tvNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:text="@string/btn_signup"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                app:font_name="UBUNTU-MEDIUM.TTF" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_3sdp">
+
+
+            <com.grocery.service.customecomponent.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/already_have_account"
+                android:textColor="@color/font_sign_text_grey"
+                android:textSize="@dimen/_14sdp"
+                android:padding="@dimen/_5sdp"
+                app:font_name="UBUNTU-MEDIUM.TTF" />
+
+
+            <com.grocery.service.customecomponent.CustomTextView
+                android:id="@+id/activity_register_tvSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_signin"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp"
+                app:font_name="UBUNTU-BOLD.TTF" />
+
+
+        </LinearLayout>
+
+
+    </com.grocery.service.comman.SlidingLinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

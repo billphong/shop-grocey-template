@@ -1,0 +1,162 @@
+<resources>
+
+    <!-- Project name -->
+    <string name="app_name_new">Grocer</string>
+    <string name="settings">Settings</string>
+    <string name="check_connection">Check your network connection</string>
+
+    <!-- Category listing   -->
+    <string-array name="category">
+        <item>Fruits</item>
+        <item>Vagitables</item>
+        <item>Oil &amp; Masala</item>
+        <item>Bakery</item>
+        <item>Beverages</item>
+        <item>Beauty</item>
+        <item>Household</item>
+        <item>Branded Foods</item>
+    </string-array>
+
+    <!-- Sign up /Register  -->
+    <string name="log_in">Log In</string>
+    <string name="new_here">New Here ? </string>
+    <string name="sign_up">Sign Up</string>
+    <string name="forgot_psw">Forgot Password</string>
+    <string name="or_login_with">Or Login With</string>
+    <string name="email">Email</string>
+    <string name="password">password</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="already_have_account">Already have account ?</string>
+    <string name="user_name">User Name</string>
+    <string name="phone">Phone Number</string>
+    <string name="btn_signin">Sign In</string>
+    <string name="btn_signup">Sign Up</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="submit">Submit</string>
+
+
+    <!-- Drawer strings -->
+    <string name="openDrawer">Navigation View Closed</string>
+    <string name="closeDrawer">Navigation View</string>
+
+
+    <!-- Validation Strings  -->
+    <string name="val_enter_name">Please enter your name.</string>
+    <string name="val_enter_password">Please enter password.</string>
+    <string name="val_password_greter_six">Password must have 6 or more characters</string>
+    <string name="val_conf_password_greter_six">Confirm password must have 6 or more characters</string>
+    <string name="val_enter_email">Please enter email address.</string>
+    <string name="val_enter_valid_email">Please enter valid email address.</string>
+    <string name="val_enter_phone">Please enter phone number.</string>
+    <string name="val_enter_mobile_number">Please enter mobile number.</string>
+    <string name="val_enter_country_code">Please select country code.</string>
+    <string name="val_password_confirm_password_not_match">Password and confirm password does not match.</string>
+    <string name="val_enter_user_name">Please enter user name</string>
+    <string name="val_enter_conf_password">Please enter confirm password</string>
+    <string name="val_enter_addressline">Please enter address.</string>
+    <string name="val_enter_fullname">Please enter fullname.</string>
+    <string name="are_you_sure_do_you_want_to_logout">Are you sure,Do you want to Logout?</string>
+
+    <!--For Intro-->
+    <string name="skip">SKIP</string>
+    <string name="slide_3_title">Shop faster with buy now </string>
+    <string name="slide_3_desc">checkout pay and finish your shopping in one simple and convenient.</string>
+
+    <!--Order and payment scree string-->
+    <string name="edit">Edit</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="start_shoping">Start Shoping</string>
+    <string name="pro_payment">Payment</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_craeteNewAddress">Create New Address</string>
+    <string name="add_address">Add Address</string>
+
+
+
+    <!-- product detail & Add address string-->
+    <string name="home_delivery">Home Delivery</string>
+    <string name="address_line_1">Address Line 1</string>
+    <string name="address_line_2">Address line 2</string>
+    <string name="your_email">Your email</string>
+    <string name="your_full_name">Your full name</string>
+    <string name="your_mobile_number">Your mobile number</string>
+    <string name="save_this_address_as">Save this address as</string>
+
+
+    <!-- Login screen facebook & google string  -->
+    <string name="login_with_facebook">Login with facebook.</string>
+    <string name="login_with_google_plus">Login with Google.</string>
+
+    <!-- Intro content -->
+    <string name="enjoy_easy_way_ordering">Enjoy easy way ordering</string>
+    <string name="best_quality_ever">best quality ever</string>
+    <string name="title_activity_menu">MenuActivity</string>
+
+
+
+    <!--Navigation slidemenu string-->
+    <string name="nav_menu_home">Home</string>
+    <string name="nav_menu_my_cart">My Cart</string>
+    <string name="nav_menu_my_address">My Address</string>
+    <string name="nav_menu_my_order">My Order</string>
+    <string name="nav_menu_about_us">About Us</string>
+    <string name="nav_menu_rate_us">Rate Us</string>
+    <string name="nav_menu_logout">Logout</string>
+    <string name="nav_menu_share">Share</string>
+    <string name="nav_menu_notification">Notification</string>
+
+
+    <!--All lable-->
+    <string name="check_out_now">Check Out Now</string>
+    <string name="your_cart_is_empty">Your cart is empty!</string>
+    <string name="shipped">Shipped</string>
+    <string name="order">Order</string>
+    <string name="name">Name :</string>
+    <string name="mobile_no">Mobile No :</string>
+    <string name="pincode">Pincode :</string>
+    <string name="address_lbl">Address :</string>
+    <string name="delivery">Delivery</string>
+    <string name="select_delivery_date">Delivery date</string>
+    <string name="select_delivery_time">Delivery time</string>
+    <string name="total_items">Total items :</string>
+    <string name="total_amount">Total amount :</string>
+    <string name="lbl_continue">Continue</string>
+    <string name="address_added_success">Address saved successfully.</string>
+    <string name="add_shipping_address">Add Shipping Address</string>
+    <string name="delivery_date_time">Delivery Date / Time</string>
+    <string name="order_now">Order Now</string>
+    <string name="total_items_and_amount">Total items and Amount</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="delivery_charge">Delivery Charge</string>
+    <string name="amount">Amount:</string>
+    <string name="your_order_successfully">Your order successfully.</string>
+    <string name="lio_jorge">Lio Jorge</string>
+    <string name="lio_jorge_gmail_com">lio.jorge@gmail.com</string>
+    <string name="profile">Profile</string>
+    <string name="sub_total">Sub Total</string>
+    <string name="select_address">Select Address</string>
+    <string name="fresh_fruits_veggies"><![CDATA[Fresh fruits & Veggies]]></string>
+    <string name="delivered_to_your_home">Delivered to your home</string>
+    <string name="dolar">$</string>
+    <string name="kg">Kg</string>
+
+
+    <!--Temp user data-->
+    <string name="leo_jorge">Leo Jorge</string>
+    <string name="lio_jorge_gmail">lio.jorge@gmail.com</string>
+    <string name="temp_number">+1 8005892365</string>
+    <string name="temp_date">10/10/2018 10:10 PM</string>
+    <string name="jems_le">Jems Le</string>
+    <string name="_1_5874126589">+1 5874126589</string>
+    <string name="temp_pin">556677</string>
+    <string name="califonia_usa">Califonia,USA</string>
+    <string name="temp_items">10</string>
+    <string name="temp_amount">$112</string>
+    <string name="_12">$12</string>
+    <string name="temp_total_amt">$100</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="description_data">Lorem Ipsum is simply dummy text of the printing and typesetting industry.dummy text of the printing and typesetting industry electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software Why do we use it?It is a long established fact that a reader will be distracted.</string>
+
+
+</resources>

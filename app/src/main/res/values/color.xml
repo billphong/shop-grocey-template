@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="colorPrimary">#5FB04F</color>
+    <color name="colorPrimaryTransparent">#5FB04F</color>
+    <color name="colorPrimaryDark">#5FB04F</color>
+
+    <color name="edittext_bg">#B3D8AC</color>
+    <color name="signup_lable_color">#848484</color>
+
+
+    <color name="bg_color">#f3f3f3</color>
+    <color name="ripal_color">#64b5f6</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_tranceparent">#99FFFFFF</color>
+    <color name="row_view">#D7D7D7</color>
+
+    <color name="color_black">#000000</color>
+    <color name="color_gray_light">#99C9C9C9</color>
+    <item name="green" type="color">#FF99CC00</item>
+
+
+    <!-- login / sign in font color -->
+    <color name="font_sign_green">#84af2a</color>
+    <color name="bg_green_color">#A8C52E</color>
+    <color name="font_sign_text_grey">#6f6f6f</color>
+
+    <color name="forgot_link_color">#8D97A0</color>
+    <color name="rippelColor">#0099CC</color>
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorGray">#BDBDBD</color>
+
+    <!--frgment color-->
+    <color name="title">#000000</color>
+    <color name="ediitext">#fff</color>
+    <color name="textcolor">#757575</color>
+    <color name="textcolor_sortby">#8D8D8D</color>
+    <color name="btntext">#fff</color>
+
+    <!--New colors-->
+    <color name="product_title_text">#626262</color>
+    <color name="price_text_color">#94AD28</color>
+
+    <color name="pink_color_pdetail">#FE1077</color>
+    <color name="blue_color_pdetail">#4684F6</color>
+    <color name="orange_color_pdetail">#FE9600</color>
+    <color name="green_color_pdetail">#04B900</color>
+
+
+    <array name="array_dot_active">
+        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimary</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>#EAEAEA</item>
+        <item>#EAEAEA</item>
+        <item>#EAEAEA</item>
+
+    </array>
+
+
+</resources>

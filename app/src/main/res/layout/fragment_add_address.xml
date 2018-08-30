@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.grocery.service.comman.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_add_address_llcontainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:fillViewport="true">
+
+
+            <LinearLayout
+                android:id="@+id/fragment_add_address_llHomeContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:orientation="vertical">
+
+                <com.grocery.service.customecomponent.CustomEdittext
+                    android:id="@+id/fragment_add_address_edAddressFullName"
+                    style="@style/register_edittext"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:hint="@string/your_full_name"
+                    android:inputType="text"
+                    app:font_name="UBUNTU-MEDIUM.TTF" />
+
+
+                <com.grocery.service.customecomponent.CustomEdittext
+                    android:id="@+id/fragment_add_address_edEmail"
+                    style="@style/register_edittext"
+                    android:layout_marginTop="@dimen/_17sdp"
+                    android:hint="@string/your_email"
+                    android:inputType="textEmailAddress"
+                    app:font_name="UBUNTU-MEDIUM.TTF" />
+
+
+                <com.grocery.service.customecomponent.CustomEdittext
+                    android:id="@+id/fragment_add_address_edMobile"
+                    android:layout_marginTop="@dimen/_17sdp"
+                    style="@style/register_edittext"
+                    android:hint="@string/your_mobile_number"
+                    android:inputType="phone"
+                    app:font_name="UBUNTU-MEDIUM.TTF" />
+                
+
+
+                <com.grocery.service.customecomponent.CustomEdittext
+                    android:id="@+id/fragment_add_address_edAddressLineOne"
+                    style="@style/register_edittext"
+                    android:layout_marginTop="@dimen/_17sdp"
+                    android:hint="@string/address_line_1"
+                    android:inputType="text"
+                    app:font_name="UBUNTU-MEDIUM.TTF" />
+
+                <com.grocery.service.customecomponent.CustomEdittext
+                    android:id="@+id/fragment_add_address_edAddressLineTwo"
+                    style="@style/register_edittext"
+                    android:layout_marginTop="@dimen/_17sdp"
+                    android:hint="@string/address_line_2"
+                    android:inputType="text"
+                    app:font_name="UBUNTU-MEDIUM.TTF" />
+
+            </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/fragment_add_address_rlAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <com.grocery.service.customecomponent.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/add_address"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp"
+            app:font_name="UBUNTU-MEDIUM.TTF" />
+
+
+    </RelativeLayout>
+    
+    
+</com.grocery.service.comman.SlidingLinearLayout>

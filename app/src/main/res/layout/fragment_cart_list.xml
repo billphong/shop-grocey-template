@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.grocery.service.comman.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_order_list_llContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fragment_order_list_rvProductList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/_5sdp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/fragment_order_list_rlEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@color/white"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/tvEmptyMessage"
+            style="@style/empty_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/your_cart_is_empty"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/fragment_order_list_rlTotalCart"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+
+            <com.grocery.service.customecomponent.CustomTextView
+               style="@style/ganaral_primarystyle"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/sub_total"
+                app:font_name="UBUNTU-BOLD.TTF" />
+
+
+            <com.grocery.service.customecomponent.CustomTextView
+                android:id="@+id/fragment_order_list_tvTotalKg"
+                style="@style/ganaral_greystyle"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/_12sdp"
+                android:text="@string/temp_total_amt"
+                app:font_name="UBUNTU-BOLD.TTF" />
+
+
+
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_order_list_rlCheckOut"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_33sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/_3sdp"
+            android:background="@drawable/login_shape"
+            android:padding="@dimen/_5sdp">
+
+
+            <com.grocery.service.customecomponent.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_3sdp"
+                android:text="@string/check_out_now"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                app:font_name="UBUNTU-MEDIUM.TTF" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</com.grocery.service.comman.SlidingLinearLayout>

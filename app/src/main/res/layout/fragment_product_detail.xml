@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.grocery.service.comman.SlidingLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+       android:layout_weight="1"
+        android:background="@drawable/background"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/fragment_product_details_rlSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_147sdp">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/fragment_product_details_vpSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:orientation="horizontal">
+
+                </android.support.v4.view.ViewPager>
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/fragment_product_details_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_alignParentBottom="true"
+                    app:ci_drawable="@drawable/ic_dot"
+                    app:ci_drawable_unselected="@drawable/ic_dot" />
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/white_tranceparent"
+                android:focusable="true"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="0dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_12sdp">
+
+                    <com.grocery.service.customecomponent.CustomTextView
+                        android:id="@+id/fragment_product_details_tvTitle"
+                        style="@style/ganaral_primarystyle"
+                        app:font_name="UBUNTU-BOLD.TTF" />
+
+                    <com.grocery.service.customecomponent.CustomTextView
+                        android:id="@+id/fragment_product_details_tvPrice"
+                        style="@style/ganaral_greystyle"
+                        android:paddingTop="@dimen/_3sdp"
+                        app:font_name="UBUNTU-MEDIUM.TTF" />
+
+
+                    <com.grocery.service.customecomponent.CustomTextView
+                        android:id="@+id/fragment_product_details_tvDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:text="@string/description_data"
+                        android:textColor="@color/signup_lable_color"
+                        android:textSize="@dimen/_12sdp"
+                        app:font_name="UBUNTU-MEDIUM.TTF" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/fragment_product_details_llbottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/fragment_product_details_rlTotalCart"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/fragment_product_details_ivMins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/minus" />
+
+
+            <com.grocery.service.customecomponent.CustomTextView
+                android:id="@+id/fragment_product_details_tvTotalKg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_12sdp"
+                app:font_name="UBUNTU-BOLD.TTF" />
+
+
+            <ImageView
+                android:id="@+id/fragment_product_details_ivPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/plus" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_product_details_rlAddToCart"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_33sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/_3sdp"
+            android:background="@drawable/login_shape"
+            android:padding="@dimen/_5sdp">
+
+
+            <com.grocery.service.customecomponent.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_3sdp"
+                android:text="@string/add_to_cart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                app:font_name="UBUNTU-MEDIUM.TTF" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</com.grocery.service.comman.SlidingLinearLayout>
+

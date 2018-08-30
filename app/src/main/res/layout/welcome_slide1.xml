@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_40sdp"
+            android:src="@drawable/iv_intro_onw" />
+
+        <com.grocery.service.customecomponent.CustomTextView
+            android:id="@+id/tvTitleOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/fresh_fruits_veggies"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_17sdp"
+            app:font_name="UBUNTU-BOLD.TTF" />
+
+        <com.grocery.service.customecomponent.CustomTextView
+            android:id="@+id/tvDesOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/_3sdp"
+            android:text="@string/enjoy_easy_way_ordering"
+            android:textAlignment="center"
+            app:font_name="UBUNTU-MEDIUM.TTF" />
+
+    </LinearLayout>
+
+</RelativeLayout>

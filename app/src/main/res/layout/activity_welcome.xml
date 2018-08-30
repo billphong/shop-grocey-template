@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.grocery.service.comman.SlidingRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background">
+
+    <Button
+        android:id="@+id/btn_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@null"
+        android:text="@string/skip"
+        android:textColor="@color/green"
+        android:visibility="visible" />
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottom"
+        android:layout_marginBottom="@dimen/_5sdp">
+
+    </android.support.v4.view.ViewPager>
+
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/layoutDots"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+
+        <com.grocery.service.customecomponent.CustomButton
+            android:id="@+id/btn_start_shop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@null"
+            android:gravity="center"
+            app:font_name="UBUNTU-BOLD.TTF"
+            android:text="@string/start_shoping"
+            android:textColor="@color/green"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+</com.grocery.service.comman.SlidingRelativeLayout>
