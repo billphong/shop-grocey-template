@@ -7,7 +7,10 @@ import android.content.Context;
 
 import com.grocery.service.R;
 import com.grocery.service.fragment.ProductListFragment;
+import com.grocery.service.model.category.CateItem;
 import com.grocery.service.support.v4.MyStatePagerAdapter;
+
+import java.util.ArrayList;
 
 
 /**
@@ -25,9 +28,9 @@ import com.grocery.service.support.v4.MyStatePagerAdapter;
 public class SubCategoryPagerAdapter extends MyStatePagerAdapter {
 
     private Context mContext;
-    private String[] categoryTitles;
+    private ArrayList<CateItem> categoryTitles;
 
-    public SubCategoryPagerAdapter(Activity context, FragmentManager fm, String[] categoryTitles) {
+    public SubCategoryPagerAdapter(Activity context, FragmentManager fm, ArrayList<CateItem> categoryTitles) {
         super(fm);
         mContext = context;
         this.categoryTitles = categoryTitles;
@@ -56,14 +59,14 @@ public class SubCategoryPagerAdapter extends MyStatePagerAdapter {
     // This determines the number of tabs
     @Override
     public int getCount() {
-        return 5;
+        return categoryTitles.size();
     }
 
 
     // This determines the title for each tab
     @Override
     public CharSequence getPageTitle(int position) {
-        return  categoryTitles[position];
+        return  categoryTitles.get(position).getTxt();
     }
 
 
