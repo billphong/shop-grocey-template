@@ -3,6 +3,7 @@ package com.grocery.service.fragment;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -13,10 +14,19 @@ import android.view.ViewGroup;
 import com.grocery.service.Activity.MenuActivity;
 import com.grocery.service.R;
 import com.grocery.service.adapter.ProductListAdapter;
+import com.grocery.service.adapter.SubCategoryPagerAdapter;
+import com.grocery.service.asyns.TaskDelegate;
+import com.grocery.service.commons.Apis;
+import com.grocery.service.dal.GetDataAsync;
 import com.grocery.service.data.TempListData;
+import com.grocery.service.model.product.ProductItem;
 import com.grocery.service.model.product.ProductListModel;
 import com.grocery.service.util.Utils;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -33,13 +43,13 @@ import java.util.List;
  */
 
 
-public class ProductListFragment extends BaseFragment implements ProductListAdapter.OnItemClickListener {
+public class ProductListFragment extends BaseFragment implements ProductListAdapter.OnItemClickListener, TaskDelegate {
 
     //Declaration
     private RecyclerView rvProductList;
     private GridLayoutManager mLayoutManager;
     private ProductListAdapter productListAdapter;
-    private List<ProductListModel> productListModelArrayList;
+    private List<ProductItem> productListModelArrayList;
     private MenuItem item;
 
     @Override
@@ -76,12 +86,8 @@ public class ProductListFragment extends BaseFragment implements ProductListAdap
      */
     private void getListData()
     {
-
-        TempListData tempListData=new TempListData();
-        productListModelArrayList = tempListData.getProductList();
-        productListAdapter = new ProductListAdapter(getActivity(), productListModelArrayList, ProductListFragment.this);
-        rvProductList.setAdapter(productListAdapter);
-        productListAdapter.setOnItemClickListener(this);
+        GetDataAsync getDataAsync = new GetDataAsync(Apis.PRODUCT_BEST_SELLER_API + "1", this, LoadingDialog());
+        getDataAsync.execute();
     }
 
     /**
@@ -129,7 +135,7 @@ public class ProductListFragment extends BaseFragment implements ProductListAdap
      */
 
     @Override
-    public void onItemClick(View view, ProductListModel viewModel) {
+    public void onItemClick(View view, ProductItem viewModel) {
 
         ProductDetailsFragment fragmentProductDetails = new ProductDetailsFragment();
         Bundle bundle = new Bundle();
@@ -148,18 +154,18 @@ public class ProductListFragment extends BaseFragment implements ProductListAdap
 
     public void addToCart(boolean addTocart, int position) {
         if (addTocart) {
-            int totalKg = productListModelArrayList.get(position).getTotalKg();
+            int totalKg = productListModelArrayList.get(position).getTotalItem();
             totalKg = totalKg + 1;
-            productListModelArrayList.get(position).setTotalKg(totalKg);
+            productListModelArrayList.get(position).setTotalItem(totalKg);
 
         } else {
-            int totalKg = productListModelArrayList.get(position).getTotalKg();
+            int totalKg = productListModelArrayList.get(position).getTotalItem();
 
             if (totalKg < 1) {
-                productListModelArrayList.get(position).setTotalKg(0);
+                productListModelArrayList.get(position).setTotalItem(0);
             } else {
                 totalKg = totalKg - 1;
-                productListModelArrayList.get(position).setTotalKg(totalKg);
+                productListModelArrayList.get(position).setTotalItem(totalKg);
             }
 
 
@@ -167,5 +173,24 @@ public class ProductListFragment extends BaseFragment implements ProductListAdap
 
         productListAdapter.notifyDataSetChanged();
 
+    }
+
+    @Override
+    public void onTaskCompleted(Object data) {
+        ArrayList<ProductItem> cate = new ArrayList<ProductItem>();
+        try {
+            JSONArray jsCates = new JSONArray((String)data);
+            for (int i = 0; i < jsCates.length(); i ++){
+                JSONObject obj = jsCates.getJSONObject(i);
+                ProductItem t = new ProductItem(obj);
+                cate.add(t);
+            }
+            productListModelArrayList = cate;
+            productListAdapter = new ProductListAdapter(getActivity(), productListModelArrayList, ProductListFragment.this);
+            rvProductList.setAdapter(productListAdapter);
+            productListAdapter.setOnItemClickListener(this);
+        }catch (Exception ex){
+            Log.e("GetData", ex.getMessage());
+        }
     }
 }

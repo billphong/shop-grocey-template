@@ -12,6 +12,8 @@ import android.widget.RelativeLayout;
 import com.grocery.service.R;
 import com.grocery.service.customecomponent.CustomTextView;
 import com.grocery.service.fragment.ProductListFragment;
+import com.grocery.service.helpers.DownloadImageTask;
+import com.grocery.service.model.product.ProductItem;
 import com.grocery.service.model.product.ProductListModel;
 
 import java.util.List;
@@ -19,13 +21,13 @@ import java.util.List;
 
 public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements View.OnClickListener {
 
-    private List<ProductListModel> productModelList;
+    private List<ProductItem> productModelList;
     private OnItemClickListener onItemClickListener;
     private Context mContext;
     private ProductListFragment productListFragment;
 
 
-    public ProductListAdapter(final Context context, final List<ProductListModel> items, final ProductListFragment fragment) {
+    public ProductListAdapter(final Context context, final List<ProductItem> items, final ProductListFragment fragment) {
         this.productModelList = items;
         this.mContext = context;
         this.productListFragment = fragment;
@@ -71,14 +73,14 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    onItemClickListener.onItemClick(v, (ProductListModel) v.getTag());
+                    onItemClickListener.onItemClick(v, (ProductItem) v.getTag());
                 }
             }, 200);
         }
     }
 
     public interface OnItemClickListener {
-        void onItemClick(View view, ProductListModel viewModel);
+        void onItemClick(View view, ProductItem viewModel);
     }
 
 
@@ -86,7 +88,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
         private CustomTextView tvProductName;
         private CustomTextView tvProductPrice;
-        private CustomTextView tvKg;
+        private CustomTextView tvOldPrice;
         private CustomTextView tvAddToCard;
         private CustomTextView tvTotalKg;
         private ImageView ivProImg;
@@ -102,7 +104,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             tvProductPrice = (CustomTextView) itemView.findViewById(R.id.row_productlist_tvPrice);
             tvAddToCard = (CustomTextView) itemView.findViewById(R.id.row_produclist_tvAddtoCart);
             tvTotalKg = (CustomTextView) itemView.findViewById(R.id.row_productlist_tvTotalKg);
-            tvKg = (CustomTextView) itemView.findViewById(R.id.row_productlist_tvKg);
+            tvOldPrice = (CustomTextView) itemView.findViewById(R.id.row_productlist_tvKg);
             ivProImg = (ImageView) itemView.findViewById(R.id.row_productlist_ivProImg);
             ivPlus = (ImageView) itemView.findViewById(R.id.row_productlist_ivPlus);
             ivMins = (ImageView) itemView.findViewById(R.id.row_productlist_ivMins);
@@ -112,17 +114,16 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         }
 
 
-        public void bindData(final ProductListModel item, final int position) {
+        public void bindData(final ProductItem item, final int position) {
 
-            tvProductName.setText("" + item.getProductName());
-            tvProductPrice.setText(item.getProductPrice());
-            tvKg.setText(item.getkG());
-            tvTotalKg.setText(item.getTotalKg()+mContext.getString(R.string.kg));
+            tvProductName.setText("" + item.getName());
+            tvProductPrice.setText(Integer.toString(item.getPrice()));
+            tvOldPrice.setText(Integer.toString(item.getOldPrice()));
+            tvTotalKg.setText(Integer.toString(item.getTotalItem()));
             itemView.setTag(item);
-            ivProImg.setImageDrawable(mContext.getResources().getDrawable(item.getProductImage()));
-
-            rlTotalCartItem.setVisibility(item.getTotalKg()==0? View.GONE:View.VISIBLE);
-            tvAddToCard.setVisibility(item.getTotalKg()==0? View.VISIBLE:View.GONE);
+            new DownloadImageTask(ivProImg).execute(item.getImg());
+            rlTotalCartItem.setVisibility(item.getTotalItem()==0? View.GONE:View.VISIBLE);
+            tvAddToCard.setVisibility(item.getTotalItem()==0? View.VISIBLE:View.GONE);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
