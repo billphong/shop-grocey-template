@@ -75,7 +75,7 @@ public class MainFragment extends BaseFragment implements TaskDelegate{
         tlHome = (TabLayout) rootView.findViewById(R.id.fragment_home_tlHome);
 
         //final String[] categoryTitles = getResources().getStringArray(R.array.category);
-        GetDataAsync getDataAsync = new GetDataAsync(Apis.CATEGORY_API, this);
+        GetDataAsync getDataAsync = new GetDataAsync(Apis.CATEGORY_API, this, LoadingDialog());
         getDataAsync.execute();
     }
 

@@ -1,5 +1,6 @@
 package com.grocery.service.dal;
 
+import android.app.AlertDialog;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.GridView;
@@ -18,14 +19,16 @@ import java.util.ArrayList;
 public class GetDataAsync extends AsyncTask<String, Void, String> {
     private String _urlApi;
     private TaskDelegate _delegate;
+    private AlertDialog _loadingDialog;
 
     public GetDataAsync(String urlApi){
         this._urlApi = urlApi;
     }
 
-    public GetDataAsync(String urlApi, TaskDelegate delegate){
+    public GetDataAsync(String urlApi, TaskDelegate delegate, AlertDialog loadingDialog){
         this._urlApi = urlApi;
         this._delegate = delegate;
+        this._loadingDialog = loadingDialog;
     }
 
     public TaskDelegate get_delegate() {
@@ -41,7 +44,18 @@ public class GetDataAsync extends AsyncTask<String, Void, String> {
     }
 
     @Override
+    protected void onPreExecute() {
+        if (_loadingDialog != null) {
+            _loadingDialog.show();
+        }
+        super.onPreExecute();
+    }
+
+    @Override
     protected void onPostExecute(String s) {
+        if (_loadingDialog != null && _loadingDialog.isShowing()) {
+            _loadingDialog.dismiss();
+        }
         if(_delegate != null){
             _delegate.onTaskCompleted(s);
         }
