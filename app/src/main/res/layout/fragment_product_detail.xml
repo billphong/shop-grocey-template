@@ -23,12 +23,12 @@
             <RelativeLayout
                 android:id="@+id/fragment_product_details_rlSlider"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_147sdp">
+                android:layout_height="@dimen/_180sdp">
 
                 <android.support.v4.view.ViewPager
                     android:id="@+id/fragment_product_details_vpSlider"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_150sdp"
+                    android:layout_height="@dimen/_220sdp"
                     android:orientation="horizontal">
 
                 </android.support.v4.view.ViewPager>

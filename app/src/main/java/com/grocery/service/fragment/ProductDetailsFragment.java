@@ -56,7 +56,7 @@ public class ProductDetailsFragment extends BaseFragment {
 
     private ArrayList pagerImgList;
     private Bundle bundle;
-    private int totalKg = 0;
+    private int totalBuyItem = 0;
 
 
     @Override
@@ -147,7 +147,7 @@ public class ProductDetailsFragment extends BaseFragment {
             tvPrice.setText(productListModel.getPriceStr());
 
             TextViewHelpers.setTextHtml(tvDescription, productListModel.getDescription());
-            totalKg = productListModel.getTotalItem();
+            totalBuyItem = productListModel.getTotalItem();
         }
     }
 
@@ -199,13 +199,13 @@ public class ProductDetailsFragment extends BaseFragment {
     private void addToCart(boolean addCart) {
 
         if (addCart) {
-            totalKg = totalKg + 1;
-            tvQuantity.setText(totalKg);
+            totalBuyItem = totalBuyItem + 1;
+            tvQuantity.setText(Integer.toString(totalBuyItem));
 
         } else {
-            if (totalKg < 1) {
-                totalKg = totalKg - 1;
-                tvQuantity.setText(totalKg);
+            if (totalBuyItem < 1) {
+                totalBuyItem = totalBuyItem - 1;
+                tvQuantity.setText(Integer.toString(totalBuyItem));
             }
         }
     }

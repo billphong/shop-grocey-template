@@ -15,6 +15,7 @@ import com.grocery.service.fragment.ProductListFragment;
 import com.grocery.service.helpers.DownloadImageTask;
 import com.grocery.service.model.product.ProductItem;
 import com.grocery.service.model.product.ProductListModel;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -121,7 +122,8 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             tvOldPrice.setText(Integer.toString(item.getOldPrice()));
             tvTotalKg.setText(Integer.toString(item.getTotalItem()));
             itemView.setTag(item);
-            new DownloadImageTask(ivProImg).execute(item.getImg());
+            //new DownloadImageTask(ivProImg).execute(item.getImg());
+            Picasso.get().load(item.getImg()).into(ivProImg);
             rlTotalCartItem.setVisibility(item.getTotalItem()==0? View.GONE:View.VISIBLE);
             tvAddToCard.setVisibility(item.getTotalItem()==0? View.VISIBLE:View.GONE);
 

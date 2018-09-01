@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import com.grocery.service.R;
 import com.grocery.service.helpers.DownloadImageTask;
+import com.squareup.picasso.Picasso;
 
 
 import java.util.List;
@@ -57,7 +58,9 @@ public class ProductPagerAdapter<T> extends PagerAdapter
         if(t instanceof Integer) {
             imageView.setImageDrawable(context.getResources().getDrawable((Integer) t));
         }else if(t instanceof String){
-            new DownloadImageTask(imageView).execute((String)t);
+            Picasso.get().load((String)t).into(imageView);
+            //.resize(0, imageView.getContext().getResources().getDimensionPixelSize(R.dimen._220sdp))
+            //new DownloadImageTask(imageView).execute((String)t);
         }
         container.addView(itemView);
         return itemView;
