@@ -2,6 +2,7 @@ package com.grocery.service.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -16,11 +17,12 @@ import android.widget.TextView;
 import com.grocery.service.Activity.MenuActivity;
 import com.grocery.service.R;
 import com.grocery.service.adapter.ProductPagerAdapter;
-import com.grocery.service.model.product.ProductListModel;
+import com.grocery.service.helpers.TextViewHelpers;
+import com.grocery.service.model.product.ProductItem;
 import com.grocery.service.util.Utils;
 
 import java.util.ArrayList;
-import java.util.List;
+
 import me.relex.circleindicator.CircleIndicator;
 
 
@@ -45,13 +47,14 @@ public class ProductDetailsFragment extends BaseFragment {
     private TextView tvQuantity;
     private TextView tvName;
     private TextView tvPrice;
+    private TextView tvDescription;
     private ImageView ivPlus;
     private ImageView ivMins;
     private RelativeLayout rlAddTocart;
-    private ProductPagerAdapter imagePagerAdapter;
-    private ProductListModel productListModel;
+    private PagerAdapter imagePagerAdapter;
+    private ProductItem productListModel;
 
-    private List<Integer> pagerImgList;
+    private ArrayList pagerImgList;
     private Bundle bundle;
     private int totalKg = 0;
 
@@ -71,7 +74,7 @@ public class ProductDetailsFragment extends BaseFragment {
 
     public void initToolbar() {
 
-        ((MenuActivity) getActivity()).setUpToolbar(productListModel.getProductName(), true);
+        ((MenuActivity) getActivity()).setUpToolbar(productListModel.getName(), true);
 
     }
 
@@ -122,6 +125,7 @@ public class ProductDetailsFragment extends BaseFragment {
         tvQuantity = rootView.findViewById(R.id.fragment_product_details_tvTotalKg);
         tvName = rootView.findViewById(R.id.fragment_product_details_tvTitle);
         tvPrice = rootView.findViewById(R.id.fragment_product_details_tvPrice);
+        tvDescription = rootView.findViewById(R.id.fragment_product_details_tvDescription);
         ivPlus = rootView.findViewById(R.id.fragment_product_details_ivPlus);
         ivMins = rootView.findViewById(R.id.fragment_product_details_ivMins);
 
@@ -138,10 +142,12 @@ public class ProductDetailsFragment extends BaseFragment {
     private void setUpDetails() {
 
         if (productListModel != null) {
-            tvName.setText(productListModel.getProductName());
-            tvQuantity.setText(productListModel.getTotalKg() + " Kg");
-            tvPrice.setText(productListModel.getProductPrice());
-            totalKg = productListModel.getTotalKg();
+            tvName.setText(productListModel.getName());
+            tvQuantity.setText(productListModel.getTotalItemStr());
+            tvPrice.setText(productListModel.getPriceStr());
+
+            TextViewHelpers.setTextHtml(tvDescription, productListModel.getDescription());
+            totalKg = productListModel.getTotalItem();
         }
     }
 
@@ -149,11 +155,17 @@ public class ProductDetailsFragment extends BaseFragment {
         try {
             pagerImgList = new ArrayList<>();
 
-            for (int i = 0; i < 5; i++) {
-                pagerImgList.add(R.drawable.graps);
-                pagerImgList.add(R.drawable.apple);
+//            for (int i = 0; i < 5; i++) {
+//                pagerImgList.add(R.drawable.graps);
+//                pagerImgList.add(R.drawable.apple);
+//            }
+            if(productListModel != null){
+                pagerImgList.add(productListModel.getImg());
+                imagePagerAdapter = new ProductPagerAdapter<String>(getActivity(), pagerImgList);
+            }else{
+                pagerImgList.add(R.drawable.no_img_available);
+                imagePagerAdapter = new ProductPagerAdapter<Integer>(getActivity(), pagerImgList);
             }
-            imagePagerAdapter = new ProductPagerAdapter(getActivity(), pagerImgList);
 
             viewPagerImages.setAdapter(imagePagerAdapter);
             indicator.setViewPager(viewPagerImages);
@@ -188,12 +200,12 @@ public class ProductDetailsFragment extends BaseFragment {
 
         if (addCart) {
             totalKg = totalKg + 1;
-            tvQuantity.setText(totalKg +" " +getString(R.string.kg));
+            tvQuantity.setText(totalKg);
 
         } else {
             if (totalKg < 1) {
                 totalKg = totalKg - 1;
-                tvQuantity.setText(totalKg +" " +getString(R.string.kg));
+                tvQuantity.setText(totalKg);
             }
         }
     }

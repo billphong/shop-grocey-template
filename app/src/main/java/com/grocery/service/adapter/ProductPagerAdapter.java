@@ -8,13 +8,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import com.grocery.service.R;
+import com.grocery.service.helpers.DownloadImageTask;
 
 
 import java.util.List;
 
 /**
  * *************************************************************************
- *
+ * Use image resource
  * @ClassdName:ImagePagerAdapter
  * @CreatedDate:
  * @ModifiedBy: not yet
@@ -24,21 +25,19 @@ import java.util.List;
  * *************************************************************************
  */
 
-public class ProductPagerAdapter extends PagerAdapter
+public class ProductPagerAdapter<T> extends PagerAdapter
 {
     Context context;
-    private List<Integer> imgList;
+    private List<T> imgList;
     LayoutInflater layoutInflater;
 
 
 
-    public ProductPagerAdapter(Context context, List<Integer> imgList) {
+    public ProductPagerAdapter(Context context, List<T> imgList) {
         this.context = context;
         this.imgList = imgList;
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
-
-
 
     @Override
     public int getCount() {
@@ -54,7 +53,12 @@ public class ProductPagerAdapter extends PagerAdapter
     public Object instantiateItem(ViewGroup container, final int position) {
         View itemView = layoutInflater.inflate(R.layout.item_varcode_image, container, false);
         ImageView imageView = itemView.findViewById(R.id.ivCode);
-        imageView.setImageDrawable(context.getResources().getDrawable(imgList.get(position)));
+        T t = imgList.get(position);
+        if(t instanceof Integer) {
+            imageView.setImageDrawable(context.getResources().getDrawable((Integer) t));
+        }else if(t instanceof String){
+            new DownloadImageTask(imageView).execute((String)t);
+        }
         container.addView(itemView);
         return itemView;
     }
@@ -64,3 +68,4 @@ public class ProductPagerAdapter extends PagerAdapter
         container.removeView((LinearLayout) object);
     }
 }
+
