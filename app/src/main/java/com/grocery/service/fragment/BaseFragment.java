@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 
 import com.grocery.service.R;
+import com.grocery.service.filters.BaseFilter;
 import com.grocery.service.util.Utils;
 
 import dmax.dialog.SpotsDialog;

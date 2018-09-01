@@ -5,7 +5,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 
-import com.grocery.service.R;
+import com.grocery.service.filters.ProductFilter;
 import com.grocery.service.fragment.ProductListFragment;
 import com.grocery.service.model.category.CateItem;
 import com.grocery.service.support.v4.MyStatePagerAdapter;
@@ -28,45 +28,35 @@ import java.util.ArrayList;
 public class SubCategoryPagerAdapter extends MyStatePagerAdapter {
 
     private Context mContext;
-    private ArrayList<CateItem> categoryTitles;
+    private ArrayList<CateItem> categories;
 
     public SubCategoryPagerAdapter(Activity context, FragmentManager fm, ArrayList<CateItem> categoryTitles) {
         super(fm);
         mContext = context;
-        this.categoryTitles = categoryTitles;
+        this.categories = categoryTitles;
     }
 
 
     // This determines the fragment for each tab
     @Override
     public Fragment getItem(int position) {
-        if (position == 0) {
-            return new ProductListFragment();
-        } else if (position == 1) {
-            return new ProductListFragment();
-        } else if (position == 2) {
-            return new ProductListFragment();
-        } else if (position == 3) {
-            return new ProductListFragment();
-        } else if (position == 4) {
-            return new ProductListFragment();
-        } else {
-            return new ProductListFragment();
-        }
-
+        CateItem cateItem = this.categories.get(position);
+        ProductFilter filter = new ProductFilter();
+        filter.set_cateId(cateItem.getId());
+        return ProductListFragment.newInstance(filter);
     }
 
     // This determines the number of tabs
     @Override
     public int getCount() {
-        return categoryTitles.size();
+        return categories.size();
     }
 
 
     // This determines the title for each tab
     @Override
     public CharSequence getPageTitle(int position) {
-        return  categoryTitles.get(position).getTxt();
+        return  categories.get(position).getTxt();
     }
 
 

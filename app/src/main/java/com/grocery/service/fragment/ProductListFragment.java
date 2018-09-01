@@ -1,5 +1,6 @@
 package com.grocery.service.fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -19,6 +20,7 @@ import com.grocery.service.asyns.TaskDelegate;
 import com.grocery.service.commons.Apis;
 import com.grocery.service.dal.GetDataAsync;
 import com.grocery.service.data.TempListData;
+import com.grocery.service.filters.ProductFilter;
 import com.grocery.service.model.product.ProductItem;
 import com.grocery.service.model.product.ProductListModel;
 import com.grocery.service.util.Utils;
@@ -51,6 +53,13 @@ public class ProductListFragment extends BaseFragment implements ProductListAdap
     private ProductListAdapter productListAdapter;
     private List<ProductItem> productListModelArrayList;
     private MenuItem item;
+    private ProductFilter filter;
+
+    public static final ProductListFragment newInstance(ProductFilter filter){
+        ProductListFragment frg = new ProductListFragment();
+        frg.filter = filter;
+        return frg;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -71,7 +80,7 @@ public class ProductListFragment extends BaseFragment implements ProductListAdap
         rvProductList = (RecyclerView) rootView.findViewById(R.id.fragment_productlist_rvProductList);
         mLayoutManager = new GridLayoutManager(getActivity(), 2);
         rvProductList.setLayoutManager(mLayoutManager);
-        getListData();
+        getListData(filter);
 
     }
     /**
@@ -84,10 +93,12 @@ public class ProductListFragment extends BaseFragment implements ProductListAdap
     /**
      * get Product list data and setUp adapter
      */
-    private void getListData()
+    private void getListData(ProductFilter filter)
     {
-        GetDataAsync getDataAsync = new GetDataAsync(Apis.PRODUCT_BEST_SELLER_API + "1", this, LoadingDialog());
-        getDataAsync.execute();
+        if(filter != null) {
+            GetDataAsync getDataAsync = new GetDataAsync(String.format(Apis.PRODUCT_GET_BY_CATE_API, filter.get_cateId(), filter.get_pageIndex()), this, LoadingDialog());
+            getDataAsync.execute();
+        }
     }
 
     /**
