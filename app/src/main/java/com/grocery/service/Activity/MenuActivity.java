@@ -86,7 +86,6 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         rlProfile = (RelativeLayout) headerLayout.findViewById(R.id.row_header_rlProfile);
         rlProfile.setOnClickListener(this);
 
-
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.openDrawer, R.string.closeDrawer) {
             @Override
