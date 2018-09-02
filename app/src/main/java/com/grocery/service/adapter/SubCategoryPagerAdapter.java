@@ -42,7 +42,7 @@ public class SubCategoryPagerAdapter extends MyStatePagerAdapter {
     public Fragment getItem(int position) {
         CateItem cateItem = this.categories.get(position);
         ProductFilter filter = new ProductFilter();
-        filter.set_cateId(cateItem.getId());
+        filter.setCateId(cateItem.getId());
         return ProductListFragment.newInstance(filter);
     }
 

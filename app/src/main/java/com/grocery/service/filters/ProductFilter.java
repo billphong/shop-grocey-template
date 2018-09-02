@@ -1,13 +1,13 @@
 package com.grocery.service.filters;
 
 public class ProductFilter extends BaseFilter {
-    private int _cateId;
+    private int CateId;
 
-    public int get_cateId() {
-        return _cateId;
+    public int getCateId() {
+        return CateId;
     }
 
-    public void set_cateId(int _cateId) {
-        this._cateId = _cateId;
+    public void setCateId(int cateId) {
+        this.CateId = cateId;
     }
 }

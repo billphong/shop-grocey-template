@@ -1,6 +1,5 @@
 package com.grocery.service.fragment;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -15,14 +14,11 @@ import android.view.ViewGroup;
 import com.grocery.service.Activity.MenuActivity;
 import com.grocery.service.R;
 import com.grocery.service.adapter.ProductListAdapter;
-import com.grocery.service.adapter.SubCategoryPagerAdapter;
 import com.grocery.service.asyns.TaskDelegate;
 import com.grocery.service.commons.Apis;
 import com.grocery.service.dal.GetDataAsync;
-import com.grocery.service.data.TempListData;
 import com.grocery.service.filters.ProductFilter;
 import com.grocery.service.model.product.ProductItem;
-import com.grocery.service.model.product.ProductListModel;
 import com.grocery.service.util.Utils;
 
 import org.json.JSONArray;
@@ -96,7 +92,7 @@ public class ProductListFragment extends BaseFragment implements ProductListAdap
     private void getListData(ProductFilter filter)
     {
         if(filter != null) {
-            GetDataAsync getDataAsync = new GetDataAsync(String.format(Apis.PRODUCT_GET_BY_CATE_API, filter.get_cateId(), filter.get_pageIndex()), this, LoadingDialog());
+            GetDataAsync getDataAsync = new GetDataAsync(String.format(Apis.PRODUCT_GET_BY_CATE_API, filter.getCateId(), filter.getPageIndex()), this, LoadingDialog());
             getDataAsync.execute();
         }
     }

@@ -1,22 +1,22 @@
 package com.grocery.service.filters;
 
 public class BaseFilter {
-    private int _pageIndex = 1;
-    private int _pageSize = 10;
+    private int PageIndex = 1;
+    private int PageSize = 10;
 
-    public int get_pageIndex() {
-        return _pageIndex;
+    public int getPageIndex() {
+        return PageIndex;
     }
 
-    public void set_pageIndex(int _pageIndex) {
-        this._pageIndex = _pageIndex;
+    public void setPageIndex(int pageIndex) {
+        this.PageIndex = pageIndex;
     }
 
-    public int get_pageSize() {
-        return _pageSize;
+    public int getPageSize() {
+        return PageSize;
     }
 
-    public void set_pageSize(int _pageSize) {
-        this._pageSize = _pageSize;
+    public void setPageSize(int pageSize) {
+        this.PageSize = pageSize;
     }
 }

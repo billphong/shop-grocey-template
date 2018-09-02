@@ -10,10 +10,17 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.grocery.service.GrocerApplication;
 import com.grocery.service.R;
+import com.grocery.service.asyns.VolleyCallback;
+import com.grocery.service.commons.Apis;
+import com.grocery.service.filters.UserFilter;
+import com.grocery.service.helpers.DataApiHelpers;
+import com.grocery.service.model.user.UserModel;
 import com.grocery.service.util.Utils;
 
+import java.io.IOException;
 
 
 /**
@@ -101,19 +108,39 @@ public class LoginActivity extends BaseActivity {
             Utils.snackbar(llContainer, getString(R.string.val_enter_valid_email), true, LoginActivity.this);
         } else if (password.isEmpty()) {
             Utils.snackbar(llContainer, getString(R.string.val_enter_password), true, LoginActivity.this);
-        } else if (password.length() < 6) {
-            Utils.snackbar(llContainer, getString(R.string.val_password_greter_six), true, LoginActivity.this);
-        } else {
+        }
+//        else if (password.length() < 6) {
+//            Utils.snackbar(llContainer, getString(R.string.val_password_greter_six), true, LoginActivity.this);
+//        }
+        else {
 
             if (Utils.isOnline(LoginActivity.this, true)) {
 
-                GrocerApplication.getmInstance().savePreferenceDataBoolean(getString(R.string.preferances_islogin), true);
-                GrocerApplication.getmInstance().savePreferenceDataString(getString(R.string.preferances_userName), email);
-                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
-                startActivity(intent);
-                finish();
-                overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
+                UserFilter filter = new UserFilter();
+                filter.setEmail(email);
+                filter.setPassword(password);
 
+                DataApiHelpers.Post(this, Apis.USER_API, filter, new VolleyCallback(){
+                    @Override
+                    public void onSuccess(String result){
+                        if(result == "null"){
+                            Utils.snackbar(llContainer, "Email hoặc mật khẩu không chính xác", true, LoginActivity.this);
+                        }else {
+                            ObjectMapper mapper = new ObjectMapper();
+                            try {
+                                UserModel obj = mapper.readValue(result, UserModel.class);
+                                GrocerApplication.getmInstance().savePreferenceDataBoolean(getString(R.string.preferances_islogin), true);
+                                GrocerApplication.getmInstance().savePreferenceDataString(getString(R.string.preferances_userName), email);
+                                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                                startActivity(intent);
+                                finish();
+                                overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                });
 
             } else {
                 Utils.snackbar(llContainer, "" + getString(R.string.check_connection), true, LoginActivity.this);

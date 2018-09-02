@@ -1,6 +1,19 @@
 package com.grocery.service.helpers;
 
+import android.content.Context;
 import android.util.Log;
+
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.type.MapType;
+import com.fasterxml.jackson.databind.type.TypeFactory;
+import com.grocery.service.asyns.VolleyCallback;
+import com.grocery.service.commons.RequestQueueSingleton;
+import com.grocery.service.filters.BaseFilter;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,6 +21,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 public class DataApiHelpers {
 
@@ -73,4 +88,41 @@ public class DataApiHelpers {
         }
     }
 
+    public static <T extends BaseFilter> void Post(Context context, String urlApi, final T t, final VolleyCallback callback){
+
+        StringRequest postRequest = new StringRequest(Request.Method.POST, urlApi,
+                new Response.Listener<String>()
+                {
+                    @Override
+                    public void onResponse(String response) {
+                        // response
+                        Log.d("Response", response);
+                        if(callback != null){
+                            callback.onSuccess(response);
+                        }
+                    }
+                },
+                new Response.ErrorListener()
+                {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        // error
+                        Log.d("Error.Response", error.getMessage());
+                    }
+                }
+        ) {
+            @Override
+            protected Map<String, String> getParams()
+            {
+                ObjectMapper objectMapper = new ObjectMapper();
+                TypeFactory factory = TypeFactory.defaultInstance();
+                MapType type = factory.constructMapType(Map.class, String.class, String.class);
+                Map<String, String>  params = objectMapper.convertValue(t, type);
+
+                return params;
+            }
+        };
+
+        RequestQueueSingleton.getInstance(context).addToRequestQueue(postRequest);
+    }
 }

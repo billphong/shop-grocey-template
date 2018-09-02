@@ -41,6 +41,18 @@ android {
             implementation 'me.relex:circleindicator:1.2.2@aar'
             implementation 'com.eftimoff:android-viewpager-transformers:1.0.1@aar'
             implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+            //loading dialog
             implementation 'com.github.d-max:spots-dialog:1.1@aar'
+
+            //hander load image
             implementation 'com.squareup.picasso:picasso:2.71828'
+
+            //hander api
+            implementation 'com.android.volley:volley:1.1.1'
+
+            //object to map
+            implementation 'com.fasterxml.jackson.core:jackson-core:2.9.6'
+            implementation 'com.fasterxml.jackson.core:jackson-annotations:2.9.6'
+            implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.6'
         }

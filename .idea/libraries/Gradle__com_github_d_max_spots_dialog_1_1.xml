@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.d-max:spots-dialog-1.1">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/spots-dialog-1.1.aar/ba254a35cdb80d96d4166baea5dc98be/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/spots-dialog-1.1.aar/ba254a35cdb80d96d4166baea5dc98be/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/spots-dialog-1.1.aar/cacf741d809b0f6e4b245831440d3e63/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/spots-dialog-1.1.aar/cacf741d809b0f6e4b245831440d3e63/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
