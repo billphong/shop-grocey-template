@@ -15,6 +15,7 @@ import com.grocery.service.GrocerApplication;
 import com.grocery.service.R;
 import com.grocery.service.asyns.VolleyCallback;
 import com.grocery.service.commons.Apis;
+import com.grocery.service.db.UserDbHelpers;
 import com.grocery.service.filters.UserFilter;
 import com.grocery.service.helpers.DataApiHelpers;
 import com.grocery.service.model.user.UserModel;
@@ -130,7 +131,16 @@ public class LoginActivity extends BaseActivity {
                             try {
                                 ObjectMapper mapper = new ObjectMapper();
                                 UserModel obj = mapper.readValue(result, UserModel.class);
-                                
+                                //add or update user to sqllite
+                                UserDbHelpers db = new UserDbHelpers(LoginActivity.this);
+                                UserModel existUser = db.getUser(obj.getEmail());
+                                if(existUser != null){
+                                    db.updateUser(obj);
+                                }else {
+                                    db.addUser(obj);
+                                }
+
+                                //
                                 GrocerApplication.getmInstance().savePreferenceDataBoolean(getString(R.string.preferances_islogin), true);
                                 GrocerApplication.getmInstance().savePreferenceDataString(getString(R.string.preferances_userName), email);
                                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);

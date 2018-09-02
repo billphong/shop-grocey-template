@@ -25,6 +25,9 @@ public class UserModel {
     @JsonProperty("Birthday")
     private Date Birthday ;
 
+    //not hashed
+    private String Password;
+
     @JsonProperty("ID")
     public int getID() {
         return ID;
@@ -74,5 +77,13 @@ public class UserModel {
     @JsonProperty("Birthday")
     public void setBirthday(Date birthday) {
         Birthday = birthday;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String password) {
+        Password = password;
     }
 }
