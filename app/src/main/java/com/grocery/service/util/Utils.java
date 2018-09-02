@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.IBinder;
 import android.support.design.widget.Snackbar;
 import android.view.Gravity;
 import android.view.View;
@@ -94,6 +95,13 @@ public class Utils {
         if (focus != null) {
 
             inputManager.hideSoftInputFromWindow(focus.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        }
+    }
+
+    public static void hideKeyboard(Context mContext, IBinder windowToken){
+        InputMethodManager inputManager = (InputMethodManager) mContext.getSystemService(Context.INPUT_METHOD_SERVICE);
+        if(windowToken != null){
+            inputManager.hideSoftInputFromWindow(windowToken, InputMethodManager.HIDE_NOT_ALWAYS);
         }
     }
 

@@ -11,4 +11,5 @@ public class Apis {
 
 
     public static final String USER_API = API_HOST + "userapi";
+    public static final String USER_REGISTER_API = API_HOST + "userapi/register";
 }

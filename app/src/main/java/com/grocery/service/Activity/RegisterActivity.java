@@ -1,15 +1,26 @@
 package com.grocery.service.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.grocery.service.GrocerApplication;
 import com.grocery.service.R;
+import com.grocery.service.asyns.VolleyCallback;
+import com.grocery.service.commons.Apis;
+import com.grocery.service.db.UserDbHelpers;
+import com.grocery.service.helpers.DataApiHelpers;
+import com.grocery.service.model.user.UserModel;
 import com.grocery.service.util.Utils;
 
+import java.io.IOException;
+import java.util.Date;
 
 
 /**
@@ -34,6 +45,7 @@ public class RegisterActivity extends BaseActivity {
     private EditText etUserName;
     private EditText etPassword;
     private EditText etConfrimPassWord;
+    private EditText etAddress;
     private TextView tvSignIn;
 
 
@@ -42,6 +54,7 @@ public class RegisterActivity extends BaseActivity {
     private String userName;
     private String passWord;
     private String confrimPassWord;
+    private String address;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +81,7 @@ public class RegisterActivity extends BaseActivity {
         etPassword = (EditText) findViewById(R.id.activity_register_etPassword);
         etConfrimPassWord = (EditText) findViewById(R.id.activity_register_etConfrimPassword);
         etPhoneNumber = (EditText) findViewById(R.id.activity_register_etPhone);
+        etAddress = (EditText) findViewById(R.id.activity_register_etAddress);
         tvSignIn = (TextView) findViewById(R.id.activity_register_tvSignIn);
 
         rlSignUp.setOnClickListener(this);
@@ -82,11 +96,14 @@ public class RegisterActivity extends BaseActivity {
 
     private void submitForm() {
 
+        Utils.hideKeyboard(RegisterActivity.this, llContainer.getWindowToken());
+
         userName = etUserName.getText().toString().trim();
         emailAdd = etEmail.getText().toString().trim();
         phoneNumber = etPhoneNumber.getText().toString().trim();
         passWord = etPassword.getText().toString().trim();
         confrimPassWord = etConfrimPassWord.getText().toString().trim();
+        address = etAddress.getText().toString().trim();
 
 
         if (Utils.isOnline(RegisterActivity.this, true)) {
@@ -107,12 +124,43 @@ public class RegisterActivity extends BaseActivity {
 
             } else if (phoneNumber.isEmpty()) {
                 Utils.snackbar(llContainer, getString(R.string.val_enter_phone), true, RegisterActivity.this);
+            } else if (address.isEmpty()) {
+                Utils.snackbar(llContainer, getString(R.string.val_enter_phone), true, RegisterActivity.this);
 
-            } else {
+            }
+            else {
+                LoadingDialog().show();
+                final UserModel userModel = new UserModel();
+                userModel.setAddress(address);
+                userModel.setPhone(phoneNumber);
+                userModel.setEmail(emailAdd);
+                userModel.setName(userName);
+                userModel.setPassword(passWord);
+                userModel.setBirthday(new Date());
+                DataApiHelpers.Post(this, Apis.USER_REGISTER_API, userModel, new VolleyCallback() {
+                    @Override
+                    public void onSuccess(String result) {
+                        LoadingDialog().dismiss();
+                        Log.d("Register", result);
+                        try {
+                            ObjectMapper mapper = new ObjectMapper();
+                            UserModel obj = mapper.readValue(result, UserModel.class);
+                            UserDbHelpers db = new UserDbHelpers(RegisterActivity.this);
+                            db.addUser(obj);
+                            overridePendingTransition(R.anim.anim_left_in, R.anim.anim_right_out);
+                            Utils.hideKeyboard(RegisterActivity.this);
+                            GrocerApplication.getmInstance().savePreferenceDataBoolean(getString(R.string.preferances_islogin), true);
+                            GrocerApplication.getmInstance().savePreferenceDataString(getString(R.string.preferances_userName), emailAdd);
+                            Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                            startActivity(intent);
+                            finish();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                            Utils.snackbar(llContainer, result, true, RegisterActivity.this);
+                        }
 
-                overridePendingTransition(R.anim.anim_left_in, R.anim.anim_right_out);
-                Utils.hideKeyboard(RegisterActivity.this);
-                finish();
+                    }
+                });
 
             }
         } else {

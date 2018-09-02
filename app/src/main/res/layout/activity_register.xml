@@ -68,6 +68,14 @@
             style="@style/register_edittext"
             app:font_name="UBUNTU-MEDIUM.TTF" />
 
+        <com.grocery.service.customecomponent.CustomEdittext
+            android:id="@+id/activity_register_etAddress"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:hint="@string/address"
+            android:inputType="text"
+            style="@style/register_edittext"
+            app:font_name="UBUNTU-MEDIUM.TTF" />
+
 
         <RelativeLayout
             android:id="@+id/activity_register_rlSignUp"

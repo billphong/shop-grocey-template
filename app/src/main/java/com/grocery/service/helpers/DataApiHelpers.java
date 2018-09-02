@@ -88,7 +88,7 @@ public class DataApiHelpers {
         }
     }
 
-    public static <T extends BaseFilter> void Post(Context context, String urlApi, final T t, final VolleyCallback callback){
+    public static <T> void Post(Context context, String urlApi, final T t, final VolleyCallback callback){
 
         StringRequest postRequest = new StringRequest(Request.Method.POST, urlApi,
                 new Response.Listener<String>()
@@ -107,7 +107,9 @@ public class DataApiHelpers {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         // error
-                        Log.d("Error.Response", error.getMessage());
+                        if(error != null) {
+                            //Log.d("Error.Response", error.getMessage());
+                        }
                     }
                 }
         ) {

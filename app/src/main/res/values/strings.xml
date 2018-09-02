@@ -27,8 +27,9 @@
     <string name="password">Mật khẩu</string>
     <string name="confirm_password">Xác nhận mật khẩu</string>
     <string name="already_have_account">Bạn đã có tài khoản?</string>
-    <string name="user_name">Tên đăng nhập</string>
+    <string name="user_name">Tên</string>
     <string name="phone">Số điện thoại</string>
+    <string name="address">Địa chỉ</string>
     <string name="btn_signin">Đăng nhập</string>
     <string name="btn_signup">Đăng ký</string>
     <string name="forgot_password">Quên mật khẩu</string>
@@ -41,21 +42,22 @@
 
 
     <!-- Validation Strings  -->
-    <string name="val_enter_name">Please enter your name.</string>
-    <string name="val_enter_password">Please enter password.</string>
-    <string name="val_password_greter_six">Password must have 6 or more characters</string>
-    <string name="val_conf_password_greter_six">Confirm password must have 6 or more characters</string>
-    <string name="val_enter_email">Please enter email address.</string>
-    <string name="val_enter_valid_email">Please enter valid email address.</string>
-    <string name="val_enter_phone">Please enter phone number.</string>
-    <string name="val_enter_mobile_number">Please enter mobile number.</string>
+    <string name="val_enter_name">Vui lòng nhập tên của bạn.</string>
+    <string name="val_enter_password">Vui lòng nhập mật khẩu.</string>
+    <string name="val_password_greter_six">Mật khẩu phải có ít nhất 6 ký tự</string>
+    <string name="val_conf_password_greter_six">Xác nhận mật khẩu phải có ít nhất 6 ký tự</string>
+    <string name="val_enter_email">Vui lòng nhập địa chỉ email.</string>
+    <string name="val_enter_valid_email">Định dạng email chưa chính xác.</string>
+    <string name="val_enter_phone">Vui lòng nhập số điện thoại.</string>
+    <string name="val_enter_mobile_number">Vui lòng nhập số điện thoại.</string>
     <string name="val_enter_country_code">Please select country code.</string>
-    <string name="val_password_confirm_password_not_match">Password and confirm password does not match.</string>
-    <string name="val_enter_user_name">Please enter user name</string>
-    <string name="val_enter_conf_password">Please enter confirm password</string>
-    <string name="val_enter_addressline">Please enter address.</string>
+    <string name="val_password_confirm_password_not_match">Mật khẩu và xác nhận mật khẩu không trùng khớp.</string>
+    <string name="val_enter_user_name">Vui lòng nhập tên của bạn</string>
+    <string name="val_enter_conf_password">Vui lòng nhập xác nhận mật khẩu</string>
+    <string name="val_enter_addressline">Vui lòng nhập địa chỉ.</string>
     <string name="val_enter_fullname">Please enter fullname.</string>
-    <string name="are_you_sure_do_you_want_to_logout">Are you sure,Do you want to Logout?</string>
+    <string name="val_enter_address">Vui lòng nhập địa chỉ.</string>
+    <string name="are_you_sure_do_you_want_to_logout">Bạn có chắc muốn thoát khỏi ứng dụng không?</string>
 
     <!--For Intro-->
     <string name="skip">SKIP</string>

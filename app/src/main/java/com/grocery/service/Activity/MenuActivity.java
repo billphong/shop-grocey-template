@@ -94,7 +94,8 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         tvEmail = headerLayout.findViewById(R.id.row_header_emailProfile);
 
         UserDbHelpers db = new UserDbHelpers(this);
-        UserModel userModel = db.getFirst();
+        String email = GrocerApplication.getmInstance().getSharedPreferences().getString(getString(R.string.preferances_userName), "");
+        UserModel userModel = email.equals("") ? db.getFirst() : db.getUser(email);
         if(userModel != null){
             tvName.setText(userModel.getName());
             tvEmail.setText(userModel.getEmail());
@@ -316,6 +317,9 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
                         dialog.cancel();
 
                         GrocerApplication.getmInstance().clearePreferenceData();
+                        //delete all data user table
+                        new UserDbHelpers(MenuActivity.this).deleteAll();
+
                         Intent i = new Intent(getApplicationContext(), SplashActivity.class);
                         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(i);

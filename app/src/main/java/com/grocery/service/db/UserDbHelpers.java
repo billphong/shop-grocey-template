@@ -231,6 +231,13 @@ public class UserDbHelpers extends SQLiteOpenHelper {
         db.close();
     }
 
+    //delete all row
+    public void deleteAll(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_USER, null, null);
+        db.close();
+    }
+
     /**
      * This method to check user exist or not
      *
