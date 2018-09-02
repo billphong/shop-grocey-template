@@ -119,16 +119,18 @@ public class LoginActivity extends BaseActivity {
                 UserFilter filter = new UserFilter();
                 filter.setEmail(email);
                 filter.setPassword(password);
-
+                LoadingDialog().show();
                 DataApiHelpers.Post(this, Apis.USER_API, filter, new VolleyCallback(){
                     @Override
                     public void onSuccess(String result){
-                        if(result == "null"){
+                        LoadingDialog().dismiss();
+                        if(result.equals("null")){
                             Utils.snackbar(llContainer, "Email hoặc mật khẩu không chính xác", true, LoginActivity.this);
                         }else {
-                            ObjectMapper mapper = new ObjectMapper();
                             try {
+                                ObjectMapper mapper = new ObjectMapper();
                                 UserModel obj = mapper.readValue(result, UserModel.class);
+                                
                                 GrocerApplication.getmInstance().savePreferenceDataBoolean(getString(R.string.preferances_islogin), true);
                                 GrocerApplication.getmInstance().savePreferenceDataString(getString(R.string.preferances_userName), email);
                                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);

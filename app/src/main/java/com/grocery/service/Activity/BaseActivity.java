@@ -1,10 +1,13 @@
 package com.grocery.service.Activity;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.grocery.service.R;
+
+import dmax.dialog.SpotsDialog;
 
 
 /**
@@ -20,7 +23,7 @@ import com.grocery.service.R;
  */
 
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
-
+    private AlertDialog loadingDialog = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,5 +46,13 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     }
 
-
+    protected AlertDialog LoadingDialog(){
+        if(loadingDialog == null){
+            loadingDialog =  new SpotsDialog.Builder()
+                    .setContext(this)
+                    .setCancelable(false)
+                    .build();
+        }
+        return loadingDialog;
+    }
 }
