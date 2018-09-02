@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 import com.grocery.service.GrocerApplication;
 import com.grocery.service.R;
+import com.grocery.service.db.UserDbHelpers;
 import com.grocery.service.fragment.AboutusFragment;
 import com.grocery.service.fragment.AddressListFragment;
 import com.grocery.service.fragment.CartListFragment;
@@ -33,6 +34,7 @@ import com.grocery.service.fragment.MainFragment;
 import com.grocery.service.fragment.NotificationListFragment;
 import com.grocery.service.fragment.OrderListFragment;
 import com.grocery.service.fragment.ProfileFragment;
+import com.grocery.service.model.user.UserModel;
 import com.grocery.service.util.Utils;
 
 /**
@@ -55,6 +57,8 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
     private ActionBarDrawerToggle toggle;
     private Toolbar toolbar;
     private TextView tvTitle;
+    private TextView tvName;
+    private TextView tvEmail;
     private Fragment mFragment = null;
     private MainFragment mainFragment;
     private RelativeLayout rlProfile;
@@ -85,6 +89,16 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         View headerLayout = navigationView.inflateHeaderView(R.layout.nav_header_menu);
         rlProfile = (RelativeLayout) headerLayout.findViewById(R.id.row_header_rlProfile);
         rlProfile.setOnClickListener(this);
+
+        tvName = headerLayout.findViewById(R.id.row_header_nameProfile);
+        tvEmail = headerLayout.findViewById(R.id.row_header_emailProfile);
+
+        UserDbHelpers db = new UserDbHelpers(this);
+        UserModel userModel = db.getFirst();
+        if(userModel != null){
+            tvName.setText(userModel.getName());
+            tvEmail.setText(userModel.getEmail());
+        }
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.openDrawer, R.string.closeDrawer) {

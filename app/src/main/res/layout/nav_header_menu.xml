@@ -23,7 +23,7 @@
             android:layout_width="@dimen/_70sdp"
             android:layout_height="@dimen/_70sdp"
            android:layout_centerInParent="true"
-            android:src="@drawable/profileimg"
+            android:src="@drawable/us_icon"
             app:civ_border_color="@color/white"
             app:civ_border_width="1dp" />
 
@@ -48,6 +48,7 @@
 
 
         <com.grocery.service.customecomponent.CustomTextView
+            android:id="@+id/row_header_nameProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
@@ -58,6 +59,7 @@
             app:font_name="UBUNTU-BOLD.TTF" />
 
         <com.grocery.service.customecomponent.CustomTextView
+            android:id="@+id/row_header_emailProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/lio_jorge_gmail_com"

@@ -58,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/Activity/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+            <state relative-caret-position="398">
+              <caret line="148" column="55" lean-forward="false" selection-start-line="148" selection-start-column="55" selection-end-line="148" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3092#3127#0" expanded="true" />
@@ -80,44 +80,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Looper.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-26/android.jar!/android/os/Looper.class">
+      <file leaf-file-name="MenuActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/Activity/MenuActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+            <state relative-caret-position="554">
+              <caret line="98" column="48" lean-forward="true" selection-start-line="98" selection-start-column="48" selection-end-line="98" selection-end-column="48" />
               <folding>
-                <marker date="1535810530247" expanded="false" signature="0:104" ph="/.../" />
-                <marker date="1535810530247" expanded="false" signature="197:208" ph=" { " />
-                <marker date="1535810530247" expanded="false" signature="244:250" ph=" }" />
-                <marker date="1535810530247" expanded="false" signature="284:295" ph=" { " />
-                <marker date="1535810530247" expanded="false" signature="331:337" ph=" }" />
-                <marker date="1535810530247" expanded="false" signature="381:392" ph=" { " />
-                <marker date="1535810530247" expanded="false" signature="428:434" ph=" }" />
-                <marker date="1535810530247" expanded="false" signature="476:487" ph=" { " />
-                <marker date="1535810530247" expanded="false" signature="523:529" ph=" }" />
-                <marker date="1535810530247" expanded="true" signature="560:571" ph=" { " />
-                <marker date="1535810530247" expanded="true" signature="607:613" ph=" }" />
-                <marker date="1535810530247" expanded="false" signature="650:661" ph=" { " />
-                <marker date="1535810530247" expanded="false" signature="697:703" ph=" }" />
-                <marker date="1535810530247" expanded="false" signature="745:756" ph=" { " />
-                <marker date="1535810530247" expanded="false" signature="792:798" ph=" }" />
-                <marker date="1535810530247" expanded="false" signature="836:847" ph=" { " />
-                <marker date="1535810530247" expanded="false" signature="883:889" ph=" }" />
-                <marker date="1535810530247" expanded="false" signature="941:952" ph=" { " />
-                <marker date="1535810530247" expanded="false" signature="988:994" ph=" }" />
-                <marker date="1535810530247" expanded="false" signature="1018:1029" ph=" { " />
-                <marker date="1535810530247" expanded="false" signature="1065:1071" ph=" }" />
-                <marker date="1535810530247" expanded="false" signature="1101:1112" ph=" { " />
-                <marker date="1535810530247" expanded="false" signature="1148:1154" ph=" }" />
-                <marker date="1535810530247" expanded="false" signature="1185:1196" ph=" { " />
-                <marker date="1535810530247" expanded="false" signature="1232:1238" ph=" }" />
-                <marker date="1535810530247" expanded="false" signature="1274:1285" ph=" { " />
-                <marker date="1535810530247" expanded="false" signature="1321:1327" ph=" }" />
-                <marker date="1535810530247" expanded="false" signature="1376:1387" ph=" { " />
-                <marker date="1535810530247" expanded="false" signature="1423:1429" ph=" }" />
-                <marker date="1535810530247" expanded="false" signature="1459:1470" ph=" { " />
-                <marker date="1535810530247" expanded="false" signature="1506:1512" ph=" }" />
+                <element signature="e#5018#5019#0" expanded="true" />
+                <element signature="e#5073#5074#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nav_header_menu.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_menu.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="528">
+              <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,8 +109,8 @@
       <file leaf-file-name="UserDbHelpers.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/db/UserDbHelpers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="89" column="36" lean-forward="false" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
+            <state relative-caret-position="563">
+              <caret line="96" column="20" lean-forward="false" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1408#1409#0" expanded="true" />
@@ -135,13 +119,15 @@
                 <element signature="e#1583#1584#0" expanded="true" />
                 <element signature="method#onUpgrade#0;class#UserDbHelpers#0" expanded="false" />
                 <element signature="docComment;method#addUser#0;class#UserDbHelpers#0" expanded="false" />
+                <element signature="method#getUser#0;class#UserDbHelpers#0" expanded="false" />
                 <element signature="docComment;method#getAllUser#0;class#UserDbHelpers#0" expanded="false" />
-                <element signature="e#4399#4410#0" expanded="true" />
+                <element signature="method#getAllUser#0;class#UserDbHelpers#0" expanded="false" />
+                <element signature="e#5394#5405#0" expanded="true" />
                 <element signature="docComment;method#updateUser#0;class#UserDbHelpers#0" expanded="false" />
-                <element signature="method#updateUser#0;class#UserDbHelpers#0" expanded="false" />
                 <element signature="docComment;method#deleteUser#0;class#UserDbHelpers#0" expanded="false" />
                 <element signature="method#deleteUser#0;class#UserDbHelpers#0" expanded="false" />
                 <element signature="docComment;method#checkUser#0;class#UserDbHelpers#0" expanded="false" />
+                <element signature="method#checkUser#0;class#UserDbHelpers#0" expanded="false" />
                 <element signature="docComment;method#checkUser#1;class#UserDbHelpers#0" expanded="false" />
                 <element signature="method#checkUser#1;class#UserDbHelpers#0" expanded="false" />
               </folding>
@@ -172,16 +158,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1617">
-              <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ProductListFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/fragment/ProductListFragment.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -207,6 +183,8 @@
       <find>getPa</find>
       <find>public</find>
       <find>{ get; set; }</find>
+      <find>lio</find>
+      <find>row_header_rlProfile</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -2248,6 +2226,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/grocery/service/db/UserHelpers.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/grocery/service/Activity/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/grocery/service/db/UserDbHelpers.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/grocery/service/Activity/MenuActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_header_menu.xml" />
       </list>
     </option>
   </component>
@@ -2296,7 +2276,25 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="service" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="Activity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shop-grocey-template" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="service" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shop-grocey-template" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="shop-grocey-template" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="shop-grocey-template" type="1abcf292:AndroidViewProjectNode" />
@@ -2315,6 +2313,12 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
     <property name="device.picker.selection" value="Nexus_5X_API_27" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\codes\android\shop-grocey-template\app\src\main\res\drawable" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -2491,6 +2495,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2500,11 +2505,12 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39939025" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39939025" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2513,8 +2519,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -2806,14 +2810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="34" column="29" lean-forward="false" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/util/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1056">
@@ -3006,35 +3002,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/db/UserDbHelpers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="89" column="36" lean-forward="false" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1408#1409#0" expanded="true" />
-            <element signature="e#1477#1478#0" expanded="true" />
-            <element signature="e#1538#1539#0" expanded="true" />
-            <element signature="e#1583#1584#0" expanded="true" />
-            <element signature="method#onUpgrade#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#addUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#getAllUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="e#4399#4410#0" expanded="true" />
-            <element signature="docComment;method#updateUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="method#updateUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#deleteUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="method#deleteUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#checkUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#checkUser#1;class#UserDbHelpers#0" expanded="false" />
-            <element signature="method#checkUser#1;class#UserDbHelpers#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/Activity/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+        <state relative-caret-position="398">
+          <caret line="148" column="55" lean-forward="false" selection-start-line="148" selection-start-column="55" selection-end-line="148" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3092#3127#0" expanded="true" />
@@ -3048,6 +3019,74 @@
             <element signature="e#6837#6876#0" expanded="true" />
             <element signature="e#6994#7036#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="132" column="22" lean-forward="false" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/db/UserDbHelpers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="96" column="20" lean-forward="false" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1408#1409#0" expanded="true" />
+            <element signature="e#1477#1478#0" expanded="true" />
+            <element signature="e#1538#1539#0" expanded="true" />
+            <element signature="e#1583#1584#0" expanded="true" />
+            <element signature="method#onUpgrade#0;class#UserDbHelpers#0" expanded="false" />
+            <element signature="docComment;method#addUser#0;class#UserDbHelpers#0" expanded="false" />
+            <element signature="method#getUser#0;class#UserDbHelpers#0" expanded="false" />
+            <element signature="docComment;method#getAllUser#0;class#UserDbHelpers#0" expanded="false" />
+            <element signature="method#getAllUser#0;class#UserDbHelpers#0" expanded="false" />
+            <element signature="e#5394#5405#0" expanded="true" />
+            <element signature="docComment;method#updateUser#0;class#UserDbHelpers#0" expanded="false" />
+            <element signature="docComment;method#deleteUser#0;class#UserDbHelpers#0" expanded="false" />
+            <element signature="method#deleteUser#0;class#UserDbHelpers#0" expanded="false" />
+            <element signature="docComment;method#checkUser#0;class#UserDbHelpers#0" expanded="false" />
+            <element signature="method#checkUser#0;class#UserDbHelpers#0" expanded="false" />
+            <element signature="docComment;method#checkUser#1;class#UserDbHelpers#0" expanded="false" />
+            <element signature="method#checkUser#1;class#UserDbHelpers#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="827">
+          <caret line="46" column="20" lean-forward="false" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/Activity/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="98" column="48" lean-forward="true" selection-start-line="98" selection-start-column="48" selection-end-line="98" selection-end-column="48" />
+          <folding>
+            <element signature="e#5018#5019#0" expanded="true" />
+            <element signature="e#5073#5074#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_menu.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>

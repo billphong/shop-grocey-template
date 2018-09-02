@@ -81,6 +81,34 @@ public class UserDbHelpers extends SQLiteOpenHelper {
         db.close();
     }
 
+    public UserModel getFirst(){
+        // array of columns to fetch
+        String[] columns = {
+                COLUMN_USER_ID,
+                COLUMN_USER_EMAIL,
+                COLUMN_USER_NAME,
+                COLUMN_USER_PASSWORD
+        };
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.query(TABLE_USER, //Table to query
+                columns,                    //columns to return
+                null,                  //columns for the WHERE clause
+                null,              //The values for the WHERE clause
+                null,                       //group the rows
+                null,                      //filter by row groups
+                null);
+        if(cursor.getCount() > 0) {
+            if(cursor.moveToFirst()) {
+                UserModel userModel = fromCursor(cursor);
+                cursor.close();
+                return userModel;
+            }
+        }
+        cursor.close();
+        return null;
+    }
+
     public UserModel getUser(String email) {
         // array of columns to fetch
         String[] columns = {
