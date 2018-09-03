@@ -93,7 +93,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
 
         SqlDbHelpers db = new SqlDbHelpers(this);
         String email = GrocerApplication.getmInstance().getSharedPreferences().getString(getString(R.string.preferances_userName), "");
-        UserModel userModel = email.equals("") ? db.getFirst() : db.getUser(email);
+        UserModel userModel = email.equals("") ? db.getFirstUser() : db.getUser(email);
         if(userModel != null){
             tvName.setText(userModel.getName());
             tvEmail.setText(userModel.getEmail());

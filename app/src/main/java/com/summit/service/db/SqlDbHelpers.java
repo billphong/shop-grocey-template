@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.summit.service.model.order.ProductOrderModel;
 import com.summit.service.model.user.UserModel;
 
 import java.util.ArrayList;
@@ -36,6 +37,10 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
     private static final String COLUMN_PRODUCT_ORDER_USER_ID = "product_user_id";
     private static final String COLUMN_PRODUCT_ORDER_PRODUCT_ID = "product_id";
     private static final String COLUMN_PRODUCT_ORDER_NUMBER = "product_number"; //so luong mua
+    private static final String COLUMN_PRODUCT_ORDER_PRODUCT_NAME = "product_name";
+    private static final String COLUMN_PRODUCT_ORDER_PRODUCT_IMG = "product_img";
+    private static final String COLUMN_PRODUCT_ORDER_PRODUCT_OLDPRICE = "product_old_price";
+    private static final String COLUMN_PRODUCT_ORDER_PRODUCT_DISCOUNT = "product_discount";
 
     // Order Table columns
     private static final String COLUMN_ORDER_PHONE = "order_phone";
@@ -59,7 +64,11 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
     private String CREATE_PRODUCT_ORDER_TABLE = "CREATE TABLE " + TABLE_PRODUCT_ORDER + "("
             + COLUMN_PRODUCT_ORDER_USER_ID + " INTEGER PRIMARY KEY,"
             + COLUMN_PRODUCT_ORDER_PRODUCT_ID + " INTEGER,"
-            + COLUMN_PRODUCT_ORDER_NUMBER + " INTEGER" + ")";
+            + COLUMN_PRODUCT_ORDER_NUMBER + " INTEGER,"
+            + COLUMN_PRODUCT_ORDER_PRODUCT_NAME + " TEXT,"
+            + COLUMN_PRODUCT_ORDER_PRODUCT_IMG + " TEXT,"
+            + COLUMN_PRODUCT_ORDER_PRODUCT_DISCOUNT + " INTEGER,"
+            + COLUMN_PRODUCT_ORDER_PRODUCT_OLDPRICE + " INTEGER" + ")";
 
     private String DROP_PRODUCT_ORDER_TABLE = "DROP TABLE IF EXISTS " + TABLE_PRODUCT_ORDER;
 
@@ -123,7 +132,7 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
         db.close();
     }
 
-    public UserModel getFirst(){
+    public UserModel getFirstUser(){
         // array of columns to fetch
         String[] columns = {
                 COLUMN_USER_ID,
@@ -386,5 +395,96 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
         user.setPhone(cursor.getString(cursor.getColumnIndex(COLUMN_USER_PHONE)));
         user.setAddress(cursor.getString(cursor.getColumnIndex(COLUMN_USER_ADDRESS)));
         return user;
+    }
+
+
+    /*table product order*/
+    public void addProductOrder(ProductOrderModel productOrderModel) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = contentValuesFromProductModel(productOrderModel);
+
+        // Inserting Row
+        db.insert(TABLE_PRODUCT_ORDER, null, values);
+        db.close();
+    }
+
+    public void updateProductOrder(ProductOrderModel productOrderModel) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = contentValuesFromProductModel(productOrderModel);
+
+        // updating row
+        db.update(TABLE_PRODUCT_ORDER, values, COLUMN_PRODUCT_ORDER_USER_ID + " = ?",
+                new String[]{String.valueOf(productOrderModel.getUserId())});
+        db.close();
+    }
+
+    public List<ProductOrderModel> getProductOrderByUserId(int userId) {
+        // array of columns to fetch
+        String[] columns = {
+                COLUMN_PRODUCT_ORDER_USER_ID ,
+                COLUMN_PRODUCT_ORDER_PRODUCT_ID ,
+                COLUMN_PRODUCT_ORDER_NUMBER ,
+                COLUMN_PRODUCT_ORDER_PRODUCT_NAME ,
+                COLUMN_PRODUCT_ORDER_PRODUCT_IMG ,
+                COLUMN_PRODUCT_ORDER_PRODUCT_DISCOUNT,
+                COLUMN_PRODUCT_ORDER_PRODUCT_OLDPRICE
+        };
+        // sorting orders
+        String sortOrder =
+                COLUMN_PRODUCT_ORDER_USER_ID + " ASC";
+        String selection = COLUMN_PRODUCT_ORDER_USER_ID + " = ?";
+        String[] selectionArgs = {Integer.toString(userId)};
+
+        List<ProductOrderModel> prOrList = new ArrayList<ProductOrderModel>();
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.query(TABLE_PRODUCT_ORDER, //Table to query
+                columns,    //columns to return
+                selection,        //columns for the WHERE clause
+                selectionArgs,        //The values for the WHERE clause
+                null,       //group the rows
+                null,       //filter by row groups
+                sortOrder); //The sort order
+
+
+        // Traversing through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                ProductOrderModel prOr = productOrderFromCursor(cursor);
+                // Adding user record to list
+                prOrList.add(prOr);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db.close();
+
+        // return user list
+        return prOrList;
+    }
+
+    private ProductOrderModel productOrderFromCursor(Cursor cursor){
+        ProductOrderModel user = new ProductOrderModel();
+        user.setUserId(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_USER_ID))));
+        user.setImg(cursor.getString(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_IMG)));
+        user.setName(cursor.getString(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_NAME)));
+        user.setProductId(cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_ID)));
+        user.setDiscount(cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_DISCOUNT)));
+        user.setOldPrice(cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_OLDPRICE)));
+        return user;
+    }
+
+    private ContentValues contentValuesFromProductModel(ProductOrderModel productOrderModel){
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_PRODUCT_ORDER_USER_ID, productOrderModel.getUserId());
+        values.put(COLUMN_PRODUCT_ORDER_PRODUCT_ID, productOrderModel.getProductId());
+        values.put(COLUMN_PRODUCT_ORDER_NUMBER, productOrderModel.getNumber());
+        values.put(COLUMN_PRODUCT_ORDER_PRODUCT_DISCOUNT, productOrderModel.getDiscount());
+        values.put(COLUMN_PRODUCT_ORDER_PRODUCT_IMG, productOrderModel.getImg());
+        values.put(COLUMN_PRODUCT_ORDER_PRODUCT_NAME, productOrderModel.getName());
+        values.put(COLUMN_PRODUCT_ORDER_PRODUCT_OLDPRICE, productOrderModel.getOldPrice());
+        return values;
     }
 }

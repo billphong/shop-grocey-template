@@ -156,20 +156,18 @@
       <file leaf-file-name="SqlDbHelpers.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/db/SqlDbHelpers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1949">
-              <caret line="379" column="27" lean-forward="false" selection-start-line="379" selection-start-column="27" selection-end-line="379" selection-end-column="27" />
+            <state relative-caret-position="530">
+              <caret line="404" column="80" lean-forward="false" selection-start-line="404" selection-start-column="80" selection-end-line="404" selection-end-column="80" />
               <folding>
                 <element signature="docComment;method#SqlDbHelpers#0;class#SqlDbHelpers#0" expanded="false" />
                 <element signature="method#onCreate#0;class#SqlDbHelpers#0" expanded="false" />
                 <element signature="method#onUpgrade#0;class#SqlDbHelpers#0" expanded="false" />
                 <element signature="docComment;method#addUser#0;class#SqlDbHelpers#0" expanded="false" />
                 <element signature="method#addUser#0;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="method#getFirst#0;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="method#getUser#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="method#getFirstUser#0;class#SqlDbHelpers#0" expanded="false" />
                 <element signature="docComment;method#getAllUser#0;class#SqlDbHelpers#0" expanded="false" />
                 <element signature="method#getAllUser#0;class#SqlDbHelpers#0" expanded="false" />
                 <element signature="docComment;method#updateUser#0;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="method#updateUser#0;class#SqlDbHelpers#0" expanded="false" />
                 <element signature="docComment;method#deleteUser#0;class#SqlDbHelpers#0" expanded="false" />
                 <element signature="method#deleteUser#0;class#SqlDbHelpers#0" expanded="false" />
                 <element signature="method#deleteAllUser#0;class#SqlDbHelpers#0" expanded="false" />
@@ -178,6 +176,53 @@
                 <element signature="docComment;method#checkUser#1;class#SqlDbHelpers#0" expanded="false" />
                 <element signature="method#checkUser#1;class#SqlDbHelpers#0" expanded="false" />
                 <element signature="method#userFromCursor#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="method#updateProductOrder#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="method#getProductOrderByUserId#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="e#16005#16024#0" expanded="true" />
+                <element signature="method#productOrderFromCursor#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="method#contentValuesFromProductModel#0;class#SqlDbHelpers#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductOrderModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/model/order/ProductOrderModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1025">
+              <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+              <folding>
+                <element signature="e#301#302#0" expanded="true" />
+                <element signature="e#330#331#0" expanded="true" />
+                <element signature="e#371#372#0" expanded="true" />
+                <element signature="e#407#408#0" expanded="true" />
+                <element signature="e#440#441#0" expanded="true" />
+                <element signature="e#472#473#0" expanded="true" />
+                <element signature="e#519#520#0" expanded="true" />
+                <element signature="e#561#562#0" expanded="true" />
+                <element signature="e#591#592#0" expanded="true" />
+                <element signature="e#620#621#0" expanded="true" />
+                <element signature="e#661#662#0" expanded="true" />
+                <element signature="e#697#698#0" expanded="true" />
+                <element signature="e#754#755#0" expanded="true" />
+                <element signature="e#793#794#0" expanded="true" />
+                <element signature="e#827#828#0" expanded="true" />
+                <element signature="e#859#860#0" expanded="true" />
+                <element signature="e#890#891#0" expanded="true" />
+                <element signature="e#935#936#0" expanded="true" />
+                <element signature="e#975#976#0" expanded="true" />
+                <element signature="e#1007#1008#0" expanded="true" />
+                <element signature="e#1038#1039#0" expanded="true" />
+                <element signature="e#1083#1084#0" expanded="true" />
+                <element signature="e#1123#1124#0" expanded="true" />
+                <element signature="e#1154#1155#0" expanded="true" />
+                <element signature="e#1181#1182#0" expanded="true" />
+                <element signature="e#1221#1222#0" expanded="true" />
+                <element signature="e#1253#1254#0" expanded="true" />
+                <element signature="e#1283#1284#0" expanded="true" />
+                <element signature="e#1309#1310#0" expanded="true" />
+                <element signature="e#1347#1348#0" expanded="true" />
+                <element signature="e#1377#1378#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2258,6 +2303,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ProductDetailsFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_product_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/model/order/OrderModel.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/model/order/ProductOrderModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/db/SqlDbHelpers.java" />
       </list>
     </option>
@@ -2310,6 +2357,21 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="service" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shop-grocey-template" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="service" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shop-grocey-template" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="service" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="order" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shop-grocey-template" type="1abcf292:AndroidViewProjectNode" />
@@ -2626,20 +2688,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/BaseFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="707">
-          <caret line="39" column="26" lean-forward="false" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-26/android.jar!/java/lang/String.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="128" column="19" lean-forward="false" selection-start-line="128" selection-start-column="19" selection-end-line="128" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-26/android.jar!/android/database/sqlite/SQLiteOpenHelper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -3125,22 +3173,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/model/order/OrderModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding>
+            <element signature="e#227#228#0" expanded="true" />
+            <element signature="e#268#269#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#364#365#0" expanded="true" />
+            <element signature="e#406#407#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/model/order/ProductOrderModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1025">
+          <caret line="36" column="27" lean-forward="false" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+          <folding>
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#330#331#0" expanded="true" />
+            <element signature="e#371#372#0" expanded="true" />
+            <element signature="e#407#408#0" expanded="true" />
+            <element signature="e#440#441#0" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+            <element signature="e#793#794#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#859#860#0" expanded="true" />
+            <element signature="e#890#891#0" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+            <element signature="e#975#976#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
+            <element signature="e#1038#1039#0" expanded="true" />
+            <element signature="e#1083#1084#0" expanded="true" />
+            <element signature="e#1123#1124#0" expanded="true" />
+            <element signature="e#1154#1155#0" expanded="true" />
+            <element signature="e#1181#1182#0" expanded="true" />
+            <element signature="e#1221#1222#0" expanded="true" />
+            <element signature="e#1253#1254#0" expanded="true" />
+            <element signature="e#1283#1284#0" expanded="true" />
+            <element signature="e#1309#1310#0" expanded="true" />
+            <element signature="e#1347#1348#0" expanded="true" />
+            <element signature="e#1377#1378#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/db/SqlDbHelpers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1949">
-          <caret line="379" column="27" lean-forward="false" selection-start-line="379" selection-start-column="27" selection-end-line="379" selection-end-column="27" />
+        <state relative-caret-position="530">
+          <caret line="404" column="80" lean-forward="false" selection-start-line="404" selection-start-column="80" selection-end-line="404" selection-end-column="80" />
           <folding>
             <element signature="docComment;method#SqlDbHelpers#0;class#SqlDbHelpers#0" expanded="false" />
             <element signature="method#onCreate#0;class#SqlDbHelpers#0" expanded="false" />
             <element signature="method#onUpgrade#0;class#SqlDbHelpers#0" expanded="false" />
             <element signature="docComment;method#addUser#0;class#SqlDbHelpers#0" expanded="false" />
             <element signature="method#addUser#0;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="method#getFirst#0;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="method#getUser#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="method#getFirstUser#0;class#SqlDbHelpers#0" expanded="false" />
             <element signature="docComment;method#getAllUser#0;class#SqlDbHelpers#0" expanded="false" />
             <element signature="method#getAllUser#0;class#SqlDbHelpers#0" expanded="false" />
             <element signature="docComment;method#updateUser#0;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="method#updateUser#0;class#SqlDbHelpers#0" expanded="false" />
             <element signature="docComment;method#deleteUser#0;class#SqlDbHelpers#0" expanded="false" />
             <element signature="method#deleteUser#0;class#SqlDbHelpers#0" expanded="false" />
             <element signature="method#deleteAllUser#0;class#SqlDbHelpers#0" expanded="false" />
@@ -3149,6 +3259,11 @@
             <element signature="docComment;method#checkUser#1;class#SqlDbHelpers#0" expanded="false" />
             <element signature="method#checkUser#1;class#SqlDbHelpers#0" expanded="false" />
             <element signature="method#userFromCursor#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="method#updateProductOrder#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="method#getProductOrderByUserId#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="e#16005#16024#0" expanded="true" />
+            <element signature="method#productOrderFromCursor#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="method#contentValuesFromProductModel#0;class#SqlDbHelpers#0" expanded="false" />
           </folding>
         </state>
       </provider>
