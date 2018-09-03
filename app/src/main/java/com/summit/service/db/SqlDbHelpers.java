@@ -81,6 +81,16 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
 
     private String DROP_ORDER_TABLE = "DROP TABLE IF EXISTS " + TABLE_ORDER;
 
+    String[] ProductOrderColumns = {
+            COLUMN_PRODUCT_ORDER_USER_ID ,
+            COLUMN_PRODUCT_ORDER_PRODUCT_ID ,
+            COLUMN_PRODUCT_ORDER_NUMBER ,
+            COLUMN_PRODUCT_ORDER_PRODUCT_NAME ,
+            COLUMN_PRODUCT_ORDER_PRODUCT_IMG ,
+            COLUMN_PRODUCT_ORDER_PRODUCT_DISCOUNT,
+            COLUMN_PRODUCT_ORDER_PRODUCT_OLDPRICE
+    };
+
     /**
      * Constructor
      *
@@ -420,17 +430,37 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
         db.close();
     }
 
+    public ProductOrderModel getProductOrder(int userId, int productId) {
+        ProductOrderModel prOr = null;
+        // sorting orders
+        String sortOrder =
+                COLUMN_PRODUCT_ORDER_USER_ID + " ASC";
+        String selection = COLUMN_PRODUCT_ORDER_USER_ID + " = ? AND " + COLUMN_PRODUCT_ORDER_PRODUCT_ID + " =? ";
+        String[] selectionArgs = {Integer.toString(userId), Integer.toString(productId)};
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor cursor = db.query(TABLE_PRODUCT_ORDER, //Table to query
+                ProductOrderColumns,    //columns to return
+                selection,        //columns for the WHERE clause
+                selectionArgs,        //The values for the WHERE clause
+                null,       //group the rows
+                null,       //filter by row groups
+                sortOrder); //The sort order
+
+        // Traversing through all rows and adding to list
+        if (cursor.getCount() > 0 && cursor.moveToFirst()) {
+            prOr = productOrderFromCursor(cursor);
+        }
+        cursor.close();
+        db.close();
+
+        // return user list
+        return prOr;
+    }
+
     public List<ProductOrderModel> getProductOrderByUserId(int userId) {
-        // array of columns to fetch
-        String[] columns = {
-                COLUMN_PRODUCT_ORDER_USER_ID ,
-                COLUMN_PRODUCT_ORDER_PRODUCT_ID ,
-                COLUMN_PRODUCT_ORDER_NUMBER ,
-                COLUMN_PRODUCT_ORDER_PRODUCT_NAME ,
-                COLUMN_PRODUCT_ORDER_PRODUCT_IMG ,
-                COLUMN_PRODUCT_ORDER_PRODUCT_DISCOUNT,
-                COLUMN_PRODUCT_ORDER_PRODUCT_OLDPRICE
-        };
+
         // sorting orders
         String sortOrder =
                 COLUMN_PRODUCT_ORDER_USER_ID + " ASC";
@@ -442,7 +472,7 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.query(TABLE_PRODUCT_ORDER, //Table to query
-                columns,    //columns to return
+                ProductOrderColumns,    //columns to return
                 selection,        //columns for the WHERE clause
                 selectionArgs,        //The values for the WHERE clause
                 null,       //group the rows

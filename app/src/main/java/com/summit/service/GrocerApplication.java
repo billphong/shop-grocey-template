@@ -73,6 +73,12 @@ public class GrocerApplication extends Application {
         editor.commit();
     }
 
+    public void savePreferenceDataInt(String key, int value) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(key, value);
+        editor.commit();
+    }
+
 
     /**
      * Call when application is close

@@ -140,10 +140,10 @@ public class LoginActivity extends BaseActivity {
                                 }else {
                                     db.addUser(obj);
                                 }
-
                                 //
                                 GrocerApplication.getmInstance().savePreferenceDataBoolean(getString(R.string.preferances_islogin), true);
                                 GrocerApplication.getmInstance().savePreferenceDataString(getString(R.string.preferances_userName), email);
+                                GrocerApplication.getmInstance().savePreferenceDataInt(getString(R.string.preferances_userId), obj.getID());
                                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
                                 startActivity(intent);
                                 finish();

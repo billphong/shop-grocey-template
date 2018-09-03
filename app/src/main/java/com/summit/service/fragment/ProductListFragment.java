@@ -12,12 +12,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.summit.service.Activity.MenuActivity;
+import com.summit.service.GrocerApplication;
 import com.summit.service.R;
 import com.summit.service.adapter.ProductListAdapter;
 import com.summit.service.asyns.TaskDelegate;
 import com.summit.service.commons.Apis;
 import com.summit.service.dal.GetDataAsync;
+import com.summit.service.db.SqlDbHelpers;
 import com.summit.service.filters.ProductFilter;
+import com.summit.service.model.ConvertModelHelpers;
+import com.summit.service.model.order.ProductOrderModel;
 import com.summit.service.model.product.ProductItem;
 import com.summit.service.util.Utils;
 
@@ -160,22 +164,36 @@ public class ProductListFragment extends BaseFragment implements ProductListAdap
 
 
     public void addToCart(boolean addTocart, int position) {
+        ProductItem productItem = productListModelArrayList.get(position);
         if (addTocart) {
-            int totalKg = productListModelArrayList.get(position).getTotalItem();
+            int totalKg = productItem.getTotalItem();
             totalKg = totalKg + 1;
-            productListModelArrayList.get(position).setTotalItem(totalKg);
+            productItem.setTotalItem(totalKg);
 
         } else {
-            int totalKg = productListModelArrayList.get(position).getTotalItem();
+            int totalKg = productItem.getTotalItem();
 
             if (totalKg < 1) {
-                productListModelArrayList.get(position).setTotalItem(0);
+                productItem.setTotalItem(0);
             } else {
                 totalKg = totalKg - 1;
-                productListModelArrayList.get(position).setTotalItem(totalKg);
+                productItem.setTotalItem(totalKg);
             }
+        }
 
+        //insert or update to db lite
+        int userId = GrocerApplication.getmInstance().getSharedPreferences().getInt(getString(R.string.preferances_userId), 0);
+        SqlDbHelpers sqlDbHelpers = new SqlDbHelpers(getActivity());
+        ProductOrderModel productOrderModel = sqlDbHelpers.getProductOrder(userId, productItem.getId());
 
+        if(productOrderModel != null){
+            productOrderModel = ConvertModelHelpers.toProductOrderModel(productItem);
+            productOrderModel.setUserId(userId);
+            sqlDbHelpers.updateProductOrder(productOrderModel);
+        }else {
+            productOrderModel = ConvertModelHelpers.toProductOrderModel(productItem);
+            productOrderModel.setUserId(userId);
+            sqlDbHelpers.addProductOrder(productOrderModel);
         }
 
         productListAdapter.notifyDataSetChanged();
