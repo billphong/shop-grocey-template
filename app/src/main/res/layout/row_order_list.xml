@@ -41,7 +41,7 @@
                     android:layout_marginTop="@dimen/_3sdp">
 
 
-                    <com.grocery.service.customecomponent.CustomTextView
+                    <com.summit.service.customecomponent.CustomTextView
                         android:id="@+id/row_orderlist_tvOrderIdLbl"
                         style="@style/ganaral_greystyle"
                         android:layout_centerVertical="true"
@@ -50,7 +50,7 @@
                         app:font_name="UBUNTU-MEDIUM.TTF" />
 
 
-                    <com.grocery.service.customecomponent.CustomTextView
+                    <com.summit.service.customecomponent.CustomTextView
                         android:id="@+id/row_orderlist_tvOrderId"
                         style="@style/ganaral_primarystyle"
                         android:layout_centerVertical="true"
@@ -59,7 +59,7 @@
                         android:textSize="@dimen/_13sdp"
                         app:font_name="UBUNTU-MEDIUM.TTF" />
 
-                    <com.grocery.service.customecomponent.CustomTextView
+                    <com.summit.service.customecomponent.CustomTextView
                         android:id="@+id/row_orderlist_tvDate"
                         style="@style/ganaral_greystyle"
                         android:layout_alignParentEnd="true"
@@ -77,7 +77,7 @@
                     android:layout_marginStart="@dimen/_5sdp">
 
 
-                    <com.grocery.service.customecomponent.CustomTextView
+                    <com.summit.service.customecomponent.CustomTextView
                         android:id="@+id/row_orderlist_tvStatus"
                         style="@style/ganaral_greystyle"
                         android:layout_centerVertical="true"
@@ -85,7 +85,7 @@
                         android:text="@string/shipped"
                         app:font_name="UBUNTU-MEDIUM.TTF" />
 
-                    <com.grocery.service.customecomponent.CustomTextView
+                    <com.summit.service.customecomponent.CustomTextView
                         android:id="@+id/row_orderlist_tvTime"
                         style="@style/ganaral_greystyle"
                         android:layout_alignParentEnd="true"
@@ -117,7 +117,7 @@
             android:layout_margin="@dimen/_5sdp"
             android:padding="@dimen/_5sdp">
 
-            <com.grocery.service.customecomponent.CustomTextView
+            <com.summit.service.customecomponent.CustomTextView
                 android:id="@+id/row_orderlist_tvProName"
                 style="@style/ganaral_greystyle"
                 android:layout_alignParentStart="true"
@@ -126,7 +126,7 @@
                 app:font_name="UBUNTU-BOLD.TTF" />
 
 
-            <com.grocery.service.customecomponent.CustomTextView
+            <com.summit.service.customecomponent.CustomTextView
                 android:id="@+id/row_orderlist_tvKg"
                 style="@style/ganaral_greystyle"
                 android:layout_centerInParent="true"
@@ -135,7 +135,7 @@
                 app:font_name="UBUNTU-BOLD.TTF" />
 
 
-            <com.grocery.service.customecomponent.CustomTextView
+            <com.summit.service.customecomponent.CustomTextView
                 android:id="@+id/row_orderlist_tvPrice"
                 style="@style/ganaral_greystyle"
                 android:layout_alignParentEnd="true"

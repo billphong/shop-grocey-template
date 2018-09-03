@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
 
-    <com.grocery.service.comman.SlidingLinearLayout
+    <com.summit.service.comman.SlidingLinearLayout
         android:id="@+id/activity_register_llContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,7 +23,7 @@
             android:src="@drawable/ic_logo_login" />
 
 
-        <com.grocery.service.customecomponent.CustomEdittext
+        <com.summit.service.customecomponent.CustomEdittext
             android:id="@+id/activity_register_etUsername"
             style="@style/register_edittext"
             android:layout_marginTop="@dimen/_13sdp"
@@ -33,7 +33,7 @@
 
 
 
-        <com.grocery.service.customecomponent.CustomEdittext
+        <com.summit.service.customecomponent.CustomEdittext
             android:id="@+id/activity_register_etEmail"
             android:layout_marginTop="@dimen/_13sdp"
             android:hint="@string/email"
@@ -43,7 +43,7 @@
 
 
 
-        <com.grocery.service.customecomponent.CustomEdittext
+        <com.summit.service.customecomponent.CustomEdittext
             android:id="@+id/activity_register_etPassword"
             android:layout_marginTop="@dimen/_13sdp"
             android:hint="@string/password"
@@ -51,7 +51,7 @@
             style="@style/register_edittext"
             app:font_name="UBUNTU-MEDIUM.TTF" />
 
-        <com.grocery.service.customecomponent.CustomEdittext
+        <com.summit.service.customecomponent.CustomEdittext
             android:id="@+id/activity_register_etConfrimPassword"
             android:layout_marginTop="@dimen/_13sdp"
             android:hint="@string/confirm_password"
@@ -60,7 +60,7 @@
             app:font_name="UBUNTU-MEDIUM.TTF"/>
 
 
-        <com.grocery.service.customecomponent.CustomEdittext
+        <com.summit.service.customecomponent.CustomEdittext
             android:id="@+id/activity_register_etPhone"
             android:layout_marginTop="@dimen/_13sdp"
             android:hint="@string/phone"
@@ -69,7 +69,7 @@
             style="@style/register_edittext"
             app:font_name="UBUNTU-MEDIUM.TTF" />
 
-        <com.grocery.service.customecomponent.CustomEdittext
+        <com.summit.service.customecomponent.CustomEdittext
             android:id="@+id/activity_register_etAddress"
             android:layout_marginTop="@dimen/_13sdp"
             android:hint="@string/address"
@@ -87,7 +87,7 @@
             android:padding="@dimen/_8sdp">
 
 
-            <com.grocery.service.customecomponent.CustomTextView
+            <com.summit.service.customecomponent.CustomTextView
                 android:id="@+id/activity_register_tvNext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
             android:padding="@dimen/_3sdp">
 
 
-            <com.grocery.service.customecomponent.CustomTextView
+            <com.summit.service.customecomponent.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
@@ -122,7 +122,7 @@
                 app:font_name="UBUNTU-MEDIUM.TTF" />
 
 
-            <com.grocery.service.customecomponent.CustomTextView
+            <com.summit.service.customecomponent.CustomTextView
                 android:id="@+id/activity_register_tvSignIn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -135,7 +135,7 @@
         </LinearLayout>
 
 
-    </com.grocery.service.comman.SlidingLinearLayout>
+    </com.summit.service.comman.SlidingLinearLayout>
 
 
 </android.support.v4.widget.NestedScrollView>

@@ -47,7 +47,7 @@
         android:orientation="vertical">
 
 
-        <com.grocery.service.customecomponent.CustomTextView
+        <com.summit.service.customecomponent.CustomTextView
             android:id="@+id/row_header_nameProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
             android:textSize="@dimen/_14sdp"
             app:font_name="UBUNTU-BOLD.TTF" />
 
-        <com.grocery.service.customecomponent.CustomTextView
+        <com.summit.service.customecomponent.CustomTextView
             android:id="@+id/row_header_emailProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

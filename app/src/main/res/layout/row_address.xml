@@ -28,7 +28,7 @@
                 android:orientation="horizontal">
 
 
-                <com.grocery.service.customecomponent.CustomTextView
+                <com.summit.service.customecomponent.CustomTextView
                     style="@style/ganaral_greystyle"
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@+id/ivOrder"
@@ -37,7 +37,7 @@
                     app:font_name="UBUNTU-MEDIUM.TTF" />
 
 
-                <com.grocery.service.customecomponent.CustomTextView
+                <com.summit.service.customecomponent.CustomTextView
                     android:id="@+id/row_addresslist_tvName"
                     style="@style/ganaral_greystyle"
                     android:layout_centerVertical="true"
@@ -55,7 +55,7 @@
                 android:orientation="horizontal">
 
 
-                <com.grocery.service.customecomponent.CustomTextView
+                <com.summit.service.customecomponent.CustomTextView
                     style="@style/ganaral_greystyle"
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@+id/ivOrder"
@@ -64,7 +64,7 @@
                     app:font_name="UBUNTU-MEDIUM.TTF" />
 
 
-                <com.grocery.service.customecomponent.CustomTextView
+                <com.summit.service.customecomponent.CustomTextView
                     android:id="@+id/row_addresslist_tvMobile"
                     style="@style/ganaral_greystyle"
                     android:layout_centerVertical="true"
@@ -83,7 +83,7 @@
                 android:orientation="horizontal">
 
 
-                <com.grocery.service.customecomponent.CustomTextView
+                <com.summit.service.customecomponent.CustomTextView
                     style="@style/ganaral_greystyle"
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@+id/ivOrder"
@@ -92,7 +92,7 @@
                     app:font_name="UBUNTU-MEDIUM.TTF" />
 
 
-                <com.grocery.service.customecomponent.CustomTextView
+                <com.summit.service.customecomponent.CustomTextView
                     android:id="@+id/row_addresslist_tvPincode"
                     style="@style/ganaral_greystyle"
                     android:layout_centerVertical="true"
@@ -110,7 +110,7 @@
                 android:orientation="horizontal">
 
 
-                <com.grocery.service.customecomponent.CustomTextView
+                <com.summit.service.customecomponent.CustomTextView
                     style="@style/ganaral_greystyle"
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@+id/ivOrder"
@@ -119,7 +119,7 @@
                     app:font_name="UBUNTU-MEDIUM.TTF" />
 
 
-                <com.grocery.service.customecomponent.CustomTextView
+                <com.summit.service.customecomponent.CustomTextView
                     android:id="@+id/row_addresslist_tvAddress"
                     style="@style/ganaral_greystyle"
                     android:layout_centerVertical="true"

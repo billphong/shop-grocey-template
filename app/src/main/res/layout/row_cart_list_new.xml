@@ -31,19 +31,19 @@
             android:background="@color/white"
             android:orientation="vertical">
 
-            <com.grocery.service.customecomponent.CustomTextView
+            <com.summit.service.customecomponent.CustomTextView
                 android:id="@+id/row_cartlist_tvName"
                 style="@style/ganaral_primarystyle"
                 app:font_name="UBUNTU-BOLD.TTF" />
 
-            <com.grocery.service.customecomponent.CustomTextView
+            <com.summit.service.customecomponent.CustomTextView
                 android:id="@+id/row_cartlist_tvKg"
                 style="@style/ganaral_greystyle"
                 android:paddingBottom="@dimen/_2sdp"
                 android:paddingTop="@dimen/_2sdp"
                 app:font_name="UBUNTU-MEDIUM.TTF" />
 
-            <com.grocery.service.customecomponent.CustomTextView
+            <com.summit.service.customecomponent.CustomTextView
                 android:id="@+id/row_cartlist_tvPrice"
                 style="@style/ganaral_greystyle"
                 app:font_name="UBUNTU-MEDIUM.TTF" />
@@ -83,7 +83,7 @@
             android:src="@drawable/ic_order_minus" />
 
 
-        <com.grocery.service.customecomponent.CustomTextView
+        <com.summit.service.customecomponent.CustomTextView
             android:id="@+id/row_cartlist_tvTotalKg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
