@@ -110,6 +110,9 @@ public class DataApiHelpers {
                         if(error != null) {
                             //Log.d("Error.Response", error.getMessage());
                         }
+                        if(callback != null){
+                            callback.onError(error);
+                        }
                     }
                 }
         ) {

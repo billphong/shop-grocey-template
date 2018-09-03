@@ -59,6 +59,8 @@
     <string name="val_enter_address">Vui lòng nhập địa chỉ.</string>
     <string name="are_you_sure_do_you_want_to_logout">Bạn có chắc muốn thoát khỏi ứng dụng không?</string>
 
+    <string name="error_anonymous">Có lỗi xảy ra.</string>
+
     <!--For Intro-->
     <string name="skip">SKIP</string>
     <string name="slide_3_title">Shop faster with buy now </string>

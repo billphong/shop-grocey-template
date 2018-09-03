@@ -10,6 +10,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.VolleyError;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.grocery.service.GrocerApplication;
 import com.grocery.service.R;
@@ -151,6 +152,11 @@ public class LoginActivity extends BaseActivity {
                                 e.printStackTrace();
                             }
                         }
+                    }
+
+                    @Override
+                    public void onError(VolleyError error) {
+                        LoadingDialog().dismiss();
                     }
                 });
 

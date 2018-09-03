@@ -9,6 +9,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.android.volley.VolleyError;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.grocery.service.GrocerApplication;
 import com.grocery.service.R;
@@ -144,6 +146,7 @@ public class RegisterActivity extends BaseActivity {
                         Log.d("Register", result);
                         try {
                             ObjectMapper mapper = new ObjectMapper();
+                            mapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
                             UserModel obj = mapper.readValue(result, UserModel.class);
                             UserDbHelpers db = new UserDbHelpers(RegisterActivity.this);
                             db.addUser(obj);
@@ -159,6 +162,15 @@ public class RegisterActivity extends BaseActivity {
                             Utils.snackbar(llContainer, result, true, RegisterActivity.this);
                         }
 
+                    }
+
+                    @Override
+                    public void onError(VolleyError error) {
+                        LoadingDialog().dismiss();
+                        if(error != null){
+                            String strErr = error.getMessage() == null ? getString(R.string.error_anonymous) : error.getMessage();
+                            Utils.snackbar(llContainer, strErr, true, RegisterActivity.this);
+                        }
                     }
                 });
 
