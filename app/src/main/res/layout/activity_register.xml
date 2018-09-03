@@ -64,7 +64,8 @@
             android:id="@+id/activity_register_etPhone"
             android:layout_marginTop="@dimen/_13sdp"
             android:hint="@string/phone"
-            android:inputType="text"
+            android:digits="0123456789"
+            android:inputType="number"
             style="@style/register_edittext"
             app:font_name="UBUNTU-MEDIUM.TTF" />
 
