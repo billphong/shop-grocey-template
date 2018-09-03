@@ -20,6 +20,9 @@ import android.widget.Toast;
 
 import com.summit.service.R;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -93,7 +96,26 @@ public class Utils {
         return true;
     }
 
+    public static String doubleToStringNoDecimal(double d) {
+        DecimalFormat formatter = (DecimalFormat) NumberFormat.getInstance(Locale.US);;
+        formatter.applyPattern("#.###");
+        return formatter.format(d);
+    }
 
+    public static String Spacer(String number){
+        StringBuilder strB = new StringBuilder();
+        strB.append(number);
+        int Three = 0;
+
+        for(int i=number.length();i>0;i--){
+            Three++;
+            if(Three == 3){
+                strB.insert(i-1, ".");
+                Three = 0;
+            }
+        }
+        return strB.toString();
+    }
     /**
      * Hide KeyBoard Using CurrentFocus
      *

@@ -44,6 +44,7 @@
     <color name="product_title_text">#626262</color>
     <color name="price_text_color">#94AD28</color>
 
+    <color name="red_color_pdetail">#DF0029</color>
     <color name="pink_color_pdetail">#FE1077</color>
     <color name="blue_color_pdetail">#4684F6</color>
     <color name="orange_color_pdetail">#FE9600</color>

@@ -1,6 +1,7 @@
 package com.summit.service.adapter;
 
 import android.content.Context;
+import android.graphics.Paint;
 import android.os.Handler;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.summit.service.R;
 import com.summit.service.customecomponent.CustomTextView;
@@ -92,6 +94,7 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         private CustomTextView tvOldPrice;
         private CustomTextView tvAddToCard;
         private CustomTextView tvTotalKg;
+        private TextView tvDiscount;
         private ImageView ivProImg;
         private ImageView ivPlus;
         private ImageView ivMins;
@@ -106,6 +109,8 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             tvAddToCard = (CustomTextView) itemView.findViewById(R.id.row_produclist_tvAddtoCart);
             tvTotalKg = (CustomTextView) itemView.findViewById(R.id.row_productlist_tvTotalKg);
             tvOldPrice = (CustomTextView) itemView.findViewById(R.id.row_productlist_tvKg);
+            tvOldPrice.setPaintFlags(tvOldPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            tvDiscount = (TextView) itemView.findViewById(R.id.row_produclist_tvDiscount);
             ivProImg = (ImageView) itemView.findViewById(R.id.row_productlist_ivProImg);
             ivPlus = (ImageView) itemView.findViewById(R.id.row_productlist_ivPlus);
             ivMins = (ImageView) itemView.findViewById(R.id.row_productlist_ivMins);
@@ -118,9 +123,15 @@ public class ProductListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         public void bindData(final ProductItem item, final int position) {
 
             tvProductName.setText("" + item.getName());
-            tvProductPrice.setText(Integer.toString(item.getPrice()));
-            tvOldPrice.setText(Integer.toString(item.getOldPrice()));
+            tvProductPrice.setText(item.getPriceStr());
+            tvOldPrice.setText(item.getOldPriceStr());
             tvTotalKg.setText(Integer.toString(item.getTotalItem()));
+            tvDiscount.setText(item.getDiscountStr());
+//            if(item.getDiscount() <= 0){
+////                tvDiscount.setVisibility(View.INVISIBLE);
+////            }else {
+////                tvDiscount.setVisibility(View.VISIBLE);
+////            }
             itemView.setTag(item);
             //new DownloadImageTask(ivProImg).execute(item.getImg());
             Picasso.get().load(item.getImg()).into(ivProImg);

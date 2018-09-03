@@ -5,8 +5,11 @@ import android.os.Parcelable;
 import android.util.Log;
 
 import com.summit.service.commons.Apis;
+import com.summit.service.util.Utils;
 
 import org.json.JSONObject;
+
+import java.util.Locale;
 
 public class ProductItem implements Parcelable {
     private int id;
@@ -34,11 +37,16 @@ public class ProductItem implements Parcelable {
             this.id = jsonObject.getInt("ID");
             this.name = jsonObject.getString("Name");
             this.img = (Apis.HOST + jsonObject.getString("Img")).replace("//","/");
-            this.price = (int)jsonObject.getDouble("Price");
             this.description = jsonObject.getString("Description");
-            this.discount = 0;//jsonObject.getInt("Discount");
-            this.saleOff = "";//jsonObject.getString("SaleOff");
-            this.oldPrice = 0;
+            this.discount = jsonObject.getInt("Discount");
+            this.saleOff = jsonObject.getString("SaleOff");
+            this.oldPrice = (int)jsonObject.getDouble("Price");
+            if(discount > 0){
+                this.price = (100 - discount) * this.oldPrice / 100;
+            }else {
+                this.price = this.oldPrice;
+            }
+
         }catch (Exception ex){
             Log.e("Init ProductItem", ex.getMessage());
         }
@@ -84,7 +92,7 @@ public class ProductItem implements Parcelable {
         return price;
     }
     public String getPriceStr(){
-        return Integer.toString(price);
+        return Utils.Spacer(Integer.toString(price)) + " đ";
     }
     public void setPrice(int price) {
         this.price = price;
@@ -94,7 +102,7 @@ public class ProductItem implements Parcelable {
         return oldPrice;
     }
     public String getOldPriceStr(){
-        return Integer.toString(oldPrice);
+        return Utils.Spacer(Integer.toString(oldPrice)) + " đ";
     }
 
     public void setOldPrice(int oldPrice) {
@@ -105,7 +113,7 @@ public class ProductItem implements Parcelable {
         return discount;
     }
     public String getDiscountStr(){
-        return Integer.toString(discount);
+        return Integer.toString(discount) + " %";
     }
 
     public void setDiscount(int discount) {
