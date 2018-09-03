@@ -1,5 +1,6 @@
 package com.summit.service.fragment;
 
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
@@ -47,7 +48,11 @@ public class ProductDetailsFragment extends BaseFragment {
     private TextView tvQuantity;
     private TextView tvName;
     private TextView tvPrice;
+    private TextView tvOldPrice;
     private TextView tvDescription;
+    private TextView tvDiscount;
+    private TextView tvSaleOff;
+    private TextView lblSaleOff;
     private ImageView ivPlus;
     private ImageView ivMins;
     private RelativeLayout rlAddTocart;
@@ -125,7 +130,12 @@ public class ProductDetailsFragment extends BaseFragment {
         tvQuantity = rootView.findViewById(R.id.fragment_product_details_tvTotalKg);
         tvName = rootView.findViewById(R.id.fragment_product_details_tvTitle);
         tvPrice = rootView.findViewById(R.id.fragment_product_details_tvPrice);
+        tvOldPrice = rootView.findViewById(R.id.fragment_product_details_tvOldPrice);
+        tvOldPrice.setPaintFlags(tvOldPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         tvDescription = rootView.findViewById(R.id.fragment_product_details_tvDescription);
+        tvDiscount = rootView.findViewById(R.id.fragment_product_details_tvDiscount);
+        tvSaleOff = rootView.findViewById(R.id.fragment_product_details_tvSaleOff);
+        lblSaleOff = rootView.findViewById(R.id.fragment_product_details_lblSaleOff);
         ivPlus = rootView.findViewById(R.id.fragment_product_details_ivPlus);
         ivMins = rootView.findViewById(R.id.fragment_product_details_ivMins);
 
@@ -145,6 +155,16 @@ public class ProductDetailsFragment extends BaseFragment {
             tvName.setText(productListModel.getName());
             tvQuantity.setText(productListModel.getTotalItemStr());
             tvPrice.setText(productListModel.getPriceStr());
+            tvDiscount.setText(productListModel.getDiscountStr());
+            tvOldPrice.setText(productListModel.getOldPriceStr());
+            if(productListModel.getSaleOff() == null || productListModel.getSaleOff().equals("")){
+                lblSaleOff.setVisibility(View.INVISIBLE);
+                tvSaleOff.setVisibility(View.INVISIBLE);
+            }else {
+                lblSaleOff.setVisibility(View.VISIBLE);
+                tvSaleOff.setVisibility(View.VISIBLE);
+                tvSaleOff.setText(productListModel.getSaleOff());
+            }
 
             TextViewHelpers.setTextHtml(tvDescription, productListModel.getDescription());
             totalBuyItem = productListModel.getTotalItem();

@@ -36,6 +36,9 @@
     <string name="submit">Lưu</string>
 
 
+    <string name="lbl_saleOff">Khuyến mãi: </string>
+    <string name="lbl_description">Thông tin chi tiết: </string>
+
     <!-- Drawer strings -->
     <string name="openDrawer">Navigation View Closed</string>
     <string name="closeDrawer">Navigation View</string>

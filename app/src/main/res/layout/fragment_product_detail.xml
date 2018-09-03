@@ -40,6 +40,18 @@
                     android:layout_alignParentBottom="true"
                     app:ci_drawable="@drawable/ic_dot"
                     app:ci_drawable_unselected="@drawable/ic_dot" />
+
+                <TextView
+                    android:id="@+id/fragment_product_details_tvDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:background="@color/red_color_pdetail"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"/>
             </RelativeLayout>
 
 
@@ -71,6 +83,38 @@
                         android:paddingTop="@dimen/_3sdp"
                         app:font_name="UBUNTU-MEDIUM.TTF" />
 
+                    <com.summit.service.customecomponent.CustomTextView
+                        android:id="@+id/fragment_product_details_tvOldPrice"
+                        style="@style/ganaral_primarystyle"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:textColor="@color/color_gray_light"
+                        />
+
+                    <com.summit.service.customecomponent.CustomTextView
+                        android:id="@+id/fragment_product_details_lblSaleOff"
+                        style="@style/ganaral_primarystyle"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:text="@string/lbl_saleOff"
+                        android:textColor="@color/rippelColor"
+                        />
+
+                    <com.summit.service.customecomponent.CustomTextView
+                        android:id="@+id/fragment_product_details_tvSaleOff"
+                        style="@style/ganaral_primarystyle"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        />
+
+                    <com.summit.service.customecomponent.CustomTextView
+                        style="@style/ganaral_primarystyle"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:text="@string/lbl_description"
+                        android:textColor="@color/rippelColor"
+                        />
 
                     <com.summit.service.customecomponent.CustomTextView
                         android:id="@+id/fragment_product_details_tvDescription"
@@ -80,6 +124,7 @@
                         android:text="@string/description_data"
                         android:textColor="@color/signup_lable_color"
                         android:textSize="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
                         app:font_name="UBUNTU-MEDIUM.TTF" />
 
 
