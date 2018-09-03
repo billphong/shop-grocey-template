@@ -16,9 +16,8 @@ import com.summit.service.GrocerApplication;
 import com.summit.service.R;
 import com.summit.service.asyns.VolleyCallback;
 import com.summit.service.commons.Apis;
-import com.summit.service.db.UserDbHelpers;
+import com.summit.service.db.SqlDbHelpers;
 import com.summit.service.helpers.DataApiHelpers;
-import com.summit.service.helpers.StringHelpers;
 import com.summit.service.model.user.UserModel;
 import com.summit.service.util.Utils;
 
@@ -153,7 +152,7 @@ public class RegisterActivity extends BaseActivity {
                             ObjectMapper mapper = new ObjectMapper();
                             mapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
                             UserModel obj = mapper.readValue(result, UserModel.class);
-                            UserDbHelpers db = new UserDbHelpers(RegisterActivity.this);
+                            SqlDbHelpers db = new SqlDbHelpers(RegisterActivity.this);
                             db.addUser(obj);
                             overridePendingTransition(R.anim.anim_left_in, R.anim.anim_right_out);
                             Utils.hideKeyboard(RegisterActivity.this);

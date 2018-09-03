@@ -1,12 +1,10 @@
 package com.summit.service.Activity;
 
-import android.annotation.TargetApi;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -26,7 +24,7 @@ import android.widget.Toast;
 
 import com.summit.service.GrocerApplication;
 import com.summit.service.R;
-import com.summit.service.db.UserDbHelpers;
+import com.summit.service.db.SqlDbHelpers;
 import com.summit.service.fragment.AboutusFragment;
 import com.summit.service.fragment.AddressListFragment;
 import com.summit.service.fragment.CartListFragment;
@@ -93,7 +91,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         tvName = headerLayout.findViewById(R.id.row_header_nameProfile);
         tvEmail = headerLayout.findViewById(R.id.row_header_emailProfile);
 
-        UserDbHelpers db = new UserDbHelpers(this);
+        SqlDbHelpers db = new SqlDbHelpers(this);
         String email = GrocerApplication.getmInstance().getSharedPreferences().getString(getString(R.string.preferances_userName), "");
         UserModel userModel = email.equals("") ? db.getFirst() : db.getUser(email);
         if(userModel != null){
@@ -318,7 +316,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
 
                         GrocerApplication.getmInstance().clearePreferenceData();
                         //delete all data user table
-                        new UserDbHelpers(MenuActivity.this).deleteAll();
+                        new SqlDbHelpers(MenuActivity.this).deleteAllUser();
 
                         Intent i = new Intent(getApplicationContext(), SplashActivity.class);
                         i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

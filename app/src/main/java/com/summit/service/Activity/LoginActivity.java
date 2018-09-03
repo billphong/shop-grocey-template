@@ -16,7 +16,7 @@ import com.summit.service.GrocerApplication;
 import com.summit.service.R;
 import com.summit.service.asyns.VolleyCallback;
 import com.summit.service.commons.Apis;
-import com.summit.service.db.UserDbHelpers;
+import com.summit.service.db.SqlDbHelpers;
 import com.summit.service.filters.UserFilter;
 import com.summit.service.helpers.DataApiHelpers;
 import com.summit.service.model.user.UserModel;
@@ -133,7 +133,7 @@ public class LoginActivity extends BaseActivity {
                                 ObjectMapper mapper = new ObjectMapper();
                                 UserModel obj = mapper.readValue(result, UserModel.class);
                                 //add or update user to sqllite
-                                UserDbHelpers db = new UserDbHelpers(LoginActivity.this);
+                                SqlDbHelpers db = new SqlDbHelpers(LoginActivity.this);
                                 UserModel existUser = db.getUser(obj.getEmail());
                                 if(existUser != null){
                                     db.updateUser(obj);

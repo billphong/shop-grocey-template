@@ -11,7 +11,7 @@ import com.summit.service.model.user.UserModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserDbHelpers extends SQLiteOpenHelper {
+public class SqlDbHelpers extends SQLiteOpenHelper {
 
     // Database Version
     private static final int DATABASE_VERSION = 1;
@@ -19,8 +19,10 @@ public class UserDbHelpers extends SQLiteOpenHelper {
     // Database Name
     private static final String DATABASE_NAME = "UserManager.db";
 
-    // User table name
+    // Table names
     private static final String TABLE_USER = "user";
+    private static final String TABLE_PRODUCT_ORDER = "productorder";
+    private static final String TABLE_ORDER = "order";
 
     // User Table Columns names
     private static final String COLUMN_USER_ID = "user_id";
@@ -30,27 +32,60 @@ public class UserDbHelpers extends SQLiteOpenHelper {
     private static final String COLUMN_USER_PHONE = "user_phone";
     private static final String COLUMN_USER_ADDRESS = "user_address";
 
+    // Product Order Table columns
+    private static final String COLUMN_PRODUCT_ORDER_USER_ID = "product_user_id";
+    private static final String COLUMN_PRODUCT_ORDER_PRODUCT_ID = "product_id";
+    private static final String COLUMN_PRODUCT_ORDER_NUMBER = "product_number"; //so luong mua
+
+    // Order Table columns
+    private static final String COLUMN_ORDER_PHONE = "order_phone";
+    private static final String COLUMN_ORDER_ADDRESS = "order_address";
+    private static final String COLUMN_ORDER_INFO = "order_info";
+    private static final String COLUMN_ORDER_USER_ID = "order_user_id";
+
     // create table sql query
     private String CREATE_USER_TABLE = "CREATE TABLE " + TABLE_USER + "("
-            + COLUMN_USER_ID + " INTEGER PRIMARY KEY," + COLUMN_USER_NAME + " TEXT,"
-            + COLUMN_USER_EMAIL + " TEXT," + COLUMN_USER_PASSWORD + " TEXT,"
-            + COLUMN_USER_PHONE + " TEXT,"+ COLUMN_USER_ADDRESS + " TEXT" + ")";
+            + COLUMN_USER_ID + " INTEGER PRIMARY KEY,"
+            + COLUMN_USER_NAME + " TEXT,"
+            + COLUMN_USER_EMAIL + " TEXT,"
+            + COLUMN_USER_PASSWORD + " TEXT,"
+            + COLUMN_USER_PHONE + " TEXT,"
+            + COLUMN_USER_ADDRESS + " TEXT" + ")";
 
     // drop table sql query
     private String DROP_USER_TABLE = "DROP TABLE IF EXISTS " + TABLE_USER;
+
+    //create table product order
+    private String CREATE_PRODUCT_ORDER_TABLE = "CREATE TABLE " + TABLE_PRODUCT_ORDER + "("
+            + COLUMN_PRODUCT_ORDER_USER_ID + " INTEGER PRIMARY KEY,"
+            + COLUMN_PRODUCT_ORDER_PRODUCT_ID + " INTEGER,"
+            + COLUMN_PRODUCT_ORDER_NUMBER + " INTEGER" + ")";
+
+    private String DROP_PRODUCT_ORDER_TABLE = "DROP TABLE IF EXISTS " + TABLE_PRODUCT_ORDER;
+
+    //create table
+    private String CREATE_ORDER_TABLE = "CREATE TABLE " + TABLE_ORDER + "("
+            + COLUMN_ORDER_USER_ID + " INTEGER PRIMARY KEY,"
+            + COLUMN_ORDER_PHONE + " TEXT,"
+            + COLUMN_ORDER_INFO + " TEXT,"
+            + COLUMN_ORDER_ADDRESS + " TEXT" + ")";
+
+    private String DROP_ORDER_TABLE = "DROP TABLE IF EXISTS " + TABLE_ORDER;
 
     /**
      * Constructor
      *
      * @param context
      */
-    public UserDbHelpers(Context context) {
+    public SqlDbHelpers(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_USER_TABLE);
+        db.execSQL(CREATE_PRODUCT_ORDER_TABLE);
+        db.execSQL(CREATE_ORDER_TABLE);
     }
 
 
@@ -59,6 +94,8 @@ public class UserDbHelpers extends SQLiteOpenHelper {
 
         //Drop User Table if exist
         db.execSQL(DROP_USER_TABLE);
+        db.execSQL(DROP_PRODUCT_ORDER_TABLE);
+        db.execSQL(DROP_ORDER_TABLE);
 
         // Create tables again
         onCreate(db);
@@ -107,7 +144,7 @@ public class UserDbHelpers extends SQLiteOpenHelper {
                 null);
         if(cursor.getCount() > 0) {
             if(cursor.moveToFirst()) {
-                UserModel userModel = fromCursor(cursor);
+                UserModel userModel = userFromCursor(cursor);
                 cursor.close();
                 return userModel;
             }
@@ -149,7 +186,7 @@ public class UserDbHelpers extends SQLiteOpenHelper {
                 null);
         if(cursor.getCount() > 0) {
             if(cursor.moveToFirst()) {
-                UserModel userModel = fromCursor(cursor);
+                UserModel userModel = userFromCursor(cursor);
                 cursor.close();
                 return userModel;
             }
@@ -198,7 +235,7 @@ public class UserDbHelpers extends SQLiteOpenHelper {
         // Traversing through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                UserModel user = fromCursor(cursor);
+                UserModel user = userFromCursor(cursor);
                 // Adding user record to list
                 userList.add(user);
             } while (cursor.moveToNext());
@@ -245,7 +282,7 @@ public class UserDbHelpers extends SQLiteOpenHelper {
     }
 
     //delete all row
-    public void deleteAll(){
+    public void deleteAllUser(){
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_USER, null, null);
         db.close();
@@ -340,7 +377,7 @@ public class UserDbHelpers extends SQLiteOpenHelper {
         return false;
     }
 
-    private UserModel fromCursor(Cursor cursor){
+    private UserModel userFromCursor(Cursor cursor){
         UserModel user = new UserModel();
         user.setID(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_USER_ID))));
         user.setEmail(cursor.getString(cursor.getColumnIndex(COLUMN_USER_EMAIL)));

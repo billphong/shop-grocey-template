@@ -73,7 +73,7 @@
 
     <!--Order and payment scree string-->
     <string name="edit">Edit</string>
-    <string name="add_to_cart">Add to Cart</string>
+    <string name="add_to_cart">Thêm vào giỏ hàng</string>
     <string name="start_shoping">Start Shoping</string>
     <string name="pro_payment">Payment</string>
     <string name="btn_submit">Submit</string>

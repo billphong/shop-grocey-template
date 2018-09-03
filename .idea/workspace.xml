@@ -36,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/Activity/MenuActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-5641">
-              <caret line="120" column="35" lean-forward="false" selection-start-line="120" selection-start-column="35" selection-end-line="120" selection-end-column="35" />
+              <caret line="118" column="35" lean-forward="false" selection-start-line="118" selection-start-column="35" selection-end-line="118" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -45,8 +45,8 @@
       <file leaf-file-name="ProductDetailsFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ProductDetailsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="161" column="49" lean-forward="false" selection-start-line="161" selection-start-column="49" selection-end-line="161" selection-end-column="49" />
+            <state relative-caret-position="407">
+              <caret line="218" column="17" lean-forward="false" selection-start-line="218" selection-start-column="17" selection-end-line="218" selection-end-column="17" />
               <folding>
                 <element signature="e#2731#2760#0" expanded="true" />
                 <element signature="e#3083#3566#0" expanded="true" />
@@ -59,21 +59,21 @@
       <file leaf-file-name="ProductListFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ProductListFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="733">
-              <caret line="195" column="47" lean-forward="false" selection-start-line="195" selection-start-column="47" selection-end-line="195" selection-end-column="47" />
+            <state relative-caret-position="431">
+              <caret line="161" column="20" lean-forward="true" selection-start-line="161" selection-start-column="20" selection-end-line="161" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_product_detail.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fragment_product_detail.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_product_detail.xml">
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="107" column="68" lean-forward="true" selection-start-line="107" selection-start-column="68" selection-end-line="107" selection-end-column="68" />
+            <state relative-caret-position="485">
+              <caret line="212" column="44" lean-forward="true" selection-start-line="212" selection-start-column="44" selection-end-line="212" selection-end-column="44" />
               <folding>
                 <element signature="e#2086#2100#0" expanded="true" />
                 <element signature="e#2191#2206#0" expanded="true" />
@@ -125,8 +125,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="683">
-              <caret line="67" column="12" lean-forward="false" selection-start-line="67" selection-start-column="12" selection-end-line="74" selection-end-column="18" />
+            <state relative-caret-position="452">
+              <caret line="60" column="41" lean-forward="true" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
               <folding>
                 <element signature="e#347#361#0" expanded="true" />
                 <element signature="e#445#459#0" expanded="true" />
@@ -153,12 +153,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <file leaf-file-name="SqlDbHelpers.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/db/SqlDbHelpers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="29" />
-              <folding />
+            <state relative-caret-position="1949">
+              <caret line="379" column="27" lean-forward="false" selection-start-line="379" selection-start-column="27" selection-end-line="379" selection-end-column="27" />
+              <folding>
+                <element signature="docComment;method#SqlDbHelpers#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="method#onCreate#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="method#onUpgrade#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="docComment;method#addUser#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="method#addUser#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="method#getFirst#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="method#getUser#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="docComment;method#getAllUser#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="method#getAllUser#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="docComment;method#updateUser#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="method#updateUser#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="docComment;method#deleteUser#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="method#deleteUser#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="method#deleteAllUser#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="docComment;method#checkUser#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="method#checkUser#0;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="docComment;method#checkUser#1;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="method#checkUser#1;class#SqlDbHelpers#0" expanded="false" />
+                <element signature="method#userFromCursor#0;class#SqlDbHelpers#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2235,9 +2255,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/model/product/ProductItem.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/adapter/ProductListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/row_product_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ProductDetailsFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_product_detail.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/db/SqlDbHelpers.java" />
       </list>
     </option>
   </component>
@@ -2288,7 +2309,7 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="service" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="adapter" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shop-grocey-template" type="1abcf292:AndroidViewProjectNode" />
@@ -2824,36 +2845,18 @@
         <state relative-caret-position="860">
           <caret line="159" column="28" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="134" />
           <folding>
-            <element signature="e#3720#3759#0" expanded="false" />
-            <element signature="e#3880#3915#0" expanded="false" />
-            <element signature="e#4047#4088#0" expanded="false" />
-            <element signature="e#4212#4255#0" expanded="false" />
-            <element signature="e#4383#4426#0" expanded="false" />
-            <element signature="e#4557#4605#0" expanded="false" />
-            <element signature="e#4741#4800#0" expanded="false" />
-            <element signature="e#5088#5121#0" expanded="false" />
-            <element signature="e#6714#6753#0" expanded="false" />
-            <element signature="e#6848#6888#0" expanded="false" />
-            <element signature="e#7592#7627#0" expanded="false" />
-            <element signature="e#7889#7925#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/db/UserDbHelpers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="349" column="82" lean-forward="false" selection-start-line="349" selection-start-column="82" selection-end-line="349" selection-end-column="82" />
-          <folding>
-            <element signature="method#onUpgrade#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#addUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#getAllUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#updateUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#deleteUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#checkUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="method#checkUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#checkUser#1;class#UserDbHelpers#0" expanded="false" />
-            <element signature="method#checkUser#1;class#UserDbHelpers#0" expanded="false" />
+            <element signature="e#3670#3709#0" expanded="false" />
+            <element signature="e#3830#3865#0" expanded="false" />
+            <element signature="e#3997#4038#0" expanded="false" />
+            <element signature="e#4162#4205#0" expanded="false" />
+            <element signature="e#4333#4376#0" expanded="false" />
+            <element signature="e#4507#4555#0" expanded="false" />
+            <element signature="e#4691#4750#0" expanded="false" />
+            <element signature="e#5038#5071#0" expanded="false" />
+            <element signature="e#6662#6701#0" expanded="false" />
+            <element signature="e#6796#6836#0" expanded="false" />
+            <element signature="e#7540#7575#0" expanded="false" />
+            <element signature="e#7837#7873#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2863,7 +2866,7 @@
         <state relative-caret-position="1023">
           <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
           <folding>
-            <element signature="e#2360#2400#0" expanded="false" />
+            <element signature="e#2267#2307#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2915,9 +2918,9 @@
           <caret line="140" column="49" lean-forward="false" selection-start-line="140" selection-start-column="49" selection-end-line="140" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#5298#5338#0" expanded="false" />
-            <element signature="e#5928#5929#0" expanded="false" />
-            <element signature="e#6001#6002#0" expanded="false" />
+            <element signature="e#5295#5335#0" expanded="false" />
+            <element signature="e#5925#5926#0" expanded="false" />
+            <element signature="e#5998#5999#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3007,13 +3010,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/color.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/Activity/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5641">
+          <caret line="118" column="35" lean-forward="false" selection-start-line="118" selection-start-column="35" selection-end-line="118" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/adapter/ProductListAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="111" column="95" lean-forward="false" selection-start-line="111" selection-start-column="12" selection-end-line="111" selection-end-column="95" />
+          <folding>
+            <element signature="e#5227#5806#0" expanded="true" />
+            <element signature="e#5805#5806#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_product_detail.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="212" column="44" lean-forward="true" selection-start-line="212" selection-start-column="44" selection-end-line="212" selection-end-column="44" />
+          <folding>
+            <element signature="e#2086#2100#0" expanded="true" />
+            <element signature="e#2191#2206#0" expanded="true" />
+            <element signature="e#3910#3925#0" expanded="true" />
+            <element signature="e#3969#3983#0" expanded="true" />
+            <element signature="e#4342#4357#0" expanded="true" />
+            <element signature="e#4401#4415#0" expanded="true" />
+            <element signature="e#4453#4474#0" expanded="true" />
+            <element signature="e#4827#4842#0" expanded="true" />
+            <element signature="e#4886#4900#0" expanded="true" />
+            <element signature="e#5012#5027#0" expanded="true" />
+            <element signature="e#5240#5255#0" expanded="true" />
+            <element signature="e#5299#5313#0" expanded="true" />
+            <element signature="e#5351#5376#0" expanded="true" />
+            <element signature="e#5785#5799#0" expanded="true" />
+            <element signature="e#5975#5990#0" expanded="true" />
+            <element signature="e#6040#6055#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="75" column="48" lean-forward="false" selection-start-line="75" selection-start-column="48" selection-end-line="75" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/row_product_list.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="67" column="12" lean-forward="false" selection-start-line="67" selection-start-column="12" selection-end-line="74" selection-end-column="18" />
+        <state relative-caret-position="452">
+          <caret line="60" column="41" lean-forward="true" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
           <folding>
             <element signature="e#347#361#0" expanded="true" />
             <element signature="e#445#459#0" expanded="true" />
@@ -3039,53 +3105,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/color.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/Activity/MenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5641">
-          <caret line="120" column="35" lean-forward="false" selection-start-line="120" selection-start-column="35" selection-end-line="120" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ProductListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="733">
-          <caret line="195" column="47" lean-forward="false" selection-start-line="195" selection-start-column="47" selection-end-line="195" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/adapter/ProductListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="111" column="95" lean-forward="false" selection-start-line="111" selection-start-column="12" selection-end-line="111" selection-end-column="95" />
-          <folding>
-            <element signature="e#5227#5806#0" expanded="true" />
-            <element signature="e#5805#5806#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="29" />
+        <state relative-caret-position="431">
+          <caret line="161" column="20" lean-forward="true" selection-start-line="161" selection-start-column="20" selection-end-line="161" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ProductDetailsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="161" column="49" lean-forward="false" selection-start-line="161" selection-start-column="49" selection-end-line="161" selection-end-column="49" />
+        <state relative-caret-position="407">
+          <caret line="218" column="17" lean-forward="false" selection-start-line="218" selection-start-column="17" selection-end-line="218" selection-end-column="17" />
           <folding>
             <element signature="e#2731#2760#0" expanded="true" />
             <element signature="e#3083#3566#0" expanded="true" />
@@ -3094,30 +3125,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_product_detail.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/db/SqlDbHelpers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="107" column="68" lean-forward="true" selection-start-line="107" selection-start-column="68" selection-end-line="107" selection-end-column="68" />
+        <state relative-caret-position="1949">
+          <caret line="379" column="27" lean-forward="false" selection-start-line="379" selection-start-column="27" selection-end-line="379" selection-end-column="27" />
           <folding>
-            <element signature="e#2086#2100#0" expanded="true" />
-            <element signature="e#2191#2206#0" expanded="true" />
-            <element signature="e#3910#3925#0" expanded="true" />
-            <element signature="e#3969#3983#0" expanded="true" />
-            <element signature="e#4342#4357#0" expanded="true" />
-            <element signature="e#4401#4415#0" expanded="true" />
-            <element signature="e#4453#4474#0" expanded="true" />
-            <element signature="e#4827#4842#0" expanded="true" />
-            <element signature="e#4886#4900#0" expanded="true" />
-            <element signature="e#5012#5027#0" expanded="true" />
-            <element signature="e#5240#5255#0" expanded="true" />
-            <element signature="e#5299#5313#0" expanded="true" />
-            <element signature="e#5351#5376#0" expanded="true" />
-            <element signature="e#5785#5799#0" expanded="true" />
-            <element signature="e#5975#5990#0" expanded="true" />
-            <element signature="e#6040#6055#0" expanded="true" />
+            <element signature="docComment;method#SqlDbHelpers#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="method#onCreate#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="method#onUpgrade#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="docComment;method#addUser#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="method#addUser#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="method#getFirst#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="method#getUser#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="docComment;method#getAllUser#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="method#getAllUser#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="docComment;method#updateUser#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="method#updateUser#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="docComment;method#deleteUser#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="method#deleteUser#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="method#deleteAllUser#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="docComment;method#checkUser#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="method#checkUser#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="docComment;method#checkUser#1;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="method#checkUser#1;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="method#userFromCursor#0;class#SqlDbHelpers#0" expanded="false" />
           </folding>
         </state>
       </provider>
