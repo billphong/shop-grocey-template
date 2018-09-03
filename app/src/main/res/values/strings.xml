@@ -59,6 +59,8 @@
     <string name="val_enter_address">Vui lòng nhập địa chỉ.</string>
     <string name="are_you_sure_do_you_want_to_logout">Bạn có chắc muốn thoát khỏi ứng dụng không?</string>
 
+    <string name="invalid_phone">Số điện thoại phải là số và có từ 10 đến 11 chữ số.</string>
+
     <string name="error_anonymous">Có lỗi xảy ra.</string>
 
     <!--For Intro-->

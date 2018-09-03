@@ -18,6 +18,7 @@ import com.grocery.service.asyns.VolleyCallback;
 import com.grocery.service.commons.Apis;
 import com.grocery.service.db.UserDbHelpers;
 import com.grocery.service.helpers.DataApiHelpers;
+import com.grocery.service.helpers.StringHelpers;
 import com.grocery.service.model.user.UserModel;
 import com.grocery.service.util.Utils;
 
@@ -126,7 +127,11 @@ public class RegisterActivity extends BaseActivity {
 
             } else if (phoneNumber.isEmpty()) {
                 Utils.snackbar(llContainer, getString(R.string.val_enter_phone), true, RegisterActivity.this);
-            } else if (address.isEmpty()) {
+            } else if(!Utils.isPhone(phoneNumber)){
+                Utils.snackbar(llContainer, getString(R.string.invalid_phone), true, RegisterActivity.this);
+            }
+
+            else if (address.isEmpty()) {
                 Utils.snackbar(llContainer, getString(R.string.val_enter_phone), true, RegisterActivity.this);
 
             }

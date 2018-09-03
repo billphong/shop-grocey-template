@@ -20,6 +20,9 @@ import android.widget.Toast;
 
 import com.grocery.service.R;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 /**
  * @purpose commonly used functions
@@ -79,6 +82,15 @@ public class Utils {
         } else {
             return android.util.Patterns.EMAIL_ADDRESS.matcher(inputEmail).matches();
         }
+    }
+
+    public static boolean isPhone(String number) {
+        Pattern pattern = Pattern.compile("^[0-9]*$");
+        Matcher matcher = pattern.matcher(number);
+        if (!matcher.matches() || number.length() != 10 || number.length() != 11) {
+            return false;
+        }
+        return true;
     }
 
 
