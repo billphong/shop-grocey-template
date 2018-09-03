@@ -157,9 +157,9 @@ public class ProductDetailsFragment extends BaseFragment {
             tvPrice.setText(productListModel.getPriceStr());
             tvDiscount.setText(productListModel.getDiscountStr());
             tvOldPrice.setText(productListModel.getOldPriceStr());
-            if(productListModel.getSaleOff() == null || productListModel.getSaleOff().equals("")){
-                lblSaleOff.setVisibility(View.INVISIBLE);
-                tvSaleOff.setVisibility(View.INVISIBLE);
+            if(productListModel.getSaleOff().equals("null") || productListModel.getSaleOff().equals("")){
+                lblSaleOff.setVisibility(View.GONE);
+                tvSaleOff.setVisibility(View.GONE);
             }else {
                 lblSaleOff.setVisibility(View.VISIBLE);
                 tvSaleOff.setVisibility(View.VISIBLE);

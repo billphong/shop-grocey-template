@@ -42,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductDetailsFragment.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductDetailsFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ProductDetailsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="159" column="96" lean-forward="false" selection-start-line="159" selection-start-column="96" selection-end-line="159" selection-end-column="96" />
+            <state relative-caret-position="365">
+              <caret line="161" column="49" lean-forward="false" selection-start-line="161" selection-start-column="49" selection-end-line="161" selection-end-column="49" />
               <folding>
                 <element signature="e#2731#2760#0" expanded="true" />
                 <element signature="e#3083#3566#0" expanded="true" />
@@ -66,14 +66,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fragment_product_detail.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fragment_product_detail.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_product_detail.xml">
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="94" column="76" lean-forward="false" selection-start-line="94" selection-start-column="76" selection-end-line="94" selection-end-column="76" />
+            <state relative-caret-position="353">
+              <caret line="107" column="68" lean-forward="true" selection-start-line="107" selection-start-column="68" selection-end-line="107" selection-end-column="68" />
               <folding>
                 <element signature="e#2086#2100#0" expanded="true" />
                 <element signature="e#2191#2206#0" expanded="true" />
@@ -82,13 +82,15 @@
                 <element signature="e#4342#4357#0" expanded="true" />
                 <element signature="e#4401#4415#0" expanded="true" />
                 <element signature="e#4453#4474#0" expanded="true" />
-                <element signature="e#4894#4909#0" expanded="true" />
-                <element signature="e#4953#4967#0" expanded="true" />
-                <element signature="e#5180#5195#0" expanded="true" />
-                <element signature="e#5239#5253#0" expanded="true" />
-                <element signature="e#5291#5316#0" expanded="true" />
-                <element signature="e#5725#5739#0" expanded="true" />
-                <element signature="e#5980#5995#0" expanded="true" />
+                <element signature="e#4827#4842#0" expanded="true" />
+                <element signature="e#4886#4900#0" expanded="true" />
+                <element signature="e#5012#5027#0" expanded="true" />
+                <element signature="e#5240#5255#0" expanded="true" />
+                <element signature="e#5299#5313#0" expanded="true" />
+                <element signature="e#5351#5376#0" expanded="true" />
+                <element signature="e#5785#5799#0" expanded="true" />
+                <element signature="e#5975#5990#0" expanded="true" />
+                <element signature="e#6040#6055#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2234,8 +2236,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/adapter/ProductListAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/row_product_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_product_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ProductDetailsFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_product_detail.xml" />
       </list>
     </option>
   </component>
@@ -2531,7 +2533,7 @@
           <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="29" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
@@ -2554,6 +2556,21 @@
       </expression>
     </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>productListModel.getSaleOff().equals(&quot;null&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>productListModel.getSaleOff().equals(null)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>productListModel.getSaleOff()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>response.equals(&quot;null&quot;)</expression-string>
         <language-id>JAVA</language-id>
@@ -2582,21 +2599,6 @@
       </expression>
       <expression>
         <expression-string>response.trim() == &quot;null&quot;</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>response.trim() == &quot;&quot;</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>response.trim()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>String.valueOf(response) == &quot;null&quot;</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -3080,13 +3082,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ProductDetailsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="161" column="49" lean-forward="false" selection-start-line="161" selection-start-column="49" selection-end-line="161" selection-end-column="49" />
+          <folding>
+            <element signature="e#2731#2760#0" expanded="true" />
+            <element signature="e#3083#3566#0" expanded="true" />
+            <element signature="e#3565#3566#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_product_detail.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="94" column="76" lean-forward="false" selection-start-line="94" selection-start-column="76" selection-end-line="94" selection-end-column="76" />
+        <state relative-caret-position="353">
+          <caret line="107" column="68" lean-forward="true" selection-start-line="107" selection-start-column="68" selection-end-line="107" selection-end-column="68" />
           <folding>
             <element signature="e#2086#2100#0" expanded="true" />
             <element signature="e#2191#2206#0" expanded="true" />
@@ -3095,25 +3109,15 @@
             <element signature="e#4342#4357#0" expanded="true" />
             <element signature="e#4401#4415#0" expanded="true" />
             <element signature="e#4453#4474#0" expanded="true" />
-            <element signature="e#4894#4909#0" expanded="true" />
-            <element signature="e#4953#4967#0" expanded="true" />
-            <element signature="e#5180#5195#0" expanded="true" />
-            <element signature="e#5239#5253#0" expanded="true" />
-            <element signature="e#5291#5316#0" expanded="true" />
-            <element signature="e#5725#5739#0" expanded="true" />
-            <element signature="e#5980#5995#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ProductDetailsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="159" column="96" lean-forward="false" selection-start-line="159" selection-start-column="96" selection-end-line="159" selection-end-column="96" />
-          <folding>
-            <element signature="e#2731#2760#0" expanded="true" />
-            <element signature="e#3083#3566#0" expanded="true" />
-            <element signature="e#3565#3566#0" expanded="true" />
+            <element signature="e#4827#4842#0" expanded="true" />
+            <element signature="e#4886#4900#0" expanded="true" />
+            <element signature="e#5012#5027#0" expanded="true" />
+            <element signature="e#5240#5255#0" expanded="true" />
+            <element signature="e#5299#5313#0" expanded="true" />
+            <element signature="e#5351#5376#0" expanded="true" />
+            <element signature="e#5785#5799#0" expanded="true" />
+            <element signature="e#5975#5990#0" expanded="true" />
+            <element signature="e#6040#6055#0" expanded="true" />
           </folding>
         </state>
       </provider>
