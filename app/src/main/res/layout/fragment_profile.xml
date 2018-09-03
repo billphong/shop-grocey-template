@@ -40,7 +40,7 @@
                 android:layout_height="@dimen/_90sdp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/_minus45sdp"
-                android:src="@drawable/profileimg"
+                android:src="@drawable/us_icon"
                 app:civ_border_color="@color/colorPrimary"
                 app:civ_border_width="@dimen/_1sdp" />
 
@@ -90,6 +90,19 @@
 
                     <com.grocery.service.customecomponent.CustomTextView
                         android:id="@+id/fragment_profile_tvPhone"
+                        style="@style/profile_textview"
+                        app:font_name="UBUNTU-BOLD.TTF" />
+
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    style="@style/profile_cardview"
+                    app:cardCornerRadius="@dimen/_5sdp">
+
+
+                    <com.grocery.service.customecomponent.CustomTextView
+                        android:id="@+id/fragment_profile_tvAddress"
                         style="@style/profile_textview"
                         app:font_name="UBUNTU-BOLD.TTF" />
 

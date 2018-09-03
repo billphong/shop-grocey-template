@@ -49,9 +49,10 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/Activity/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="497">
-              <caret line="140" column="52" lean-forward="false" selection-start-line="140" selection-start-column="52" selection-end-line="140" selection-end-column="52" />
+              <caret line="140" column="49" lean-forward="false" selection-start-line="140" selection-start-column="49" selection-end-line="140" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5308#5348#0" expanded="true" />
                 <element signature="e#5938#5939#0" expanded="true" />
                 <element signature="e#6011#6012#0" expanded="true" />
               </folding>
@@ -59,21 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SplashActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/Activity/SplashActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2310">
-              <caret line="83" column="140" lean-forward="false" selection-start-line="83" selection-start-column="140" selection-end-line="83" selection-end-column="140" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RegisterActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/Activity/RegisterActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="85" column="69" lean-forward="false" selection-start-line="85" selection-start-column="69" selection-end-line="85" selection-end-column="69" />
+            <state relative-caret-position="860">
+              <caret line="159" column="28" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="134" />
               <folding>
                 <element signature="e#3730#3769#0" expanded="true" />
                 <element signature="e#3890#3925#0" expanded="true" />
@@ -104,15 +95,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_register.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
+      <file leaf-file-name="ProfileFragment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/fragment/ProfileFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+              <folding>
+                <element signature="e#2367#2407#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_profile.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml">
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="66" column="38" lean-forward="false" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
-              <folding />
+            <state relative-caret-position="650">
+              <caret line="104" column="60" lean-forward="false" selection-start-line="104" selection-start-column="60" selection-end-line="104" selection-end-column="60" />
+              <folding>
+                <element signature="e#1188#1210#0" expanded="true" />
+                <element signature="e#3840#3854#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,9 +126,29 @@
       <file leaf-file-name="MenuActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/Activity/MenuActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2112">
+            <state relative-caret-position="487">
               <caret line="99" column="48" lean-forward="false" selection-start-line="99" selection-start-column="48" selection-end-line="99" selection-end-column="48" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDbHelpers.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/db/UserDbHelpers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="349" column="82" lean-forward="false" selection-start-line="349" selection-start-column="82" selection-end-line="349" selection-end-column="82" />
+              <folding>
+                <element signature="method#onUpgrade#0;class#UserDbHelpers#0" expanded="false" />
+                <element signature="docComment;method#addUser#0;class#UserDbHelpers#0" expanded="false" />
+                <element signature="docComment;method#getAllUser#0;class#UserDbHelpers#0" expanded="false" />
+                <element signature="docComment;method#updateUser#0;class#UserDbHelpers#0" expanded="false" />
+                <element signature="docComment;method#deleteUser#0;class#UserDbHelpers#0" expanded="false" />
+                <element signature="docComment;method#checkUser#0;class#UserDbHelpers#0" expanded="false" />
+                <element signature="method#checkUser#0;class#UserDbHelpers#0" expanded="false" />
+                <element signature="docComment;method#checkUser#1;class#UserDbHelpers#0" expanded="false" />
+                <element signature="method#checkUser#1;class#UserDbHelpers#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,40 +158,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="997">
               <caret line="93" column="5" lean-forward="false" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDbHelpers.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/db/UserDbHelpers.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1518">
-              <caret line="83" column="21" lean-forward="false" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
-              <folding>
-                <element signature="method#onUpgrade#0;class#UserDbHelpers#0" expanded="false" />
-                <element signature="docComment;method#addUser#0;class#UserDbHelpers#0" expanded="false" />
-                <element signature="method#addUser#0;class#UserDbHelpers#0" expanded="false" />
-                <element signature="docComment;method#getAllUser#0;class#UserDbHelpers#0" expanded="false" />
-                <element signature="method#getAllUser#0;class#UserDbHelpers#0" expanded="false" />
-                <element signature="docComment;method#updateUser#0;class#UserDbHelpers#0" expanded="false" />
-                <element signature="method#updateUser#0;class#UserDbHelpers#0" expanded="false" />
-                <element signature="docComment;method#deleteUser#0;class#UserDbHelpers#0" expanded="false" />
-                <element signature="docComment;method#checkUser#0;class#UserDbHelpers#0" expanded="false" />
-                <element signature="method#checkUser#0;class#UserDbHelpers#0" expanded="false" />
-                <element signature="docComment;method#checkUser#1;class#UserDbHelpers#0" expanded="false" />
-                <element signature="method#checkUser#1;class#UserDbHelpers#0" expanded="false" />
-                <element signature="method#fromCursor#0;class#UserDbHelpers#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="786">
-              <caret line="61" column="81" lean-forward="false" selection-start-line="61" selection-start-column="81" selection-end-line="61" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -2225,7 +2217,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/grocery/service/model/user/UserModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/grocery/service/db/UserHelpers.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_header_menu.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/grocery/service/db/UserDbHelpers.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/grocery/service/commons/Apis.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/grocery/service/Activity/MenuActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/grocery/service/asyns/VolleyCallback.java" />
@@ -2236,6 +2227,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/grocery/service/util/Utils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/grocery/service/Activity/RegisterActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/grocery/service/fragment/ProfileFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/grocery/service/db/UserDbHelpers.java" />
       </list>
     </option>
   </component>
@@ -2293,6 +2287,13 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="service" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="fragment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shop-grocey-template" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="service" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="helpers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -2301,6 +2302,17 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="service" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shop-grocey-template" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="shop-grocey-template" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="shop-grocey-template" type="1abcf292:AndroidViewProjectNode" />
@@ -2513,7 +2525,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39939025" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39939025" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2538,7 +2550,7 @@
           <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="25" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
@@ -2610,20 +2622,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/fragment/ProductListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/helpers/TextViewHelpers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="10" column="82" lean-forward="true" selection-start-line="10" selection-start-column="82" selection-end-line="10" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/helpers/PicassoImageGetter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-165">
@@ -2745,6 +2743,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
           <caret line="94" column="159" lean-forward="false" selection-start-line="94" selection-start-column="159" selection-end-line="94" selection-end-column="159" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2779,16 +2778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_menu.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_menu_new_drawer.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -2806,6 +2795,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2881,28 +2871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/db/UserDbHelpers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1518">
-          <caret line="83" column="21" lean-forward="false" selection-start-line="83" selection-start-column="21" selection-end-line="83" selection-end-column="21" />
-          <folding>
-            <element signature="method#onUpgrade#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#addUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="method#addUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#getAllUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="method#getAllUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#updateUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="method#updateUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#deleteUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#checkUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="method#checkUser#0;class#UserDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#checkUser#1;class#UserDbHelpers#0" expanded="false" />
-            <element signature="method#checkUser#1;class#UserDbHelpers#0" expanded="false" />
-            <element signature="method#fromCursor#0;class#UserDbHelpers#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/GrocerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-562">
@@ -2930,14 +2898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2310">
           <caret line="83" column="140" lean-forward="false" selection-start-line="83" selection-start-column="140" selection-end-line="83" selection-end-column="140" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/Activity/MenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2112">
-          <caret line="99" column="48" lean-forward="false" selection-start-line="99" selection-start-column="48" selection-end-line="99" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -2970,18 +2930,6 @@
         <state relative-caret-position="132">
           <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/Activity/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="140" column="52" lean-forward="false" selection-start-line="140" selection-start-column="52" selection-end-line="140" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5938#5939#0" expanded="true" />
-            <element signature="e#6011#6012#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3022,10 +2970,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="66" column="38" lean-forward="false" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_menu.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="104" column="60" lean-forward="false" selection-start-line="104" selection-start-column="60" selection-end-line="104" selection-end-column="60" />
+          <folding>
+            <element signature="e#1188#1210#0" expanded="true" />
+            <element signature="e#3840#3854#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/Activity/RegisterActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="85" column="69" lean-forward="false" selection-start-line="85" selection-start-column="69" selection-end-line="85" selection-end-column="69" />
+        <state relative-caret-position="860">
+          <caret line="159" column="28" lean-forward="false" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="134" />
           <folding>
             <element signature="e#3730#3769#0" expanded="true" />
             <element signature="e#3890#3925#0" expanded="true" />
@@ -3043,14 +3027,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/Activity/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="66" column="38" lean-forward="false" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+        <state relative-caret-position="497">
+          <caret line="140" column="49" lean-forward="false" selection-start-line="140" selection-start-column="49" selection-end-line="140" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5308#5348#0" expanded="true" />
+            <element signature="e#5938#5939#0" expanded="true" />
+            <element signature="e#6011#6012#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/Activity/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="99" column="48" lean-forward="false" selection-start-line="99" selection-start-column="48" selection-end-line="99" selection-end-column="48" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/db/UserDbHelpers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="349" column="82" lean-forward="false" selection-start-line="349" selection-start-column="82" selection-end-line="349" selection-end-column="82" />
+          <folding>
+            <element signature="method#onUpgrade#0;class#UserDbHelpers#0" expanded="false" />
+            <element signature="docComment;method#addUser#0;class#UserDbHelpers#0" expanded="false" />
+            <element signature="docComment;method#getAllUser#0;class#UserDbHelpers#0" expanded="false" />
+            <element signature="docComment;method#updateUser#0;class#UserDbHelpers#0" expanded="false" />
+            <element signature="docComment;method#deleteUser#0;class#UserDbHelpers#0" expanded="false" />
+            <element signature="docComment;method#checkUser#0;class#UserDbHelpers#0" expanded="false" />
+            <element signature="method#checkUser#0;class#UserDbHelpers#0" expanded="false" />
+            <element signature="docComment;method#checkUser#1;class#UserDbHelpers#0" expanded="false" />
+            <element signature="method#checkUser#1;class#UserDbHelpers#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/grocery/service/fragment/ProfileFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding>
+            <element signature="e#2367#2407#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

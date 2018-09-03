@@ -27,11 +27,14 @@ public class UserDbHelpers extends SQLiteOpenHelper {
     private static final String COLUMN_USER_NAME = "user_name";
     private static final String COLUMN_USER_EMAIL = "user_email";
     private static final String COLUMN_USER_PASSWORD = "user_password";
+    private static final String COLUMN_USER_PHONE = "user_phone";
+    private static final String COLUMN_USER_ADDRESS = "user_address";
 
     // create table sql query
     private String CREATE_USER_TABLE = "CREATE TABLE " + TABLE_USER + "("
             + COLUMN_USER_ID + " INTEGER PRIMARY KEY," + COLUMN_USER_NAME + " TEXT,"
-            + COLUMN_USER_EMAIL + " TEXT," + COLUMN_USER_PASSWORD + " TEXT" + ")";
+            + COLUMN_USER_EMAIL + " TEXT," + COLUMN_USER_PASSWORD + " TEXT,"
+            + COLUMN_USER_PHONE + " TEXT,"+ COLUMN_USER_ADDRESS + " TEXT" + ")";
 
     // drop table sql query
     private String DROP_USER_TABLE = "DROP TABLE IF EXISTS " + TABLE_USER;
@@ -75,6 +78,8 @@ public class UserDbHelpers extends SQLiteOpenHelper {
         values.put(COLUMN_USER_NAME, user.getName());
         values.put(COLUMN_USER_EMAIL, user.getEmail());
         values.put(COLUMN_USER_PASSWORD, user.getPassword());
+        values.put(COLUMN_USER_PHONE, user.getPhone());
+        values.put(COLUMN_USER_ADDRESS, user.getAddress());
 
         // Inserting Row
         db.insert(TABLE_USER, null, values);
@@ -87,7 +92,9 @@ public class UserDbHelpers extends SQLiteOpenHelper {
                 COLUMN_USER_ID,
                 COLUMN_USER_EMAIL,
                 COLUMN_USER_NAME,
-                COLUMN_USER_PASSWORD
+                COLUMN_USER_PASSWORD,
+                COLUMN_USER_PHONE,
+                COLUMN_USER_ADDRESS
         };
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -115,7 +122,9 @@ public class UserDbHelpers extends SQLiteOpenHelper {
                 COLUMN_USER_ID,
                 COLUMN_USER_EMAIL,
                 COLUMN_USER_NAME,
-                COLUMN_USER_PASSWORD
+                COLUMN_USER_PASSWORD,
+                COLUMN_USER_PHONE,
+                COLUMN_USER_ADDRESS
         };
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -160,7 +169,9 @@ public class UserDbHelpers extends SQLiteOpenHelper {
                 COLUMN_USER_ID,
                 COLUMN_USER_EMAIL,
                 COLUMN_USER_NAME,
-                COLUMN_USER_PASSWORD
+                COLUMN_USER_PASSWORD,
+                COLUMN_USER_PHONE,
+                COLUMN_USER_ADDRESS
         };
         // sorting orders
         String sortOrder =
@@ -211,6 +222,8 @@ public class UserDbHelpers extends SQLiteOpenHelper {
         values.put(COLUMN_USER_NAME, user.getName());
         values.put(COLUMN_USER_EMAIL, user.getEmail());
         values.put(COLUMN_USER_PASSWORD, user.getPassword());
+        values.put(COLUMN_USER_PHONE, user.getPhone());
+        values.put(COLUMN_USER_ADDRESS, user.getAddress());
 
         // updating row
         db.update(TABLE_USER, values, COLUMN_USER_ID + " = ?",
@@ -333,6 +346,8 @@ public class UserDbHelpers extends SQLiteOpenHelper {
         user.setEmail(cursor.getString(cursor.getColumnIndex(COLUMN_USER_EMAIL)));
         user.setName(cursor.getString(cursor.getColumnIndex(COLUMN_USER_NAME)));
         user.setPassword(cursor.getString(cursor.getColumnIndex(COLUMN_USER_PASSWORD)));
+        user.setPhone(cursor.getString(cursor.getColumnIndex(COLUMN_USER_PHONE)));
+        user.setAddress(cursor.getString(cursor.getColumnIndex(COLUMN_USER_ADDRESS)));
         return user;
     }
 }

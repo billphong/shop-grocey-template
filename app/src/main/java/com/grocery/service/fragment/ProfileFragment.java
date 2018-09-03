@@ -11,8 +11,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.grocery.service.Activity.LoginActivity;
 import com.grocery.service.Activity.MenuActivity;
+import com.grocery.service.GrocerApplication;
 import com.grocery.service.R;
+import com.grocery.service.db.UserDbHelpers;
+import com.grocery.service.model.user.UserModel;
 
 /**
  * *************************************************************************
@@ -32,6 +36,7 @@ public class ProfileFragment extends BaseFragment {
     private TextView tvName;
     private TextView tvPhone;
     private TextView tvEmail;
+    private TextView tvAddress;
     private ImageView ivProfile;
 
     @Override
@@ -64,12 +69,18 @@ public class ProfileFragment extends BaseFragment {
         tvName = (TextView) rootView.findViewById(R.id.fragment_profile_tvName);
         tvEmail = (TextView) rootView.findViewById(R.id.fragment_profile_tvEmail);
         tvPhone = (TextView) rootView.findViewById(R.id.fragment_profile_tvPhone);
+        tvAddress = (TextView) rootView.findViewById(R.id.fragment_profile_tvAddress);
         ivProfile = (ImageView) rootView.findViewById(R.id.fragment_profile_ivProfilePic);
 
-        tvName.setText(R.string.leo_jorge);
-        tvEmail.setText(R.string.lio_jorge_gmail);
-        tvPhone.setText(R.string.temp_number);
-
+        UserDbHelpers db = new UserDbHelpers(getActivity());
+        String email = GrocerApplication.getmInstance().getSharedPreferences().getString(getString(R.string.preferances_userName), "");
+        UserModel existUser = db.getUser(email);
+        if(existUser != null){
+            tvName.setText(existUser.getName());
+            tvEmail.setText(existUser.getEmail());
+            tvPhone.setText(existUser.getPhone());
+            tvAddress.setText(existUser.getAddress());
+        }
     }
 
 
