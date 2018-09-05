@@ -14,10 +14,15 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.summit.service.Activity.MenuActivity;
+import com.summit.service.GrocerApplication;
 import com.summit.service.R;
 import com.summit.service.adapter.CartListAdapter;
 import com.summit.service.data.TempListData;
+import com.summit.service.db.SqlDbHelpers;
+import com.summit.service.model.ConvertModelHelpers;
 import com.summit.service.model.cart.CartlistModel;
+import com.summit.service.model.order.ProductOrderModel;
+import com.summit.service.model.product.ProductItem;
 import com.summit.service.util.Utils;
 
 import java.util.List;
@@ -44,7 +49,7 @@ public class CartListFragment extends BaseFragment {
     private RelativeLayout rlEmpty;
     private LinearLayoutManager mLayoutManager;
     private CartListAdapter productListAdapter;
-    private List<CartlistModel> productListModelArrayList;
+    private List<ProductOrderModel> productListModelArrayList;
     private MenuItem item;
 
 
@@ -88,12 +93,13 @@ public class CartListFragment extends BaseFragment {
 
     private int getTotalPrice() {
         int total = 0;
-
-        for (int i = 0; i < productListModelArrayList.size(); i++) {
-            int totalQty = productListModelArrayList.get(i).getProductQuantity();
-            int price = productListModelArrayList.get(i).getProductPrice();
-            int totalPrice = totalQty * price;
-            total = total + totalPrice;
+        if(productListModelArrayList != null && productListModelArrayList.size() > 0) {
+            for (int i = 0; i < productListModelArrayList.size(); i++) {
+                int totalQty = productListModelArrayList.get(i).getNumber();
+                int price = productListModelArrayList.get(i).getPrice();
+                int totalPrice = totalQty * price;
+                total = total + totalPrice;
+            }
         }
 
         return total;
@@ -105,8 +111,11 @@ public class CartListFragment extends BaseFragment {
 
     private void getListData() {
 
-        TempListData tempListData = new TempListData();
-        productListModelArrayList = tempListData.getCartList();
+//        TempListData tempListData = new TempListData();
+//        productListModelArrayList = tempListData.getCartList();
+        SqlDbHelpers sqlDbHelpers = new SqlDbHelpers(getActivity());
+        productListModelArrayList = sqlDbHelpers.getProductOrderByUserId(GrocerApplication.getmInstance().getSharedPreferences().getInt(getString(R.string.preferances_userId), 0));
+
         productListAdapter = new CartListAdapter(getActivity(), productListModelArrayList, CartListFragment.this);
         rvProductList.setAdapter(productListAdapter);
 
@@ -174,23 +183,36 @@ public class CartListFragment extends BaseFragment {
 
 
     public void addToCart(boolean addTocart, int position) {
+        ProductOrderModel productOrderModel = productListModelArrayList.get(position);
         if (addTocart) {
-            int totalKg = productListModelArrayList.get(position).getProductQuantity();
+            int totalKg = productOrderModel.getNumber();
             totalKg = totalKg + 1;
-            productListModelArrayList.get(position).setProductQuantity(totalKg);
+            productOrderModel.setNumber(totalKg);
 
         } else {
-            int totalKg = productListModelArrayList.get(position).getProductQuantity();
+            int totalKg = productOrderModel.getNumber();
 
             if (totalKg > 1) {
                 totalKg = totalKg - 1;
-                productListModelArrayList.get(position).setProductQuantity(totalKg);
+                productOrderModel.setNumber(totalKg);
             }
         }
 
         productListAdapter.notifyDataSetChanged();
-        tvTotalPrice.setText(getString(R.string.dolar) + getTotalPrice());
+        tvTotalPrice.setText(getTotalPrice() + getString(R.string.dolar));
 
+        //insert or update to db lite
+        int userId = GrocerApplication.getmInstance().getSharedPreferences().getInt(getString(R.string.preferances_userId), 0);
+        SqlDbHelpers sqlDbHelpers = new SqlDbHelpers(getActivity());
+        ProductOrderModel productOrderModel2 = sqlDbHelpers.getProductOrder(userId, productOrderModel.getProductId());
+
+        if(productOrderModel2 != null){
+            productOrderModel2.setNumber(productOrderModel.getNumber());
+            sqlDbHelpers.updateProductOrder(productOrderModel2);
+        }else {
+            productOrderModel2.setNumber(productOrderModel.getNumber());
+            sqlDbHelpers.addProductOrder(productOrderModel2);
+        }
     }
 
     /**

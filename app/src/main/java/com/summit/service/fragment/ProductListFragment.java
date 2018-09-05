@@ -18,10 +18,8 @@ import com.summit.service.adapter.ProductListAdapter;
 import com.summit.service.asyns.TaskDelegate;
 import com.summit.service.commons.Apis;
 import com.summit.service.dal.GetDataAsync;
-import com.summit.service.db.SqlDbHelpers;
+import com.summit.service.data.ProductOrderService;
 import com.summit.service.filters.ProductFilter;
-import com.summit.service.model.ConvertModelHelpers;
-import com.summit.service.model.order.ProductOrderModel;
 import com.summit.service.model.product.ProductItem;
 import com.summit.service.util.Utils;
 
@@ -183,18 +181,7 @@ public class ProductListFragment extends BaseFragment implements ProductListAdap
 
         //insert or update to db lite
         int userId = GrocerApplication.getmInstance().getSharedPreferences().getInt(getString(R.string.preferances_userId), 0);
-        SqlDbHelpers sqlDbHelpers = new SqlDbHelpers(getActivity());
-        ProductOrderModel productOrderModel = sqlDbHelpers.getProductOrder(userId, productItem.getId());
-
-        if(productOrderModel != null){
-            productOrderModel = ConvertModelHelpers.toProductOrderModel(productItem);
-            productOrderModel.setUserId(userId);
-            sqlDbHelpers.updateProductOrder(productOrderModel);
-        }else {
-            productOrderModel = ConvertModelHelpers.toProductOrderModel(productItem);
-            productOrderModel.setUserId(userId);
-            sqlDbHelpers.addProductOrder(productOrderModel);
-        }
+        ProductOrderService.addUpdateToProductOrderTable(getActivity(), userId, productItem);
 
         productListAdapter.notifyDataSetChanged();
 

@@ -16,8 +16,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.summit.service.Activity.MenuActivity;
+import com.summit.service.GrocerApplication;
 import com.summit.service.R;
 import com.summit.service.adapter.ProductPagerAdapter;
+import com.summit.service.data.ProductOrderService;
 import com.summit.service.helpers.TextViewHelpers;
 import com.summit.service.model.product.ProductItem;
 import com.summit.service.util.Utils;
@@ -157,7 +159,7 @@ public class ProductDetailsFragment extends BaseFragment {
             tvPrice.setText(productListModel.getPriceStr());
             tvDiscount.setText(productListModel.getDiscountStr());
             tvOldPrice.setText(productListModel.getOldPriceStr());
-            if(productListModel.getSaleOff().equals("null") || productListModel.getSaleOff().equals("")){
+            if(productListModel.getSaleOff() == null || productListModel.getSaleOff().equals("null") || productListModel.getSaleOff().equals("")){
                 lblSaleOff.setVisibility(View.GONE);
                 tvSaleOff.setVisibility(View.GONE);
             }else {
@@ -228,6 +230,10 @@ public class ProductDetailsFragment extends BaseFragment {
                 tvQuantity.setText(Integer.toString(totalBuyItem));
             }
         }
+
+        productListModel.setTotalItem(totalBuyItem);
+        int userId = GrocerApplication.getmInstance().getSharedPreferences().getInt(getString(R.string.preferances_userId), 0);
+        ProductOrderService.addUpdateToProductOrderTable(getActivity(), userId, productListModel);
     }
 
     @Override

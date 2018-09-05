@@ -7,10 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.squareup.picasso.Picasso;
 import com.summit.service.R;
 import com.summit.service.customecomponent.CustomTextView;
 import com.summit.service.fragment.CartListFragment;
 import com.summit.service.model.cart.CartlistModel;
+import com.summit.service.model.order.ProductOrderModel;
 
 import java.util.List;
 
@@ -31,12 +33,12 @@ import java.util.List;
 
 public class CartListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<CartlistModel> productModelList;
+    private List<ProductOrderModel> productModelList;
     private Context mContext;
     private CartListFragment orderListFragmentNew;
 
 
-    public CartListAdapter(final Context context, final List<CartlistModel> items, final CartListFragment fragment) {
+    public CartListAdapter(final Context context, final List<ProductOrderModel> items, final CartListFragment fragment) {
         this.productModelList = items;
         this.mContext = context;
         this.orderListFragmentNew = fragment;
@@ -60,13 +62,15 @@ public class CartListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        ((ViewHolderData) holder).bindData(productModelList.get(position), position);
+        if(productModelList != null) {
+            ((ViewHolderData) holder).bindData(productModelList.get(position), position);
+        }
     }
 
 
     @Override
     public int getItemCount() {
-        return productModelList.size();
+        return productModelList != null ? productModelList.size() : 0;
     }
 
 
@@ -98,15 +102,15 @@ public class CartListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         }
 
 
-        public void bindData(final CartlistModel item, final int position)
+        public void bindData(final ProductOrderModel item, final int position)
         {
 
-            tvProductName.setText("" + item.getProductName());
-            tvProductPrice.setText("$"+item.getProductPrice());
-            tvKg.setText(item.getKg());
-            tvTotalKg.setText(item.getProductQuantity() +mContext.getString(R.string.kg));
+            tvProductName.setText("" + item.getName());
+            tvProductPrice.setText("$"+item.getPrice());
+            tvKg.setText(item.getNumberStr());
+            tvTotalKg.setText(item.getNumberStr());
             itemView.setTag(item);
-            ivProImg.setImageDrawable(mContext.getResources().getDrawable(item.getProductImages()));
+            Picasso.get().load(item.getImg()).into(ivProImg);
 
 
             ivPlus.setOnClickListener(new View.OnClickListener() {

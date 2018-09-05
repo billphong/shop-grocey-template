@@ -23,7 +23,7 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
     // Table names
     private static final String TABLE_USER = "user";
     private static final String TABLE_PRODUCT_ORDER = "productorder";
-    private static final String TABLE_ORDER = "order";
+    private static final String TABLE_ORDER = "ordertb";
 
     // User Table Columns names
     private static final String COLUMN_USER_ID = "user_id";
@@ -62,7 +62,7 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
 
     //create table product order
     private String CREATE_PRODUCT_ORDER_TABLE = "CREATE TABLE " + TABLE_PRODUCT_ORDER + "("
-            + COLUMN_PRODUCT_ORDER_USER_ID + " INTEGER PRIMARY KEY,"
+            + COLUMN_PRODUCT_ORDER_USER_ID + " INTEGER,"
             + COLUMN_PRODUCT_ORDER_PRODUCT_ID + " INTEGER,"
             + COLUMN_PRODUCT_ORDER_NUMBER + " INTEGER,"
             + COLUMN_PRODUCT_ORDER_PRODUCT_NAME + " TEXT,"
@@ -74,7 +74,7 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
 
     //create table
     private String CREATE_ORDER_TABLE = "CREATE TABLE " + TABLE_ORDER + "("
-            + COLUMN_ORDER_USER_ID + " INTEGER PRIMARY KEY,"
+            + COLUMN_ORDER_USER_ID + " INTEGER,"
             + COLUMN_ORDER_PHONE + " TEXT,"
             + COLUMN_ORDER_INFO + " TEXT,"
             + COLUMN_ORDER_ADDRESS + " TEXT" + ")";

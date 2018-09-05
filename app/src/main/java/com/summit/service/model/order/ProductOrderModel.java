@@ -30,6 +30,10 @@ public class ProductOrderModel {
         return number;
     }
 
+    public String getNumberStr() {
+        return Integer.toString(number);
+    }
+
     public void setNumber(int number) {
         this.number = number;
     }
