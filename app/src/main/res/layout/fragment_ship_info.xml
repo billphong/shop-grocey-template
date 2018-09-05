@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.summit.service.comman.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_ship_info_llContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.summit.service.customecomponent.CustomEdittext
+                android:id="@+id/fragment_ship_info_etName"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:hint="@string/name"
+                android:digits="0123456789"
+                android:inputType="number"
+                style="@style/register_edittext"
+                app:font_name="UBUNTU-MEDIUM.TTF" />
+
+            <com.summit.service.customecomponent.CustomEdittext
+                android:id="@+id/fragment_ship_info_etPhone"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:hint="@string/phone"
+                android:digits="0123456789"
+                android:inputType="number"
+                style="@style/register_edittext"
+                app:font_name="UBUNTU-MEDIUM.TTF" />
+
+            <com.summit.service.customecomponent.CustomEdittext
+                android:id="@+id/fragment_ship_info_etAddress"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:hint="@string/address"
+                android:inputType="text"
+                style="@style/register_edittext"
+                app:font_name="UBUNTU-MEDIUM.TTF" />
+
+            <com.summit.service.customecomponent.CustomEdittext
+                android:layout_height="wrap_content"
+                android:id="@+id/fragment_ship_info_etInfo"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:hint="@string/info"
+                android:inputType="text"
+                style="@style/ship_info"
+                app:font_name="UBUNTU-MEDIUM.TTF"
+                android:lines="5"
+                android:maxLines="5"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_ship_info_rlOrder"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorPrimary">
+
+
+            <com.summit.service.customecomponent.CustomTextView
+                android:id="@+id/fragment_ship_info_tvOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_3sdp"
+                android:text="@string/order"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                app:font_name="UBUNTU-MEDIUM.TTF" />
+
+
+        </RelativeLayout>
+
+</com.summit.service.comman.SlidingLinearLayout>

@@ -134,7 +134,7 @@ public class CartListFragment extends BaseFragment {
     public void onClick(View v) {
 
         if (v == rlCheckOut) {
-            SelectAddressFragment cartFragment = new SelectAddressFragment();
+            ShipInfoFragment cartFragment = new ShipInfoFragment();
             Utils.addNextFragment(getActivity(), cartFragment, CartListFragment.this, true);
         }
     }
