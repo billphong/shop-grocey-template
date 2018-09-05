@@ -48,6 +48,14 @@
                 style="@style/ganaral_greystyle"
                 app:font_name="UBUNTU-MEDIUM.TTF" />
 
+            <com.summit.service.customecomponent.CustomTextView
+                android:id="@+id/row_cartlist_tvOldPrice"
+                style="@style/ganaral_primarystyle"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:textColor="@color/color_gray_light"
+                app:font_name="UBUNTU-MEDIUM.TTF"
+                />
 
         </LinearLayout>
 

@@ -1,6 +1,7 @@
 package com.summit.service.adapter;
 
 import android.content.Context;
+import android.graphics.Paint;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +12,6 @@ import com.squareup.picasso.Picasso;
 import com.summit.service.R;
 import com.summit.service.customecomponent.CustomTextView;
 import com.summit.service.fragment.CartListFragment;
-import com.summit.service.model.cart.CartlistModel;
 import com.summit.service.model.order.ProductOrderModel;
 
 import java.util.List;
@@ -78,7 +78,8 @@ public class CartListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
         private CustomTextView tvProductName;
         private CustomTextView tvProductPrice;
-        private CustomTextView tvKg;
+        private CustomTextView tvProductOldPrice;
+        private CustomTextView tvNumber;
         private CustomTextView tvTotalKg;
         private ImageView ivProImg;
         private ImageView ivPlus;
@@ -91,8 +92,10 @@ public class CartListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
             tvProductName = (CustomTextView) itemView.findViewById(R.id.row_cartlist_tvName);
             tvProductPrice = (CustomTextView) itemView.findViewById(R.id.row_cartlist_tvPrice);
+            tvProductOldPrice = (CustomTextView) itemView.findViewById(R.id.row_cartlist_tvOldPrice);
+            tvProductOldPrice.setPaintFlags(tvProductOldPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             tvTotalKg = (CustomTextView) itemView.findViewById(R.id.row_cartlist_tvTotalKg);
-            tvKg = (CustomTextView) itemView.findViewById(R.id.row_cartlist_tvKg);
+            tvNumber = (CustomTextView) itemView.findViewById(R.id.row_cartlist_tvKg);
             ivProImg = (ImageView) itemView.findViewById(R.id.row_cartlist_ivProImg);
             ivPlus = (ImageView) itemView.findViewById(R.id.row_cartlist_ivPlus);
             ivMins = (ImageView) itemView.findViewById(R.id.row_cartlist_ivMins);
@@ -106,8 +109,9 @@ public class CartListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         {
 
             tvProductName.setText("" + item.getName());
-            tvProductPrice.setText("$"+item.getPrice());
-            tvKg.setText(item.getNumberStr());
+            tvProductPrice.setText(item.getPrice() + " đ");
+            tvProductOldPrice.setText(item.getOldPrice() + " đ");
+            tvNumber.setText(item.getNumberStr());
             tvTotalKg.setText(item.getNumberStr());
             itemView.setTag(item);
             Picasso.get().load(item.getImg()).into(ivProImg);

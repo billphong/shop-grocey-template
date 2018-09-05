@@ -41,6 +41,12 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+
+    }
+
+    @Override
     public void onClick(View v) {
 
 

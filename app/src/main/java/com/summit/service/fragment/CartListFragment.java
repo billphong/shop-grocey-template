@@ -88,7 +88,7 @@ public class CartListFragment extends BaseFragment {
         rlCheckOut.setOnClickListener(this);
 
         getListData();
-        tvTotalPrice.setText(getString(R.string.dolar) + getTotalPrice());
+        tvTotalPrice.setText(getTotalPrice() + " " + getString(R.string.dolar));
     }
 
     private int getTotalPrice() {

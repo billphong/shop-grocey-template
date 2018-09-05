@@ -104,20 +104,20 @@
 
 
     <!--Navigation slidemenu string-->
-    <string name="nav_menu_home">Home</string>
-    <string name="nav_menu_my_cart">My Cart</string>
+    <string name="nav_menu_home">Trang chủ</string>
+    <string name="nav_menu_my_cart">Giỏ hàng</string>
     <string name="nav_menu_my_address">My Address</string>
     <string name="nav_menu_my_order">My Order</string>
-    <string name="nav_menu_about_us">About Us</string>
+    <string name="nav_menu_about_us">Về chúng tôi</string>
     <string name="nav_menu_rate_us">Rate Us</string>
-    <string name="nav_menu_logout">Logout</string>
-    <string name="nav_menu_share">Share</string>
+    <string name="nav_menu_logout">Đăng xuất</string>
+    <string name="nav_menu_share">Chia sẻ</string>
     <string name="nav_menu_notification">Notification</string>
 
 
     <!--All lable-->
-    <string name="check_out_now">Check Out Now</string>
-    <string name="your_cart_is_empty">Your cart is empty!</string>
+    <string name="check_out_now">Thanh toán</string>
+    <string name="your_cart_is_empty">Giở hàng trống!</string>
     <string name="shipped">Shipped</string>
     <string name="order">Order</string>
     <string name="name">Name :</string>
@@ -142,7 +142,7 @@
     <string name="lio_jorge">Lio Jorge</string>
     <string name="lio_jorge_gmail_com">lio.jorge@gmail.com</string>
     <string name="profile">Profile</string>
-    <string name="sub_total">Sub Total</string>
+    <string name="sub_total">Tổng tiền</string>
     <string name="select_address">Select Address</string>
     <string name="fresh_fruits_veggies"><![CDATA[Fresh fruits & Veggies]]></string>
     <string name="delivered_to_your_home">Delivered to your home</string>

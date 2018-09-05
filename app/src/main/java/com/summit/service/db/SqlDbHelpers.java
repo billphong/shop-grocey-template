@@ -503,6 +503,7 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
         user.setProductId(cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_ID)));
         user.setDiscount(cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_DISCOUNT)));
         user.setOldPrice(cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_OLDPRICE)));
+        user.setNumber(cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_NUMBER)));
         return user;
     }
 
