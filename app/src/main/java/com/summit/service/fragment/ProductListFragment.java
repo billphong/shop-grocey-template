@@ -115,7 +115,7 @@ public class ProductListFragment extends BaseFragment implements ProductListAdap
             public boolean onMenuItemClick(MenuItem item) {
                 Utils.hideKeyboard(getActivity());
                 CartListFragment fragmentProductDetails = new CartListFragment();
-                fragmentProductDetails.setTargetFragment(ProductListFragment.this, 222);
+                //fragmentProductDetails.setTargetFragment(ProductListFragment.this, 222);
                 Utils.addNextFragment(getActivity(), fragmentProductDetails, ProductListFragment.this, false);
 
                 return true;

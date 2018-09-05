@@ -25,6 +25,7 @@ import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import android.os.Build;
 
 
 /**
@@ -168,8 +169,12 @@ public class Utils {
      */
 
     public static void addNextFragment(Activity mActivity, Fragment targetedFragment, Fragment shooterFragment, boolean isDownToUp) {
-        final FragmentTransaction transaction = mActivity.getFragmentManager().beginTransaction();
+        FragmentTransaction transaction = null;//mActivity.getFragmentManager().beginTransaction();
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+            transaction = mActivity.getFragmentManager().beginTransaction();
+        else
+            transaction = shooterFragment.getChildFragmentManager().beginTransaction();
 
         if (isDownToUp) {
             transaction.setCustomAnimations(R.animator.slide_fragment_vertical_right_in, R.animator.slide_fragment_vertical_left_out, R.animator.slide_fragment_vertical_left_in,
