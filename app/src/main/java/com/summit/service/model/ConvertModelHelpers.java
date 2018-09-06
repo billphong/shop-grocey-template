@@ -19,7 +19,7 @@ public class ConvertModelHelpers {
         }else{
             orderModel.setPrice(item.getOldPrice());
         }
-        //orderModel.setUserId(GrocerApplication.getmInstance().getSharedPreferences().getInt("user_id", 0));
+        //orderModel.setUserID(GrocerApplication.getmInstance().getSharedPreferences().getInt("user_id", 0));
         return orderModel;
     }
 }

@@ -6,10 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.summit.service.Activity.LoginActivity;
 import com.summit.service.Activity.MenuActivity;
 import com.summit.service.GrocerApplication;
 import com.summit.service.R;
@@ -91,10 +89,10 @@ public class ShipInfoFragment extends BaseFragment {
 
     private OrderModel getOrderModelFromView(){
         OrderModel orderModel = new OrderModel();
-        orderModel.setAddress(etAddress.getText().toString().trim());
-        orderModel.setPhone(etPhone.getText().toString().trim());
-        orderModel.setInfo(etInfo.getText().toString().trim());
-        orderModel.setUserId(GrocerApplication.getmInstance().getSharedPreferences().getInt(getString(R.string.preferances_userId), 0));
+        orderModel.setShipAddress(etAddress.getText().toString().trim());
+        orderModel.setShipPhone(etPhone.getText().toString().trim());
+        orderModel.setShipInfo(etInfo.getText().toString().trim());
+        orderModel.setUserID(GrocerApplication.getmInstance().getSharedPreferences().getInt(getString(R.string.preferances_userId), 0));
         return orderModel;
     }
 }

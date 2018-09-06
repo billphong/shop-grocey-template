@@ -28,9 +28,9 @@
     <string name="confirm_password">Xác nhận mật khẩu</string>
     <string name="already_have_account">Bạn đã có tài khoản?</string>
     <string name="user_name">Tên</string>
-    <string name="phone">Số điện thoại</string>
-    <string name="address">Địa chỉ</string>
-    <string name="info">Ghi chú</string>
+    <string name="shipPhone">Số điện thoại</string>
+    <string name="shipAddress">Địa chỉ</string>
+    <string name="shipInfo">Ghi chú</string>
     <string name="btn_signin">Đăng nhập</string>
     <string name="btn_signup">Đăng ký</string>
     <string name="forgot_password">Quên mật khẩu</string>
@@ -83,14 +83,14 @@
 
 
 
-    <!-- product detail & Add address string-->
+    <!-- product detail & Add shipAddress string-->
     <string name="home_delivery">Home Delivery</string>
     <string name="address_line_1">Address Line 1</string>
     <string name="address_line_2">Address line 2</string>
     <string name="your_email">Your email</string>
     <string name="your_full_name">Your full name</string>
     <string name="your_mobile_number">Your mobile number</string>
-    <string name="save_this_address_as">Save this address as</string>
+    <string name="save_this_address_as">Save this shipAddress as</string>
 
 
     <!-- Login screen facebook & google string  -->

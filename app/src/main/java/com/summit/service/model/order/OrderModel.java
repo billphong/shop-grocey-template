@@ -1,40 +1,40 @@
 package com.summit.service.model.order;
 
 public class OrderModel {
-    private int userId;
-    private String phone;
-    private String info;
-    private String address;
+    private int UserID;
+    private String ShipPhone;
+    private String ShipInfo;
+    private String ShipAddress;
 
-    public int getUserId() {
-        return userId;
+    public int getUserID() {
+        return UserID;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUserID(int userID) {
+        this.UserID = userID;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getShipPhone() {
+        return ShipPhone;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setShipPhone(String shipPhone) {
+        this.ShipPhone = shipPhone;
     }
 
-    public String getInfo() {
-        return info;
+    public String getShipInfo() {
+        return ShipInfo;
     }
 
-    public void setInfo(String info) {
-        this.info = info;
+    public void setShipInfo(String shipInfo) {
+        this.ShipInfo = shipInfo;
     }
 
-    public String getAddress() {
-        return address;
+    public String getShipAddress() {
+        return ShipAddress;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setShipAddress(String shipAddress) {
+        this.ShipAddress = shipAddress;
     }
 }

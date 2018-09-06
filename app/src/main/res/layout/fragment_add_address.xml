@@ -48,7 +48,7 @@
                     android:layout_marginTop="@dimen/_17sdp"
                     style="@style/register_edittext"
                     android:hint="@string/your_mobile_number"
-                    android:inputType="phone"
+                    android:inputType="shipPhone"
                     app:font_name="UBUNTU-MEDIUM.TTF" />
                 
 

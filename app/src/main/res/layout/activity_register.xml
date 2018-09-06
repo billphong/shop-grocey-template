@@ -63,7 +63,7 @@
         <com.summit.service.customecomponent.CustomEdittext
             android:id="@+id/activity_register_etPhone"
             android:layout_marginTop="@dimen/_13sdp"
-            android:hint="@string/phone"
+            android:hint="@string/shipPhone"
             android:digits="0123456789"
             android:inputType="number"
             style="@style/register_edittext"
@@ -72,7 +72,7 @@
         <com.summit.service.customecomponent.CustomEdittext
             android:id="@+id/activity_register_etAddress"
             android:layout_marginTop="@dimen/_13sdp"
-            android:hint="@string/address"
+            android:hint="@string/shipAddress"
             android:inputType="text"
             style="@style/register_edittext"
             app:font_name="UBUNTU-MEDIUM.TTF" />
