@@ -17,12 +17,8 @@ import com.summit.service.Activity.MenuActivity;
 import com.summit.service.GrocerApplication;
 import com.summit.service.R;
 import com.summit.service.adapter.CartListAdapter;
-import com.summit.service.data.TempListData;
 import com.summit.service.db.SqlDbHelpers;
-import com.summit.service.model.ConvertModelHelpers;
-import com.summit.service.model.cart.CartlistModel;
 import com.summit.service.model.order.ProductOrderModel;
-import com.summit.service.model.product.ProductItem;
 import com.summit.service.util.Utils;
 
 import java.util.List;
@@ -135,6 +131,7 @@ public class CartListFragment extends BaseFragment {
 
         if (v == rlCheckOut) {
             ShipInfoFragment cartFragment = new ShipInfoFragment();
+            cartFragment.setTargetFragment(CartListFragment.this, 222);
             Utils.addNextFragment(getActivity(), cartFragment, CartListFragment.this, true);
         }
     }
@@ -204,7 +201,7 @@ public class CartListFragment extends BaseFragment {
         //insert or update to db lite
         int userId = GrocerApplication.getmInstance().getSharedPreferences().getInt(getString(R.string.preferances_userId), 0);
         SqlDbHelpers sqlDbHelpers = new SqlDbHelpers(getActivity());
-        ProductOrderModel productOrderModel2 = sqlDbHelpers.getProductOrder(userId, productOrderModel.getProductId());
+        ProductOrderModel productOrderModel2 = sqlDbHelpers.getProductOrder(userId, productOrderModel.getProductID());
 
         if(productOrderModel2 != null){
             productOrderModel2.setNumber(productOrderModel.getNumber());

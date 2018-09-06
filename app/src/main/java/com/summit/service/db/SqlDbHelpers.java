@@ -426,7 +426,7 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
 
         // updating row
         db.update(TABLE_PRODUCT_ORDER, values, COLUMN_PRODUCT_ORDER_USER_ID + " = ? AND " + COLUMN_PRODUCT_ORDER_PRODUCT_ID + " =? ",
-                new String[]{String.valueOf(productOrderModel.getUserId()), String.valueOf(productOrderModel.getProductId())});
+                new String[]{String.valueOf(productOrderModel.getUserID()), String.valueOf(productOrderModel.getProductID())});
         db.close();
     }
 
@@ -497,10 +497,10 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
 
     private ProductOrderModel productOrderFromCursor(Cursor cursor){
         ProductOrderModel user = new ProductOrderModel();
-        user.setUserId(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_USER_ID))));
+        user.setUserID(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_USER_ID))));
         user.setImg(cursor.getString(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_IMG)));
         user.setName(cursor.getString(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_NAME)));
-        user.setProductId(cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_ID)));
+        user.setProductID(cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_ID)));
         int discount = cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_DISCOUNT));
         int oldPrice = cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_OLDPRICE));
         user.setDiscount(discount);
@@ -516,8 +516,8 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
 
     private ContentValues contentValuesFromProductModel(ProductOrderModel productOrderModel){
         ContentValues values = new ContentValues();
-        values.put(COLUMN_PRODUCT_ORDER_USER_ID, productOrderModel.getUserId());
-        values.put(COLUMN_PRODUCT_ORDER_PRODUCT_ID, productOrderModel.getProductId());
+        values.put(COLUMN_PRODUCT_ORDER_USER_ID, productOrderModel.getUserID());
+        values.put(COLUMN_PRODUCT_ORDER_PRODUCT_ID, productOrderModel.getProductID());
         values.put(COLUMN_PRODUCT_ORDER_NUMBER, productOrderModel.getNumber());
         values.put(COLUMN_PRODUCT_ORDER_PRODUCT_DISCOUNT, productOrderModel.getDiscount());
         values.put(COLUMN_PRODUCT_ORDER_PRODUCT_IMG, productOrderModel.getImg());

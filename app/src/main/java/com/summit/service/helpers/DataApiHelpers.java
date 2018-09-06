@@ -3,17 +3,22 @@ package com.summit.service.helpers;
 import android.content.Context;
 import android.util.Log;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.MapType;
 import com.fasterxml.jackson.databind.type.TypeFactory;
 import com.summit.service.asyns.VolleyCallback;
+import com.summit.service.asyns.VolleyJsonCallback;
 import com.summit.service.commons.RequestQueueSingleton;
 import com.summit.service.filters.BaseFilter;
+
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -125,6 +130,45 @@ public class DataApiHelpers {
                 Map<String, String>  params = objectMapper.convertValue(t, type);
 
                 return params;
+            }
+        };
+
+        RequestQueueSingleton.getInstance(context).addToRequestQueue(postRequest);
+    }
+
+    public static <T> void PostJson(Context context, String urlApi, final JSONObject t, final VolleyJsonCallback callback){
+
+        JsonObjectRequest postRequest = new JsonObjectRequest (Request.Method.POST, urlApi, t,
+                new Response.Listener<JSONObject>()
+                {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        // response
+                        Log.d("Response", response.toString());
+                        if(callback != null){
+                            callback.onSuccess(response);
+                        }
+                    }
+                },
+                new Response.ErrorListener()
+                {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        // error
+                        if(error != null) {
+                            //Log.d("Error.Response", error.getMessage());
+                        }
+                        if(callback != null){
+                            callback.onError(error);
+                        }
+                    }
+                }
+        ) {
+            @Override
+            public Map<String, String> getHeaders() throws AuthFailureError {
+                HashMap<String, String> headers = new HashMap<String, String>();
+                headers.put("Content-Type", "application/json; charset=utf-8");
+                return headers;
             }
         };
 

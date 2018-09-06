@@ -1,80 +1,80 @@
 package com.summit.service.model.order;
 
 public class ProductOrderModel {
-    private int userId;
-    private int productId;
-    private int number;
-    private int price;
-    private int oldPrice;
-    private int discount;
-    private String name;
-    private String img;
+    private int UserID;
+    private int ProductID;
+    private int Number;
+    private int Price;
+    private int OldPrice;
+    private int Discount;
+    private String Name;
+    private String Img;
 
-    public int getUserId() {
-        return userId;
+    public int getUserID() {
+        return UserID;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUserID(int userID) {
+        this.UserID = userID;
     }
 
-    public int getProductId() {
-        return productId;
+    public int getProductID() {
+        return ProductID;
     }
 
-    public void setProductId(int productId) {
-        this.productId = productId;
+    public void setProductID(int productID) {
+        this.ProductID = productID;
     }
 
     public int getNumber() {
-        return number;
+        return Number;
     }
 
     public String getNumberStr() {
-        return Integer.toString(number);
+        return Integer.toString(Number);
     }
 
     public void setNumber(int number) {
-        this.number = number;
+        this.Number = number;
     }
 
     public int getPrice() {
-        return price;
+        return Price;
     }
 
     public void setPrice(int price) {
-        this.price = price;
+        this.Price = price;
     }
 
     public int getOldPrice() {
-        return oldPrice;
+        return OldPrice;
     }
 
     public void setOldPrice(int oldPrice) {
-        this.oldPrice = oldPrice;
+        this.OldPrice = oldPrice;
     }
 
     public int getDiscount() {
-        return discount;
+        return Discount;
     }
 
     public void setDiscount(int discount) {
-        this.discount = discount;
+        this.Discount = discount;
     }
 
     public String getName() {
-        return name;
+        return Name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.Name = name;
     }
 
     public String getImg() {
-        return img;
+        return Img;
     }
 
     public void setImg(String img) {
-        this.img = img;
+        this.Img = img;
     }
 }

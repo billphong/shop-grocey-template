@@ -8,13 +8,27 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.android.volley.VolleyError;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.summit.service.Activity.MenuActivity;
 import com.summit.service.GrocerApplication;
 import com.summit.service.R;
+import com.summit.service.asyns.VolleyCallback;
+import com.summit.service.asyns.VolleyJsonCallback;
+import com.summit.service.commons.Apis;
 import com.summit.service.db.SqlDbHelpers;
+import com.summit.service.helpers.DataApiHelpers;
 import com.summit.service.model.order.OrderModel;
+import com.summit.service.model.order.ProductOrderModel;
 import com.summit.service.model.user.UserModel;
 import com.summit.service.util.Utils;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.List;
 
 public class ShipInfoFragment extends BaseFragment {
 
@@ -26,6 +40,8 @@ public class ShipInfoFragment extends BaseFragment {
     private TextView tvOrder;
 
     private OrderModel orderModel;
+    private List<ProductOrderModel> lsProductOrderMode;
+    private int userId;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -47,6 +63,13 @@ public class ShipInfoFragment extends BaseFragment {
         etInfo = (EditText) rootView.findViewById(R.id.fragment_ship_info_etInfo);
         tvOrder = (TextView) rootView.findViewById(R.id.fragment_ship_info_tvOrder);
 
+        tvOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                submitForm();
+            }
+        });
+
         getData();
     }
 
@@ -62,15 +85,15 @@ public class ShipInfoFragment extends BaseFragment {
             etPhone.setText(userModel.getPhone());
             etAddress.setText(userModel.getAddress());
         }
+        userId = GrocerApplication.getmInstance().getSharedPreferences().getInt(getString(R.string.preferances_userId), 0);
     }
 
     @Override
     public void onClick(View v) {
-        super.onClick(v);
 
         if(v == tvOrder){
-            //call api save order
-
+//            //call api save order
+//            submitForm();
         }
     }
 
@@ -82,8 +105,36 @@ public class ShipInfoFragment extends BaseFragment {
         } else if (etAddress.getText().toString().trim().isEmpty()) {
             Utils.snackbar(llContainer, getString(R.string.val_enter_address), true, getActivity());
         } else {
-
             orderModel = getOrderModelFromView();
+            lsProductOrderMode = new SqlDbHelpers(getActivity()).getProductOrderByUserId(userId);
+
+            try {
+                ObjectMapper mapper = new ObjectMapper();
+                JSONObject json = new JSONObject();
+                json.put("order", new JSONObject(mapper.writeValueAsString(orderModel)));
+                json.put("productOrder", new JSONArray(mapper.writeValueAsString(lsProductOrderMode)));
+
+                LoadingDialog().show();
+                DataApiHelpers.PostJson(getActivity().getApplicationContext(), Apis.ORDER_API, json, new VolleyJsonCallback() {
+
+                    @Override
+                    public void onSuccess(Object result) {
+                        LoadingDialog().dismiss();
+                    }
+
+                    @Override
+                    public void onError(VolleyError error) {
+                        LoadingDialog().dismiss();
+                        if(error != null && error.getMessage() != null){
+                            Utils.snackbar(llContainer, error.getMessage(), true, getActivity());
+                        }
+                    }
+                });
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (JsonProcessingException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -92,7 +143,7 @@ public class ShipInfoFragment extends BaseFragment {
         orderModel.setShipAddress(etAddress.getText().toString().trim());
         orderModel.setShipPhone(etPhone.getText().toString().trim());
         orderModel.setShipInfo(etInfo.getText().toString().trim());
-        orderModel.setUserID(GrocerApplication.getmInstance().getSharedPreferences().getInt(getString(R.string.preferances_userId), 0));
+        orderModel.setUserID(userId);
         return orderModel;
     }
 }

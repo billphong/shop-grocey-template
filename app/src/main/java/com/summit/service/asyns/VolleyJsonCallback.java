@@ -2,8 +2,7 @@ package com.summit.service.asyns;
 
 import com.android.volley.VolleyError;
 
-public interface VolleyCallback {
-    void onSuccess(String result);
+public interface VolleyJsonCallback {
+    void onSuccess(Object result);
     void onError(VolleyError error);
 }
-

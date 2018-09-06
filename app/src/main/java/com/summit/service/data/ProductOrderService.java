@@ -2,8 +2,6 @@ package com.summit.service.data;
 
 import android.content.Context;
 
-import com.summit.service.GrocerApplication;
-import com.summit.service.R;
 import com.summit.service.db.SqlDbHelpers;
 import com.summit.service.model.ConvertModelHelpers;
 import com.summit.service.model.order.ProductOrderModel;
@@ -16,11 +14,11 @@ public class ProductOrderService {
 
         if(productOrderModel != null){
             productOrderModel = ConvertModelHelpers.toProductOrderModel(productItem);
-            productOrderModel.setUserId(userId);
+            productOrderModel.setUserID(userId);
             sqlDbHelpers.updateProductOrder(productOrderModel);
         }else {
             productOrderModel = ConvertModelHelpers.toProductOrderModel(productItem);
-            productOrderModel.setUserId(userId);
+            productOrderModel.setUserID(userId);
             sqlDbHelpers.addProductOrder(productOrderModel);
         }
     }
