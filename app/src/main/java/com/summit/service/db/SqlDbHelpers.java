@@ -425,8 +425,8 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
         ContentValues values = contentValuesFromProductModel(productOrderModel);
 
         // updating row
-        db.update(TABLE_PRODUCT_ORDER, values, COLUMN_PRODUCT_ORDER_USER_ID + " = ?",
-                new String[]{String.valueOf(productOrderModel.getUserId())});
+        db.update(TABLE_PRODUCT_ORDER, values, COLUMN_PRODUCT_ORDER_USER_ID + " = ? AND " + COLUMN_PRODUCT_ORDER_PRODUCT_ID + " =? ",
+                new String[]{String.valueOf(productOrderModel.getUserId()), String.valueOf(productOrderModel.getProductId())});
         db.close();
     }
 
@@ -501,8 +501,15 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
         user.setImg(cursor.getString(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_IMG)));
         user.setName(cursor.getString(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_NAME)));
         user.setProductId(cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_ID)));
-        user.setDiscount(cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_DISCOUNT)));
-        user.setOldPrice(cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_OLDPRICE)));
+        int discount = cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_DISCOUNT));
+        int oldPrice = cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_PRODUCT_OLDPRICE));
+        user.setDiscount(discount);
+        user.setOldPrice(oldPrice);
+        if(discount > 0){
+            user.setPrice(oldPrice * (100 - discount) / 100);
+        }else{
+            user.setPrice(oldPrice);
+        }
         user.setNumber(cursor.getInt(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_NUMBER)));
         return user;
     }
