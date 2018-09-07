@@ -137,6 +137,8 @@ public class ShipInfoFragment extends BaseFragment {
                             Utils.addNextFragment(getActivity(), new MainFragment(), ShipInfoFragment.this, false, false);
                             Toast.makeText(getActivity(), R.string.your_order_successfully, Toast.LENGTH_SHORT).show();
                             Utils.clearBackStack(getActivity(), ShipInfoFragment.this);
+                            SqlDbHelpers sqlDbHelpers = new SqlDbHelpers(getActivity());
+                            sqlDbHelpers.deleteAllProductOrder();
                         } catch (Exception e) {
                             e.printStackTrace();
                         }

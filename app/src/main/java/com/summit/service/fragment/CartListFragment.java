@@ -196,7 +196,7 @@ public class CartListFragment extends BaseFragment {
         }
 
         productListAdapter.notifyDataSetChanged();
-        tvTotalPrice.setText(getTotalPrice() + getString(R.string.dolar));
+        tvTotalPrice.setText(getTotalPrice() + " " + getString(R.string.dolar));
 
         //insert or update to db lite
         int userId = GrocerApplication.getmInstance().getSharedPreferences().getInt(getString(R.string.preferances_userId), 0);
@@ -217,13 +217,19 @@ public class CartListFragment extends BaseFragment {
      */
 
     public void deleteItem(int position) {
+        ProductOrderModel productOrderModel = productListModelArrayList.get(position);
         productListModelArrayList.remove(position);
         productListAdapter.notifyDataSetChanged();
-        tvTotalPrice.setText(getString(R.string.dolar) + getTotalPrice());
+        tvTotalPrice.setText(getTotalPrice() + " " + getString(R.string.dolar));
 
         if (productListModelArrayList.size() == 0) {
             rlEmpty.setVisibility(View.VISIBLE);
             rvProductList.setVisibility(View.GONE);
         }
+
+        int userId = GrocerApplication.getmInstance().getSharedPreferences().getInt(getString(R.string.preferances_userId), 0);
+        SqlDbHelpers sqlDbHelpers = new SqlDbHelpers(getActivity());
+        sqlDbHelpers.deleteProductOrder(userId, productOrderModel.getProductID());
+
     }
 }

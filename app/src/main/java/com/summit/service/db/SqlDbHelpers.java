@@ -495,6 +495,19 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
         return prOrList;
     }
 
+    public void deleteProductOrder(int userId, int productId){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_PRODUCT_ORDER, COLUMN_PRODUCT_ORDER_USER_ID + " = ? AND " + COLUMN_PRODUCT_ORDER_PRODUCT_ID + " =? "
+                , new String[]{Integer.toString(userId), Integer.toString(productId)});
+        db.close();
+    }
+
+    public void deleteAllProductOrder(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_PRODUCT_ORDER, null, null);
+        db.close();
+    }
+
     private ProductOrderModel productOrderFromCursor(Cursor cursor){
         ProductOrderModel user = new ProductOrderModel();
         user.setUserID(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_PRODUCT_ORDER_USER_ID))));
