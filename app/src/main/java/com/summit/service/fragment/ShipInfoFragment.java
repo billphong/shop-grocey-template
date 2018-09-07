@@ -130,7 +130,10 @@ public class ShipInfoFragment extends BaseFragment {
                     public void onSuccess(Object result) {
                         LoadingDialog().dismiss();
                         Toast.makeText(getActivity(), R.string.your_order_successfully, Toast.LENGTH_SHORT).show();
-                        getFragmentManager().popBackStack(MainFragment.class.getName(), FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                        //getFragmentManager().popBackStack(MainFragment.class.getName(), FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                        Utils.clearBackStack(getActivity(), ShipInfoFragment.this);
+                        
+                        Utils.addNextFragment(getActivity(), new MainFragment(), ShipInfoFragment.this, false, false);
                     }
 
                     @Override

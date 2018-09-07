@@ -35,8 +35,8 @@
       <file leaf-file-name="ShipInfoFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ShipInfoFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="109" column="68" lean-forward="false" selection-start-line="109" selection-start-column="68" selection-end-line="109" selection-end-column="68" />
+            <state relative-caret-position="588">
+              <caret line="134" column="24" lean-forward="false" selection-start-line="134" selection-start-column="24" selection-end-line="134" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2471#2620#0" expanded="true" />
@@ -49,7 +49,7 @@
                 <element signature="e#4211#4244#0" expanded="true" />
                 <element signature="e#4497#4534#0" expanded="true" />
                 <element signature="e#5416#5448#0" expanded="true" />
-                <element signature="e#5890#5925#0" expanded="true" />
+                <element signature="e#6120#6155#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -65,39 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SqlDbHelpers.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/db/SqlDbHelpers.java">
+      <file leaf-file-name="CartListFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/CartListFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="461" column="24" lean-forward="false" selection-start-line="461" selection-start-column="24" selection-end-line="461" selection-end-column="24" />
-              <folding>
-                <element signature="docComment;method#SqlDbHelpers#0;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="method#onCreate#0;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="method#onUpgrade#0;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="docComment;method#addUser#0;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="method#getFirstUser#0;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="docComment;method#getAllUser#0;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="method#getAllUser#0;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="docComment;method#updateUser#0;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="method#updateUser#0;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="docComment;method#deleteUser#0;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="method#deleteUser#0;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="method#deleteAllUser#0;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="docComment;method#checkUser#0;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="method#checkUser#0;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="docComment;method#checkUser#1;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="method#checkUser#1;class#SqlDbHelpers#0" expanded="false" />
-                <element signature="method#userFromCursor#0;class#SqlDbHelpers#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductOrderModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/model/order/ProductOrderModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="601">
+              <caret line="134" column="52" lean-forward="false" selection-start-line="134" selection-start-column="52" selection-end-line="134" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -126,56 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CartListAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/adapter/CartListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="33" column="20" lean-forward="false" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1703#1704#0" expanded="true" />
-                <element signature="e#1757#1758#0" expanded="true" />
-                <element signature="class#ViewHolderData#0;class#CartListAdapter#0" expanded="false" />
-                <element signature="method#ViewHolderData#0;class#ViewHolderData#0;class#CartListAdapter#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/Activity/LoginActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="161" column="62" lean-forward="false" selection-start-line="161" selection-start-column="62" selection-end-line="161" selection-end-column="62" />
-              <folding>
-                <element signature="docComment;class#LoginActivity#0" expanded="false" />
-                <element signature="docComment;method#initComponents#0;class#LoginActivity#0" expanded="false" />
-                <element signature="docComment;method#submitForm#0;class#LoginActivity#0" expanded="false" />
-                <element signature="e#3501#3544#0" expanded="false" />
-                <element signature="e#6234#6269#0" expanded="true" />
-                <element signature="docComment;method#onClick#0;class#LoginActivity#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/Activity/RegisterActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="129" column="76" lean-forward="false" selection-start-line="129" selection-start-column="63" selection-end-line="129" selection-end-column="76" />
-              <folding>
-                <element signature="e#7677#7712#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/util/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="192" column="30" lean-forward="false" selection-start-line="192" selection-start-column="30" selection-end-line="192" selection-end-column="30" />
+            <state relative-caret-position="408">
+              <caret line="188" column="89" lean-forward="false" selection-start-line="188" selection-start-column="89" selection-end-line="188" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -2273,7 +2200,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/model/ConvertModelHelpers.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/row_cart_list_new.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/adapter/CartListAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/util/Utils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ProductListFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_payment.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
@@ -2289,6 +2215,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/Activity/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_ship_info.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/util/Utils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ShipInfoFragment.java" />
       </list>
     </option>
@@ -2369,6 +2296,13 @@
               <item name="service" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shop-grocey-template" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="service" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="shop-grocey-template" type="1abcf292:AndroidViewProjectNode" />
@@ -2591,7 +2525,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39844617" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39844617" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2614,20 +2548,8 @@
           <properties />
           <option name="timeStamp" value="57" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ShipInfoFragment.java</url>
-          <line>130</line>
-          <properties />
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ShipInfoFragment.java</url>
-          <line>137</line>
-          <properties />
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="64" />
+      <option name="time" value="66" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
@@ -2650,6 +2572,16 @@
       </expression>
     </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>matcher.matches()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>number.length()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>(int)obj.getDouble(&quot;Discount&quot;)</expression-string>
         <language-id>JAVA</language-id>
@@ -2685,62 +2617,9 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>TextUtils.isEmpty(response)</expression-string>
-        <language-id>JAVA</language-id>
-        <custom-info>android.text.TextUtils</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>String a = null; boolean b = a == response;</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/adapter/SubCategoryPagerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_cart_list.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="74" column="57" lean-forward="false" selection-start-line="74" selection-start-column="57" selection-end-line="74" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/helpers/TextViewHelpers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-27/android.jar!/android/app/Fragment.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="99" column="41" lean-forward="false" selection-start-line="99" selection-start-column="41" selection-end-line="99" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-27/android.jar!/android/view/View.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="330" column="35" lean-forward="false" selection-start-line="330" selection-start-column="35" selection-end-line="330" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/27.1.1/21d073509c5f8d25a1bf274067fa729a1fba8d75/appcompat-v7-27.1.1-sources.jar!/android/support/v7/view/menu/ActionMenuItemView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -3075,22 +2954,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/CartListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="133" column="71" lean-forward="false" selection-start-line="133" selection-start-column="71" selection-end-line="133" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/adapter/CartListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="33" column="20" lean-forward="false" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1703#1704#0" expanded="true" />
-            <element signature="e#1757#1758#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1703#1704#0" expanded="false" />
+            <element signature="e#1757#1758#0" expanded="false" />
             <element signature="class#ViewHolderData#0;class#CartListAdapter#0" expanded="false" />
             <element signature="method#ViewHolderData#0;class#ViewHolderData#0;class#CartListAdapter#0" expanded="false" />
           </folding>
@@ -3106,17 +2977,9 @@
             <element signature="docComment;method#initComponents#0;class#LoginActivity#0" expanded="false" />
             <element signature="docComment;method#submitForm#0;class#LoginActivity#0" expanded="false" />
             <element signature="e#3501#3544#0" expanded="false" />
-            <element signature="e#6234#6269#0" expanded="true" />
+            <element signature="e#6234#6269#0" expanded="false" />
             <element signature="docComment;method#onClick#0;class#LoginActivity#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/Activity/MenuActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="119" column="16" lean-forward="false" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3124,14 +2987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/util/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="192" column="30" lean-forward="false" selection-start-line="192" selection-start-column="30" selection-end-line="192" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -3160,15 +3015,111 @@
         <state relative-caret-position="363">
           <caret line="129" column="76" lean-forward="false" selection-start-line="129" selection-start-column="63" selection-end-line="129" selection-end-column="76" />
           <folding>
-            <element signature="e#7677#7712#0" expanded="true" />
+            <element signature="e#7677#7712#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-27/android.jar!/android/app/Activity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-27/android.jar!/android/app/Fragment.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="127" column="33" lean-forward="false" selection-start-line="127" selection-start-column="33" selection-end-line="127" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-27/android.jar!/android/widget/EditText.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="47" column="31" lean-forward="false" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+          <folding>
+            <marker date="1527666843969" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1527666843969" expanded="false" signature="138:354" ph="..." />
+            <marker date="1527666843969" expanded="true" signature="434:542" ph="{...}" />
+            <marker date="1527666843969" expanded="true" signature="601:709" ph="{...}" />
+            <marker date="1527666843969" expanded="true" signature="786:894" ph="{...}" />
+            <marker date="1527666843969" expanded="true" signature="988:1096" ph="{...}" />
+            <marker date="1527666843969" expanded="false" signature="1133:1144" ph=" { " />
+            <marker date="1527666843969" expanded="false" signature="1180:1186" ph=" }" />
+            <marker date="1527666843969" expanded="false" signature="1230:1241" ph=" { " />
+            <marker date="1527666843969" expanded="false" signature="1277:1283" ph=" }" />
+            <marker date="1527666843969" expanded="false" signature="1340:1351" ph=" { " />
+            <marker date="1527666843969" expanded="false" signature="1387:1393" ph=" }" />
+            <marker date="1527666843969" expanded="true" signature="1424:1435" ph=" { " />
+            <marker date="1527666843969" expanded="true" signature="1471:1477" ph=" }" />
+            <marker date="1527666843969" expanded="false" signature="1538:1549" ph=" { " />
+            <marker date="1527666843969" expanded="false" signature="1585:1591" ph=" }" />
+            <marker date="1527666843969" expanded="false" signature="1642:1653" ph=" { " />
+            <marker date="1527666843969" expanded="false" signature="1689:1695" ph=" }" />
+            <marker date="1527666843969" expanded="false" signature="1736:1747" ph=" { " />
+            <marker date="1527666843969" expanded="false" signature="1783:1789" ph=" }" />
+            <marker date="1527666843969" expanded="false" signature="1818:1829" ph=" { " />
+            <marker date="1527666843969" expanded="false" signature="1865:1871" ph=" }" />
+            <marker date="1527666843969" expanded="false" signature="1915:1926" ph=" { " />
+            <marker date="1527666843969" expanded="false" signature="1962:1968" ph=" }" />
+            <marker date="1527666843969" expanded="false" signature="2019:2030" ph=" { " />
+            <marker date="1527666843969" expanded="false" signature="2066:2072" ph=" }" />
+            <marker date="1527666843969" expanded="false" signature="2125:2136" ph=" { " />
+            <marker date="1527666843969" expanded="false" signature="2172:2178" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-27/android.jar!/android/text/SpannableStringBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="114" column="30" lean-forward="false" selection-start-line="114" selection-start-column="30" selection-end-line="114" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/CartListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="134" column="52" lean-forward="false" selection-start-line="134" selection-start-column="52" selection-end-line="134" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/Activity/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="119" column="16" lean-forward="false" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/util/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="188" column="89" lean-forward="false" selection-start-line="188" selection-start-column="89" selection-end-line="188" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-27/android.jar!/android/widget/Toast.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="19" column="16" lean-forward="false" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding>
+            <element signature="e#470#471#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ShipInfoFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="109" column="68" lean-forward="false" selection-start-line="109" selection-start-column="68" selection-end-line="109" selection-end-column="68" />
+        <state relative-caret-position="588">
+          <caret line="134" column="24" lean-forward="false" selection-start-line="134" selection-start-column="24" selection-end-line="134" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2471#2620#0" expanded="true" />
@@ -3181,7 +3132,7 @@
             <element signature="e#4211#4244#0" expanded="true" />
             <element signature="e#4497#4534#0" expanded="true" />
             <element signature="e#5416#5448#0" expanded="true" />
-            <element signature="e#5890#5925#0" expanded="true" />
+            <element signature="e#6120#6155#0" expanded="true" />
           </folding>
         </state>
       </provider>

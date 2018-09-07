@@ -3,6 +3,7 @@ package com.summit.service.util;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -91,7 +92,7 @@ public class Utils {
     public static boolean isPhone(String number) {
         Pattern pattern = Pattern.compile("^[0-9]*$");
         Matcher matcher = pattern.matcher(number);
-        if (!matcher.matches() || number.length() != 10 || number.length() != 11) {
+        if (!matcher.matches() || (number.length() != 10 && number.length() != 11)) {
             return false;
         }
         return true;
@@ -169,6 +170,10 @@ public class Utils {
      */
 
     public static void addNextFragment(Activity mActivity, Fragment targetedFragment, Fragment shooterFragment, boolean isDownToUp) {
+        addNextFragment(mActivity, targetedFragment, shooterFragment, isDownToUp, true);
+    }
+
+    public static void addNextFragment(Activity mActivity, Fragment targetedFragment, Fragment shooterFragment, boolean isDownToUp, boolean isAddToBackStack) {
         FragmentTransaction transaction = null;//mActivity.getFragmentManager().beginTransaction();
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
@@ -190,9 +195,21 @@ public class Utils {
         transaction.add(R.id.flcontainer, targetedFragment, targetedFragment.getClass().getSimpleName());
 
         transaction.hide(shooterFragment);
-        transaction.addToBackStack(targetedFragment.getClass().getSimpleName());
+        if(isAddToBackStack) {
+            transaction.addToBackStack(targetedFragment.getClass().getSimpleName());
+        }
         transaction.commit();
     }
 
+    public static void clearBackStack(Activity mActivity, Fragment currentFragment){
+        FragmentManager manager = null;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+            manager = mActivity.getFragmentManager();
+        else
+            manager = currentFragment.getChildFragmentManager();
 
+        while (manager.getBackStackEntryCount() > 0){
+            manager.popBackStackImmediate();
+        }
+    }
 }
