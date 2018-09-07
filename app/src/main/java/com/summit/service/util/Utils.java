@@ -205,10 +205,10 @@ public class Utils {
         FragmentManager manager = null;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
             manager = mActivity.getFragmentManager();
-        else
+        else if(currentFragment != null)
             manager = currentFragment.getChildFragmentManager();
 
-        while (manager.getBackStackEntryCount() > 0){
+        while (manager != null && manager.getBackStackEntryCount() > 0){
             manager.popBackStackImmediate();
         }
     }

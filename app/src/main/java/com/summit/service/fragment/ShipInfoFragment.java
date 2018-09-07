@@ -32,6 +32,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.TimeUnit;
 
 public class ShipInfoFragment extends BaseFragment {
 
@@ -129,11 +132,14 @@ public class ShipInfoFragment extends BaseFragment {
                     @Override
                     public void onSuccess(Object result) {
                         LoadingDialog().dismiss();
-                        Toast.makeText(getActivity(), R.string.your_order_successfully, Toast.LENGTH_SHORT).show();
                         //getFragmentManager().popBackStack(MainFragment.class.getName(), FragmentManager.POP_BACK_STACK_INCLUSIVE);
-                        Utils.clearBackStack(getActivity(), ShipInfoFragment.this);
-                        
-                        Utils.addNextFragment(getActivity(), new MainFragment(), ShipInfoFragment.this, false, false);
+                        try {
+                            Utils.addNextFragment(getActivity(), new MainFragment(), ShipInfoFragment.this, false, false);
+                            Toast.makeText(getActivity(), R.string.your_order_successfully, Toast.LENGTH_SHORT).show();
+                            Utils.clearBackStack(getActivity(), ShipInfoFragment.this);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
 
                     @Override
