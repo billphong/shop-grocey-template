@@ -14,6 +14,7 @@ import com.android.volley.VolleyError;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.summit.service.Activity.MenuActivity;
+import com.summit.service.Activity.RegisterActivity;
 import com.summit.service.GrocerApplication;
 import com.summit.service.R;
 import com.summit.service.asyns.VolleyCallback;
@@ -106,7 +107,10 @@ public class ShipInfoFragment extends BaseFragment {
         } else if (etPhone.getText().toString().trim().isEmpty()) {
             //Utils.snackbar(llContainer, getString(R.string.val_enter_phone), true, getActivity());
             Toast.makeText(getActivity(), getString(R.string.val_enter_phone), Toast.LENGTH_SHORT).show();
-        } else if (etAddress.getText().toString().trim().isEmpty()) {
+        } else if(!Utils.isPhone(etPhone.getText().toString().trim())){
+            Toast.makeText(getActivity(), getString(R.string.invalid_phone), Toast.LENGTH_SHORT).show();
+        }
+        else if (etAddress.getText().toString().trim().isEmpty()) {
             //Utils.snackbar(llContainer, getString(R.string.val_enter_address), true, getActivity());
             Toast.makeText(getActivity(), getString(R.string.val_enter_address), Toast.LENGTH_SHORT).show();
         } else {

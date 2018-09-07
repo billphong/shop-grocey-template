@@ -35,20 +35,21 @@
       <file leaf-file-name="ShipInfoFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ShipInfoFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="110" column="108" lean-forward="true" selection-start-line="110" selection-start-column="108" selection-end-line="110" selection-end-column="108" />
+            <state relative-caret-position="204">
+              <caret line="109" column="68" lean-forward="false" selection-start-line="109" selection-start-column="68" selection-end-line="109" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2418#2567#0" expanded="true" />
-                <element signature="e#2566#2567#0" expanded="true" />
-                <element signature="e#2681#2709#0" expanded="true" />
-                <element signature="e#2940#2980#0" expanded="true" />
-                <element signature="e#3264#3302#0" expanded="true" />
-                <element signature="e#3704#3738#0" expanded="true" />
-                <element signature="e#3979#4014#0" expanded="true" />
-                <element signature="e#4259#4296#0" expanded="true" />
-                <element signature="e#5178#5210#0" expanded="true" />
-                <element signature="e#5652#5687#0" expanded="true" />
+                <element signature="e#2471#2620#0" expanded="true" />
+                <element signature="e#2619#2620#0" expanded="true" />
+                <element signature="e#2734#2762#0" expanded="true" />
+                <element signature="e#2993#3033#0" expanded="true" />
+                <element signature="e#3317#3355#0" expanded="true" />
+                <element signature="e#3757#3791#0" expanded="true" />
+                <element signature="e#4032#4067#0" expanded="true" />
+                <element signature="e#4211#4244#0" expanded="true" />
+                <element signature="e#4497#4534#0" expanded="true" />
+                <element signature="e#5416#5448#0" expanded="true" />
+                <element signature="e#5890#5925#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -161,8 +162,8 @@
       <file leaf-file-name="RegisterActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/Activity/RegisterActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="737">
-              <caret line="175" column="130" lean-forward="false" selection-start-line="175" selection-start-column="28" selection-end-line="175" selection-end-column="130" />
+            <state relative-caret-position="363">
+              <caret line="129" column="76" lean-forward="false" selection-start-line="129" selection-start-column="63" selection-end-line="129" selection-end-column="76" />
               <folding>
                 <element signature="e#7677#7712#0" expanded="true" />
               </folding>
@@ -2615,13 +2616,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ShipInfoFragment.java</url>
-          <line>126</line>
+          <line>130</line>
           <properties />
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ShipInfoFragment.java</url>
-          <line>133</line>
+          <line>137</line>
           <properties />
           <option name="timeStamp" value="63" />
         </line-breakpoint>
@@ -3096,16 +3097,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/Activity/RegisterActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="737">
-          <caret line="175" column="130" lean-forward="false" selection-start-line="175" selection-start-column="28" selection-end-line="175" selection-end-column="130" />
-          <folding>
-            <element signature="e#7677#7712#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/Activity/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -3164,22 +3155,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/Activity/RegisterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="129" column="76" lean-forward="false" selection-start-line="129" selection-start-column="63" selection-end-line="129" selection-end-column="76" />
+          <folding>
+            <element signature="e#7677#7712#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ShipInfoFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="110" column="108" lean-forward="true" selection-start-line="110" selection-start-column="108" selection-end-line="110" selection-end-column="108" />
+        <state relative-caret-position="204">
+          <caret line="109" column="68" lean-forward="false" selection-start-line="109" selection-start-column="68" selection-end-line="109" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2418#2567#0" expanded="true" />
-            <element signature="e#2566#2567#0" expanded="true" />
-            <element signature="e#2681#2709#0" expanded="true" />
-            <element signature="e#2940#2980#0" expanded="true" />
-            <element signature="e#3264#3302#0" expanded="true" />
-            <element signature="e#3704#3738#0" expanded="true" />
-            <element signature="e#3979#4014#0" expanded="true" />
-            <element signature="e#4259#4296#0" expanded="true" />
-            <element signature="e#5178#5210#0" expanded="true" />
-            <element signature="e#5652#5687#0" expanded="true" />
+            <element signature="e#2471#2620#0" expanded="true" />
+            <element signature="e#2619#2620#0" expanded="true" />
+            <element signature="e#2734#2762#0" expanded="true" />
+            <element signature="e#2993#3033#0" expanded="true" />
+            <element signature="e#3317#3355#0" expanded="true" />
+            <element signature="e#3757#3791#0" expanded="true" />
+            <element signature="e#4032#4067#0" expanded="true" />
+            <element signature="e#4211#4244#0" expanded="true" />
+            <element signature="e#4497#4534#0" expanded="true" />
+            <element signature="e#5416#5448#0" expanded="true" />
+            <element signature="e#5890#5925#0" expanded="true" />
           </folding>
         </state>
       </provider>
