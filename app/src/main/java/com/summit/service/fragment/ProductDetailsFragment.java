@@ -81,7 +81,10 @@ public class ProductDetailsFragment extends BaseFragment {
 
     public void initToolbar() {
 
-        ((MenuActivity) getActivity()).setUpToolbar(productListModel.getName(), true);
+        MenuActivity menuActivity = ((MenuActivity) getActivity());
+        if(menuActivity != null) {
+            menuActivity.setUpToolbar(productListModel.getName(), true);
+        }
 
     }
 

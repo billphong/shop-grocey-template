@@ -80,7 +80,10 @@ public class ShipInfoFragment extends BaseFragment {
     }
 
     public void initToolbar() {
-        ((MenuActivity) getActivity()).setUpToolbar(getString(R.string.delivery), true);
+        MenuActivity menuActivity = ((MenuActivity) getActivity());
+        if(menuActivity != null) {
+            menuActivity.setUpToolbar(getString(R.string.delivery), true);
+        }
     }
 
     private void  getData(){
@@ -92,15 +95,6 @@ public class ShipInfoFragment extends BaseFragment {
             etAddress.setText(userModel.getAddress());
         }
         userId = GrocerApplication.getmInstance().getSharedPreferences().getInt(getString(R.string.preferances_userId), 0);
-    }
-
-    @Override
-    public void onClick(View v) {
-
-        if(v == tvOrder){
-//            //call api save order
-//            submitForm();
-        }
     }
 
     private void submitForm(){
