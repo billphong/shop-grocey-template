@@ -10,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -44,6 +45,7 @@ public class CartListFragment extends BaseFragment {
     private RelativeLayout rlCheckOut;
     private RelativeLayout rlEmpty;
     private LinearLayoutManager mLayoutManager;
+    private LinearLayout mLayoutTotalMoney;
     private CartListAdapter productListAdapter;
     private List<ProductOrderModel> productListModelArrayList;
     private MenuItem item;
@@ -77,6 +79,7 @@ public class CartListFragment extends BaseFragment {
         rlCheckOut = (RelativeLayout) rootView.findViewById(R.id.fragment_order_list_rlCheckOut);
         rlEmpty = (RelativeLayout) rootView.findViewById(R.id.fragment_order_list_rlEmpty);
         tvTotalPrice = (TextView) rootView.findViewById(R.id.fragment_order_list_tvTotalKg);
+        mLayoutTotalMoney = (LinearLayout) rootView.findViewById(R.id.fragment_order_list_rlTotalCart);
         mLayoutManager = new LinearLayoutManager(getActivity());
 
         rvProductList.setLayoutManager(mLayoutManager);
@@ -115,7 +118,10 @@ public class CartListFragment extends BaseFragment {
         productListAdapter = new CartListAdapter(getActivity(), productListModelArrayList, CartListFragment.this);
         rvProductList.setAdapter(productListAdapter);
 
-
+        if(productListModelArrayList != null && productListModelArrayList.size() <= 0){
+            rlCheckOut.setVisibility(View.GONE);
+            mLayoutTotalMoney.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -225,6 +231,7 @@ public class CartListFragment extends BaseFragment {
         if (productListModelArrayList.size() == 0) {
             rlEmpty.setVisibility(View.VISIBLE);
             rvProductList.setVisibility(View.GONE);
+            rlCheckOut.setVisibility(View.GONE);
         }
 
         int userId = GrocerApplication.getmInstance().getSharedPreferences().getInt(getString(R.string.preferances_userId), 0);

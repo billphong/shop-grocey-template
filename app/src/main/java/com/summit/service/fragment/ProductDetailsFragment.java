@@ -211,6 +211,7 @@ public class ProductDetailsFragment extends BaseFragment {
                 break;
 
             case R.id.fragment_product_details_rlAddToCart:
+                addToCart(true);
                 CartListFragment cartFragment = new CartListFragment();
                 cartFragment.setTargetFragment(ProductDetailsFragment.this, 222);
                 Utils.addNextFragment(getActivity(), cartFragment, ProductDetailsFragment.this, true);
