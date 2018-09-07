@@ -101,11 +101,14 @@ public class ShipInfoFragment extends BaseFragment {
 
     private void submitForm(){
         if (etName.getText().toString().trim().isEmpty()) {
-            Utils.snackbar(llContainer, getString(R.string.val_enter_name), true, getActivity());
+            //Utils.snackbar(llContainer, getString(R.string.val_enter_name), true, getActivity());
+            Toast.makeText(getActivity(), getString(R.string.val_enter_name), Toast.LENGTH_SHORT).show();
         } else if (etPhone.getText().toString().trim().isEmpty()) {
-            Utils.snackbar(llContainer, getString(R.string.val_enter_phone), true, getActivity());
+            //Utils.snackbar(llContainer, getString(R.string.val_enter_phone), true, getActivity());
+            Toast.makeText(getActivity(), getString(R.string.val_enter_phone), Toast.LENGTH_SHORT).show();
         } else if (etAddress.getText().toString().trim().isEmpty()) {
-            Utils.snackbar(llContainer, getString(R.string.val_enter_address), true, getActivity());
+            //Utils.snackbar(llContainer, getString(R.string.val_enter_address), true, getActivity());
+            Toast.makeText(getActivity(), getString(R.string.val_enter_address), Toast.LENGTH_SHORT).show();
         } else {
             orderModel = getOrderModelFromView();
             lsProductOrderMode = new SqlDbHelpers(getActivity()).getProductOrderByUserId(userId);

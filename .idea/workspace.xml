@@ -36,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ShipInfoFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="125" column="51" lean-forward="false" selection-start-line="125" selection-start-column="51" selection-end-line="125" selection-end-column="51" />
+              <caret line="110" column="108" lean-forward="true" selection-start-line="110" selection-start-column="108" selection-end-line="110" selection-end-column="108" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2418#2567#0" expanded="true" />
@@ -44,11 +44,11 @@
                 <element signature="e#2681#2709#0" expanded="true" />
                 <element signature="e#2940#2980#0" expanded="true" />
                 <element signature="e#3264#3302#0" expanded="true" />
-                <element signature="e#3602#3636#0" expanded="true" />
-                <element signature="e#3768#3803#0" expanded="true" />
-                <element signature="e#3937#3974#0" expanded="true" />
-                <element signature="e#4850#4882#0" expanded="true" />
-                <element signature="e#5324#5359#0" expanded="true" />
+                <element signature="e#3704#3738#0" expanded="true" />
+                <element signature="e#3979#4014#0" expanded="true" />
+                <element signature="e#4259#4296#0" expanded="true" />
+                <element signature="e#5178#5210#0" expanded="true" />
+                <element signature="e#5652#5687#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,8 +105,21 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="141" column="62" lean-forward="false" selection-start-line="141" selection-start-column="62" selection-end-line="141" selection-end-column="62" />
+            <state relative-caret-position="154">
+              <caret line="141" column="18" lean-forward="false" selection-start-line="141" selection-start-column="18" selection-end-line="141" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_ship_info.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_ship_info.xml">
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-408">
+              <caret line="21" column="43" lean-forward="false" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -2264,7 +2277,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_payment.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/db/SqlDbHelpers.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_ship_info.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/model/order/OrderModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/model/order/ProductOrderModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/commons/Apis.java" />
@@ -2275,11 +2287,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/CartListFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/Activity/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_ship_info.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ShipInfoFragment.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-13" />
     <option name="y" value="-13" />
     <option name="width" value="1400" />
@@ -2552,7 +2565,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2602,13 +2615,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ShipInfoFragment.java</url>
-          <line>123</line>
+          <line>126</line>
           <properties />
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ShipInfoFragment.java</url>
-          <line>130</line>
+          <line>133</line>
           <properties />
           <option name="timeStamp" value="63" />
         </line-breakpoint>
@@ -2945,19 +2958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_ship_info.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="69" column="28" lean-forward="false" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
-          <folding>
-            <element signature="e#427#2549#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ProductDetailsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -3036,14 +3036,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="99" column="12" lean-forward="false" selection-start-line="99" selection-start-column="12" selection-end-line="100" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="141" column="62" lean-forward="false" selection-start-line="141" selection-start-column="62" selection-end-line="141" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -3153,10 +3145,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="141" column="18" lean-forward="false" selection-start-line="141" selection-start-column="18" selection-end-line="141" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_ship_info.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="21" column="43" lean-forward="false" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/service/fragment/ShipInfoFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="125" column="51" lean-forward="false" selection-start-line="125" selection-start-column="51" selection-end-line="125" selection-end-column="51" />
+          <caret line="110" column="108" lean-forward="true" selection-start-line="110" selection-start-column="108" selection-end-line="110" selection-end-column="108" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2418#2567#0" expanded="true" />
@@ -3164,11 +3175,11 @@
             <element signature="e#2681#2709#0" expanded="true" />
             <element signature="e#2940#2980#0" expanded="true" />
             <element signature="e#3264#3302#0" expanded="true" />
-            <element signature="e#3602#3636#0" expanded="true" />
-            <element signature="e#3768#3803#0" expanded="true" />
-            <element signature="e#3937#3974#0" expanded="true" />
-            <element signature="e#4850#4882#0" expanded="true" />
-            <element signature="e#5324#5359#0" expanded="true" />
+            <element signature="e#3704#3738#0" expanded="true" />
+            <element signature="e#3979#4014#0" expanded="true" />
+            <element signature="e#4259#4296#0" expanded="true" />
+            <element signature="e#5178#5210#0" expanded="true" />
+            <element signature="e#5652#5687#0" expanded="true" />
           </folding>
         </state>
       </provider>
