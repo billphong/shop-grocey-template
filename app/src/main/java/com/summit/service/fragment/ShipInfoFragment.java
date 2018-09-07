@@ -1,5 +1,6 @@
 package com.summit.service.fragment;
 
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.VolleyError;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -120,13 +122,17 @@ public class ShipInfoFragment extends BaseFragment {
                     @Override
                     public void onSuccess(Object result) {
                         LoadingDialog().dismiss();
+                        Toast.makeText(getActivity(), R.string.your_order_successfully, Toast.LENGTH_SHORT).show();
+                        getFragmentManager().popBackStack(MainFragment.class.getName(), FragmentManager.POP_BACK_STACK_INCLUSIVE);
                     }
 
                     @Override
                     public void onError(VolleyError error) {
                         LoadingDialog().dismiss();
-                        if(error != null && error.getMessage() != null){
-                            Utils.snackbar(llContainer, error.getMessage(), true, getActivity());
+                        if(error != null){
+                            String strErr = error.getMessage() == null ? getString(R.string.error_anonymous) : error.getMessage();
+                            Toast.makeText(getActivity(), strErr, Toast.LENGTH_SHORT).show();
+                            //Utils.snackbar(llContainer, error.getMessage(), true, getActivity());
                         }
                     }
                 });

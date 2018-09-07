@@ -139,7 +139,7 @@
     <string name="delivery_address">Delivery Address</string>
     <string name="delivery_charge">Delivery Charge</string>
     <string name="amount">Amount:</string>
-    <string name="your_order_successfully">Your order successfully.</string>
+    <string name="your_order_successfully">Đặt hàng thành công.</string>
     <string name="lio_jorge">Lio Jorge</string>
     <string name="lio_jorge_gmail_com">lio.jorge@gmail.com</string>
     <string name="profile">Profile</string>

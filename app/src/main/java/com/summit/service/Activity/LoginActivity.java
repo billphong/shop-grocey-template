@@ -157,8 +157,9 @@ public class LoginActivity extends BaseActivity {
                     @Override
                     public void onError(VolleyError error) {
                         LoadingDialog().dismiss();
-                        if(error != null && error.getMessage() != null){
-                            Utils.snackbar(llContainer, error.getMessage(), true, LoginActivity.this);
+                        if(error != null){
+                            String strErr = error.getMessage() == null ? getString(R.string.error_anonymous) : error.getMessage();
+                            Utils.snackbar(llContainer, strErr, true, LoginActivity.this);
                         }
                     }
                 });
