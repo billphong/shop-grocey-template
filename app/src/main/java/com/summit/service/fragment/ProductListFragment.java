@@ -52,6 +52,8 @@ public class ProductListFragment extends BaseFragment implements ProductListAdap
     private List<ProductItem> productListModelArrayList;
     private MenuItem item;
     private ProductFilter filter;
+    private boolean loading = true;
+    private int lastVisibleItem, totalItemCount, visibleItemCount;
 
     public static final ProductListFragment newInstance(ProductFilter filter){
         ProductListFragment frg = new ProductListFragment();
@@ -78,8 +80,35 @@ public class ProductListFragment extends BaseFragment implements ProductListAdap
         rvProductList = (RecyclerView) rootView.findViewById(R.id.fragment_productlist_rvProductList);
         mLayoutManager = new GridLayoutManager(getActivity(), 2);
         rvProductList.setLayoutManager(mLayoutManager);
-        getListData(filter);
 
+        productListModelArrayList = new ArrayList<ProductItem>();
+        productListAdapter = new ProductListAdapter(getActivity(), productListModelArrayList, ProductListFragment.this);
+        rvProductList.setAdapter(productListAdapter);
+        productListAdapter.setOnItemClickListener(this);
+
+        getListData(filter);
+        //load more
+        rvProductList.addOnScrollListener(new RecyclerView.OnScrollListener() {
+
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                if(dy > 0) {
+                    visibleItemCount = mLayoutManager.getChildCount();
+                    totalItemCount = mLayoutManager.getItemCount();
+                    lastVisibleItem = mLayoutManager.findFirstVisibleItemPosition();
+                    Log.d("lastItem-pageindex", Integer.toString(lastVisibleItem)
+                            + " - " + Integer.toString(filter.getPageIndex())
+                            + " - totalItemCount: " + Integer.toString(totalItemCount)
+                            + " - visibleItemCount: " + Integer.toString(visibleItemCount)
+                            + " - lastVisibleItem: " + Integer.toString(lastVisibleItem));
+
+                    if ((visibleItemCount + lastVisibleItem) >= totalItemCount && totalItemCount == filter.getPageIndex() * filter.getPageSize()) {
+                        filter.setPageIndex(filter.getPageIndex() + 1);
+                        getListData(filter);
+                    }
+                }
+            }
+        });
     }
     /**
      * SetUp Toolbar & title
@@ -197,10 +226,10 @@ public class ProductListFragment extends BaseFragment implements ProductListAdap
                 ProductItem t = new ProductItem(obj);
                 cate.add(t);
             }
-            productListModelArrayList = cate;
-            productListAdapter = new ProductListAdapter(getActivity(), productListModelArrayList, ProductListFragment.this);
-            rvProductList.setAdapter(productListAdapter);
-            productListAdapter.setOnItemClickListener(this);
+            if(cate != null && cate.size() > 0) {
+                productListModelArrayList.addAll(cate);
+                productListAdapter.notifyDataSetChanged();
+            }
         }catch (Exception ex){
             Log.e("GetData", ex.getMessage());
         }

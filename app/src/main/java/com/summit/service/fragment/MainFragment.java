@@ -121,9 +121,6 @@ public class MainFragment extends BaseFragment implements TaskDelegate{
             SubCategoryPagerAdapter adapter = new SubCategoryPagerAdapter(getActivity(), getChildFragmentManager(), cate);
             vpSubCategory.setAdapter(adapter);
 
-            // Set the adapter onto the view pager
-            vpSubCategory.setAdapter(adapter);
-
             // Give the TabLayout the ViewPager
             tlHome.setupWithViewPager(vpSubCategory);
         }catch (Exception ex){
