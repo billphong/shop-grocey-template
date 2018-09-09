@@ -69,15 +69,15 @@
 
     <!--For Intro-->
     <string name="skip">SKIP</string>
-    <string name="slide_3_title">Shop faster with buy now </string>
-    <string name="slide_3_desc">checkout pay and finish your shopping in one simple and convenient.</string>
+    <string name="slide_3_title">Mua sắm nhanh chóng</string>
+    <string name="slide_3_desc">tiện lợi - dễ dàng.</string>
 
     <!--Order and payment scree string-->
     <string name="edit">Edit</string>
     <string name="add_to_cart">Thêm vào giỏ hàng</string>
-    <string name="start_shoping">Start Shoping</string>
-    <string name="pro_payment">Payment</string>
-    <string name="btn_submit">Submit</string>
+    <string name="start_shoping">Bắt đầu mua hàng</string>
+    <string name="pro_payment">Thanh toán</string>
+    <string name="btn_submit">Lưu</string>
     <string name="btn_craeteNewAddress">Create New Address</string>
     <string name="add_address">Add Address</string>
 
@@ -98,8 +98,8 @@
     <string name="login_with_google_plus">Login with Google.</string>
 
     <!-- Intro content -->
-    <string name="enjoy_easy_way_ordering">Enjoy easy way ordering</string>
-    <string name="best_quality_ever">best quality ever</string>
+    <string name="enjoy_easy_way_ordering">Mua sắm thật dễ dàng</string>
+    <string name="best_quality_ever">Chất lượng tuyệt vời</string>
     <string name="title_activity_menu">MenuActivity</string>
 
 
@@ -145,8 +145,8 @@
     <string name="profile">Profile</string>
     <string name="sub_total">Tổng tiền</string>
     <string name="select_address">Select Address</string>
-    <string name="fresh_fruits_veggies"><![CDATA[Fresh fruits & Veggies]]></string>
-    <string name="delivered_to_your_home">Delivered to your home</string>
+    <string name="fresh_fruits_veggies"><![CDATA[Mọi thứ bạn cần]]></string>
+    <string name="delivered_to_your_home">Vận chuyển đến tận cửa nhà bạn</string>
     <string name="dolar">đ</string>
     <string name="kg">Kg</string>
 
