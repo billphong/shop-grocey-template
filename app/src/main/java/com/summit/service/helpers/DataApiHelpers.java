@@ -138,7 +138,19 @@ public class DataApiHelpers {
 
     public static <T> void PostJson(Context context, String urlApi, final JSONObject t, final VolleyJsonCallback callback){
 
-        JsonObjectRequest postRequest = new JsonObjectRequest (Request.Method.POST, urlApi, t,
+        SendRequestJson(false, context, urlApi, t, callback);
+    }
+
+    public static <T> void GetJson(Context context, String urlApi, final JSONObject t, final VolleyJsonCallback callback){
+
+        SendRequestJson(true, context, urlApi, t, callback);
+    }
+
+    private static <T> void SendRequestJson(boolean isGet, Context context, String urlApi, final JSONObject t, final VolleyJsonCallback callback){
+
+        int method = isGet ? Request.Method.GET : Request.Method.POST;
+
+        JsonObjectRequest postRequest = new JsonObjectRequest (method, urlApi, t,
                 new Response.Listener<JSONObject>()
                 {
                     @Override

@@ -1,6 +1,7 @@
 package com.summit.service.Activity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -8,8 +9,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.summit.service.R;
+import com.summit.service.asyns.TaskDelegate;
+import com.summit.service.commons.Apis;
+import com.summit.service.dal.GetDataAsync;
 import com.summit.service.util.Utils;
 
+import org.json.JSONObject;
 
 
 /**
@@ -26,7 +31,7 @@ import com.summit.service.util.Utils;
 
 
 
-public class ForgotPasswordActivity extends BaseActivity {
+public class ForgotPasswordActivity extends BaseActivity implements TaskDelegate{
 
     private LinearLayout llContainer;
     private EditText etEmail;
@@ -83,10 +88,9 @@ public class ForgotPasswordActivity extends BaseActivity {
         } else if (!Utils.isValidEmail(email)) {
             Utils.snackbar(llContainer, getString(R.string.val_enter_valid_email), true, ForgotPasswordActivity.this);
         } else {
-
-            finish();
-            overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
-
+            String api = String.format(Apis.USER_FORGOT_PASSOWRD_API, email);
+            GetDataAsync getDataAsync = new GetDataAsync(api, this, LoadingDialog());
+            getDataAsync.execute();
 
         }
 
@@ -121,4 +125,14 @@ public class ForgotPasswordActivity extends BaseActivity {
         finish();
     }
 
+    @Override
+    public void onTaskCompleted(Object data) {
+//        try {
+//            JSONObject jsonObject = new JSONObject(data);
+//            finish();
+//            overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
+//        }catch (Exception ex){
+//            Log.d("ForgotPassword", ex.getMessage());
+//        }
+    }
 }
