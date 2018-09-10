@@ -240,11 +240,10 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
             openFragment(mFragment);
 
         }
-//          else if (id == R.id.nav_share) {
-//
-//            Toast.makeText(getApplicationContext(), "Share", Toast.LENGTH_SHORT).show();
-//
-//        }
+        else if (id == R.id.nav_share) {
+            //Toast.makeText(getApplicationContext(), "Share", Toast.LENGTH_SHORT).show();
+            share();
+        }
         else if (id == R.id.nav_logout) {
             openLogoutDialog();
 
@@ -259,6 +258,14 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
      *  SetUp toolbar & Title & HomeIndicator Image & Navigation drawer lock
      */
 
+    private void share(){
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        sharingIntent.setType("text/plain");
+        String shareBody = getString(R.string.share_content);
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, getString(R.string.share_subject));
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+        startActivity(Intent.createChooser(sharingIntent, getString(R.string.share_title_app)));
+    }
 
     public void setUpToolbar(final String title, final boolean isShowback) {
 

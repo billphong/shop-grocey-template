@@ -36,6 +36,10 @@
     <string name="forgot_password">Quên mật khẩu</string>
     <string name="submit">Lưu</string>
 
+    <string name="send_email">Gửi email</string>
+    <string name="share_title_app">Chia sẻ qua</string>
+    <string name="share_content">Summit shop - Mua sắm thật nhanh chóng, dễ dàng, tiện lợi. https://play.google.com/store/apps/details?id=com.summit.service</string>
+    <string name="share_subject">Summit shop</string>
 
     <string name="lbl_saleOff">Khuyến mãi: </string>
     <string name="lbl_description">Thông tin chi tiết: </string>
