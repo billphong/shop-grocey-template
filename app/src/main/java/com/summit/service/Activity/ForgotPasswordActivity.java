@@ -1,5 +1,6 @@
 package com.summit.service.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -7,14 +8,23 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.VolleyError;
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.summit.service.R;
 import com.summit.service.asyns.TaskDelegate;
+import com.summit.service.asyns.VolleyJsonCallback;
 import com.summit.service.commons.Apis;
 import com.summit.service.dal.GetDataAsync;
+import com.summit.service.helpers.DataApiHelpers;
+import com.summit.service.model.JsonReturn;
 import com.summit.service.util.Utils;
 
 import org.json.JSONObject;
+
+import java.io.IOException;
 
 
 /**
@@ -31,7 +41,7 @@ import org.json.JSONObject;
 
 
 
-public class ForgotPasswordActivity extends BaseActivity implements TaskDelegate{
+public class ForgotPasswordActivity extends BaseActivity {
 
     private LinearLayout llContainer;
     private EditText etEmail;
@@ -88,9 +98,42 @@ public class ForgotPasswordActivity extends BaseActivity implements TaskDelegate
         } else if (!Utils.isValidEmail(email)) {
             Utils.snackbar(llContainer, getString(R.string.val_enter_valid_email), true, ForgotPasswordActivity.this);
         } else {
+            LoadingDialog().show();
             String api = String.format(Apis.USER_FORGOT_PASSOWRD_API, email);
-            GetDataAsync getDataAsync = new GetDataAsync(api, this, LoadingDialog());
-            getDataAsync.execute();
+            DataApiHelpers.GetJson(this, api, null, new VolleyJsonCallback() {
+                @Override
+                public void onSuccess(Object result) {
+                    LoadingDialog().dismiss();
+                    ObjectMapper mapper = new ObjectMapper();
+                    mapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
+                    try {
+                        JsonReturn obj = mapper.readValue(result.toString(), JsonReturn.class);
+                        if(obj != null){
+                            if(obj.success){
+                                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                                startActivity(intent);
+                                finish();
+                                overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
+                                Toast.makeText(ForgotPasswordActivity.this, obj.message, Toast.LENGTH_SHORT).show();
+                            }else
+                            {
+                                Utils.snackbar(llContainer, obj.message, true, ForgotPasswordActivity.this);
+                            }
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                @Override
+                public void onError(VolleyError error) {
+                    LoadingDialog().dismiss();
+                    if(error != null){
+                        String strErr = error.getMessage() == null ? getString(R.string.error_anonymous) : error.getMessage();
+                        Utils.snackbar(llContainer, strErr, true, ForgotPasswordActivity.this);
+                    }
+                }
+            });
 
         }
 
@@ -125,14 +168,4 @@ public class ForgotPasswordActivity extends BaseActivity implements TaskDelegate
         finish();
     }
 
-    @Override
-    public void onTaskCompleted(Object data) {
-//        try {
-//            JSONObject jsonObject = new JSONObject(data);
-//            finish();
-//            overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
-//        }catch (Exception ex){
-//            Log.d("ForgotPassword", ex.getMessage());
-//        }
-    }
 }

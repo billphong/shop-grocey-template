@@ -217,31 +217,35 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
             mFragment = new CartListFragment();
             openFragment(mFragment);
 
-        } else if (id == R.id.nav_address) {
-
-            mFragment = new AddressListFragment();
-            openFragment(mFragment);
-
-        } else if (id == R.id.nav_order) {
-
-            mFragment = new OrderListFragment();
-            openFragment(mFragment);
-
-        } else if (id == R.id.nav_notification) {
-
-            mFragment = new NotificationListFragment();
-            openFragment(mFragment);
-
-        } else if (id == R.id.nav_about_us) {
+        }
+//        else if (id == R.id.nav_address) {
+//
+//            mFragment = new AddressListFragment();
+//            openFragment(mFragment);
+//
+//        } else if (id == R.id.nav_order) {
+//
+//            mFragment = new OrderListFragment();
+//            openFragment(mFragment);
+//
+//        } else if (id == R.id.nav_notification) {
+//
+//            mFragment = new NotificationListFragment();
+//            openFragment(mFragment);
+//
+//        }
+        else if (id == R.id.nav_about_us) {
 
             mFragment = new AboutusFragment();
             openFragment(mFragment);
 
-        } else if (id == R.id.nav_share) {
-
-            Toast.makeText(getApplicationContext(), "Share", Toast.LENGTH_SHORT).show();
-
-        } else if (id == R.id.nav_logout) {
+        }
+//          else if (id == R.id.nav_share) {
+//
+//            Toast.makeText(getApplicationContext(), "Share", Toast.LENGTH_SHORT).show();
+//
+//        }
+        else if (id == R.id.nav_logout) {
             openLogoutDialog();
 
         }
