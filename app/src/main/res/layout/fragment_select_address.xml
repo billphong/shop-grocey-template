@@ -1,4 +1,4 @@
-<com.summit.service.comman.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.summit.cherrity.comman.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -36,7 +36,7 @@
                     android:src="@drawable/ic_date" />
 
 
-                <com.summit.service.customecomponent.CustomTextView
+                <com.summit.cherrity.customecomponent.CustomTextView
                     android:id="@+id/fragment_addresslist_tvDate"
                     style="@style/ganaral_greystyle"
                     android:layout_centerInParent="true"
@@ -71,7 +71,7 @@
                     android:src="@drawable/ic_time" />
 
 
-                <com.summit.service.customecomponent.CustomTextView
+                <com.summit.cherrity.customecomponent.CustomTextView
                     android:id="@+id/fragment_addresslist_tvTime"
                     style="@style/ganaral_greystyle"
                     android:layout_centerInParent="true"
@@ -103,7 +103,7 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
-                <com.summit.service.customecomponent.CustomTextView
+                <com.summit.cherrity.customecomponent.CustomTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -156,7 +156,7 @@
                 android:visibility="visible">
 
 
-                <com.summit.service.customecomponent.CustomTextView
+                <com.summit.cherrity.customecomponent.CustomTextView
                     style="@style/ganaral_primarystyle"
                     android:layout_centerInParent="true"
                     android:layout_gravity="center"
@@ -165,7 +165,7 @@
                     app:font_name="UBUNTU-BOLD.TTF" />
 
 
-                <com.summit.service.customecomponent.CustomTextView
+                <com.summit.cherrity.customecomponent.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -191,7 +191,7 @@
                 android:visibility="visible">
 
 
-                <com.summit.service.customecomponent.CustomTextView
+                <com.summit.cherrity.customecomponent.CustomTextView
                     style="@style/ganaral_primarystyle"
                     android:layout_centerInParent="true"
                     android:layout_gravity="center"
@@ -200,7 +200,7 @@
                     app:font_name="UBUNTU-BOLD.TTF" />
 
 
-                <com.summit.service.customecomponent.CustomTextView
+                <com.summit.cherrity.customecomponent.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -226,7 +226,7 @@
             android:background="@color/colorPrimary">
 
 
-            <com.summit.service.customecomponent.CustomTextView
+            <com.summit.cherrity.customecomponent.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -244,4 +244,4 @@
 
     </LinearLayout>
 
-</com.summit.service.comman.SlidingLinearLayout>
+</com.summit.cherrity.comman.SlidingLinearLayout>

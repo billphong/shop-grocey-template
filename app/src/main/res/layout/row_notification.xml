@@ -33,12 +33,12 @@
             android:padding="@dimen/_7sdp"
             android:orientation="vertical">
 
-            <com.summit.service.customecomponent.CustomTextView
+            <com.summit.cherrity.customecomponent.CustomTextView
                 android:id="@+id/row_notification_list_tvName"
                 style="@style/ganaral_greystyle"
                 app:font_name="UBUNTU-BOLD.TTF" />
 
-            <com.summit.service.customecomponent.CustomTextView
+            <com.summit.cherrity.customecomponent.CustomTextView
                 android:id="@+id/row_notification_list_tvDateTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

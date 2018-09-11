@@ -11,7 +11,7 @@
         android:layout_margin="@dimen/_10sdp"
         app:cardCornerRadius="@dimen/_5sdp">
 
-        <com.summit.service.customecomponent.CustomTextView
+        <com.summit.cherrity.customecomponent.CustomTextView
             android:id="@+id/fragment_aboutus_tvData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.summit.service.comman.SlidingLinearLayout
+<com.summit.cherrity.comman.SlidingLinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -72,18 +72,18 @@
                     android:orientation="vertical"
                     android:padding="@dimen/_12sdp">
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         android:id="@+id/fragment_product_details_tvTitle"
                         style="@style/ganaral_primarystyle"
                         app:font_name="UBUNTU-BOLD.TTF" />
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         android:id="@+id/fragment_product_details_tvPrice"
                         style="@style/ganaral_greystyle"
                         android:paddingTop="@dimen/_3sdp"
                         app:font_name="UBUNTU-MEDIUM.TTF" />
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         android:id="@+id/fragment_product_details_tvOldPrice"
                         style="@style/ganaral_primarystyle"
                         android:layout_marginBottom="@dimen/_10sdp"
@@ -91,7 +91,7 @@
                         android:textColor="@color/color_gray_light"
                         />
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         android:id="@+id/fragment_product_details_lblSaleOff"
                         style="@style/ganaral_primarystyle"
                         android:layout_marginBottom="@dimen/_10sdp"
@@ -100,7 +100,7 @@
                         android:textColor="@color/rippelColor"
                         />
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         android:id="@+id/fragment_product_details_tvSaleOff"
                         style="@style/ganaral_primarystyle"
                         android:layout_marginBottom="@dimen/_10sdp"
@@ -109,7 +109,7 @@
                         android:textSize="@dimen/_11sdp"
                         />
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         style="@style/ganaral_primarystyle"
                         android:layout_marginBottom="@dimen/_10sdp"
                         android:paddingTop="@dimen/_3sdp"
@@ -117,7 +117,7 @@
                         android:textColor="@color/rippelColor"
                         />
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         android:id="@+id/fragment_product_details_tvDescription"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -168,7 +168,7 @@
                 android:src="@drawable/minus" />
 
 
-            <com.summit.service.customecomponent.CustomTextView
+            <com.summit.cherrity.customecomponent.CustomTextView
                 android:id="@+id/fragment_product_details_tvTotalKg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -204,7 +204,7 @@
             android:padding="@dimen/_5sdp">
 
 
-            <com.summit.service.customecomponent.CustomTextView
+            <com.summit.cherrity.customecomponent.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -223,5 +223,5 @@
     </LinearLayout>
 
 
-</com.summit.service.comman.SlidingLinearLayout>
+</com.summit.cherrity.comman.SlidingLinearLayout>
 

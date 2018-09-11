@@ -1,4 +1,4 @@
-<com.summit.service.comman.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.summit.cherrity.comman.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_payment_llContainer"
     android:layout_width="match_parent"
@@ -32,7 +32,7 @@
                 android:orientation="vertical">
 
 
-                <com.summit.service.customecomponent.CustomTextView
+                <com.summit.cherrity.customecomponent.CustomTextView
                     android:id="@+id/fragment_payment_tvDate"
                     style="@style/ganaral_primarystyle"
                     android:layout_centerInParent="true"
@@ -41,7 +41,7 @@
                     app:font_name="UBUNTU-BOLD.TTF" />
 
 
-                <com.summit.service.customecomponent.CustomTextView
+                <com.summit.cherrity.customecomponent.CustomTextView
                     style="@style/ganaral_greystyle"
                     android:layout_centerInParent="true"
                     android:gravity="center_vertical"
@@ -68,7 +68,7 @@
                 android:layout_margin="@dimen/_5sdp"
                 android:orientation="vertical">
 
-                <com.summit.service.customecomponent.CustomTextView
+                <com.summit.cherrity.customecomponent.CustomTextView
                     style="@style/ganaral_primarystyle"
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@+id/ivOrder"
@@ -84,7 +84,7 @@
                     android:orientation="horizontal">
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         style="@style/ganaral_greystyle"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@+id/ivOrder"
@@ -93,7 +93,7 @@
                         app:font_name="UBUNTU-BOLD.TTF" />
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         android:id="@+id/fragment_payment_tvName"
                         style="@style/ganaral_greystyle"
                         android:layout_centerVertical="true"
@@ -112,7 +112,7 @@
                     android:orientation="horizontal">
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         style="@style/ganaral_greystyle"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@+id/ivOrder"
@@ -121,7 +121,7 @@
                         app:font_name="UBUNTU-BOLD.TTF" />
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         android:id="@+id/fragment_payment_tvMobile"
                         style="@style/ganaral_greystyle"
                         android:layout_centerVertical="true"
@@ -141,7 +141,7 @@
                     android:orientation="horizontal">
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         style="@style/ganaral_greystyle"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@+id/ivOrder"
@@ -150,7 +150,7 @@
                         app:font_name="UBUNTU-BOLD.TTF" />
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         android:id="@+id/fragment_payment_tvPincode"
                         style="@style/ganaral_greystyle"
                         android:layout_centerVertical="true"
@@ -169,7 +169,7 @@
                     android:orientation="horizontal">
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         style="@style/ganaral_greystyle"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@+id/ivOrder"
@@ -178,7 +178,7 @@
                         app:font_name="UBUNTU-BOLD.TTF" />
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         android:id="@+id/fragment_payment_tvAddress"
                         style="@style/ganaral_greystyle"
                         android:layout_centerVertical="true"
@@ -208,7 +208,7 @@
                 android:layout_margin="@dimen/_5sdp"
                 android:orientation="vertical">
 
-                <com.summit.service.customecomponent.CustomTextView
+                <com.summit.cherrity.customecomponent.CustomTextView
                     style="@style/ganaral_primarystyle"
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@+id/ivOrder"
@@ -224,7 +224,7 @@
                     android:orientation="horizontal">
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         style="@style/ganaral_greystyle"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@+id/ivOrder"
@@ -233,7 +233,7 @@
                         app:font_name="UBUNTU-BOLD.TTF" />
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         android:id="@+id/fragment_payment_tvItems"
                         style="@style/ganaral_greystyle"
                         android:layout_centerVertical="true"
@@ -252,7 +252,7 @@
                     android:orientation="horizontal">
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         style="@style/ganaral_greystyle"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@+id/ivOrder"
@@ -261,7 +261,7 @@
                         app:font_name="UBUNTU-BOLD.TTF" />
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         android:id="@+id/fragment_payment_tvAmount"
                         style="@style/ganaral_greystyle"
                         android:layout_centerVertical="true"
@@ -281,7 +281,7 @@
                     android:orientation="horizontal">
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         style="@style/ganaral_greystyle"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@+id/ivOrder"
@@ -290,7 +290,7 @@
                         app:font_name="UBUNTU-BOLD.TTF" />
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         android:id="@+id/fragment_payment_tvDeliveryCharge"
                         style="@style/ganaral_greystyle"
                         android:layout_centerVertical="true"
@@ -309,7 +309,7 @@
                     android:orientation="horizontal">
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         style="@style/ganaral_greystyle"
                         android:layout_centerVertical="true"
                         android:layout_toEndOf="@+id/ivOrder"
@@ -318,7 +318,7 @@
                         app:font_name="UBUNTU-BOLD.TTF" />
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         android:id="@+id/fragment_payment_tvTotalAmount"
                         style="@style/ganaral_greystyle"
                         android:layout_centerVertical="true"
@@ -346,7 +346,7 @@
         android:background="@color/colorPrimary">
 
 
-        <com.summit.service.customecomponent.CustomTextView
+        <com.summit.cherrity.customecomponent.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -362,4 +362,4 @@
     </RelativeLayout>
 
 
-</com.summit.service.comman.SlidingLinearLayout>
+</com.summit.cherrity.comman.SlidingLinearLayout>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.summit.service.comman.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.summit.cherrity.comman.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_add_address_llcontainer"
     android:layout_width="match_parent"
@@ -25,7 +25,7 @@
                 android:layout_marginStart="@dimen/_18sdp"
                 android:orientation="vertical">
 
-                <com.summit.service.customecomponent.CustomEdittext
+                <com.summit.cherrity.customecomponent.CustomEdittext
                     android:id="@+id/fragment_add_address_edAddressFullName"
                     style="@style/register_edittext"
                     android:layout_marginTop="@dimen/_10sdp"
@@ -34,7 +34,7 @@
                     app:font_name="UBUNTU-MEDIUM.TTF" />
 
 
-                <com.summit.service.customecomponent.CustomEdittext
+                <com.summit.cherrity.customecomponent.CustomEdittext
                     android:id="@+id/fragment_add_address_edEmail"
                     style="@style/register_edittext"
                     android:layout_marginTop="@dimen/_17sdp"
@@ -43,7 +43,7 @@
                     app:font_name="UBUNTU-MEDIUM.TTF" />
 
 
-                <com.summit.service.customecomponent.CustomEdittext
+                <com.summit.cherrity.customecomponent.CustomEdittext
                     android:id="@+id/fragment_add_address_edMobile"
                     android:layout_marginTop="@dimen/_17sdp"
                     style="@style/register_edittext"
@@ -53,7 +53,7 @@
                 
 
 
-                <com.summit.service.customecomponent.CustomEdittext
+                <com.summit.cherrity.customecomponent.CustomEdittext
                     android:id="@+id/fragment_add_address_edAddressLineOne"
                     style="@style/register_edittext"
                     android:layout_marginTop="@dimen/_17sdp"
@@ -61,7 +61,7 @@
                     android:inputType="text"
                     app:font_name="UBUNTU-MEDIUM.TTF" />
 
-                <com.summit.service.customecomponent.CustomEdittext
+                <com.summit.cherrity.customecomponent.CustomEdittext
                     android:id="@+id/fragment_add_address_edAddressLineTwo"
                     style="@style/register_edittext"
                     android:layout_marginTop="@dimen/_17sdp"
@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary">
 
-        <com.summit.service.customecomponent.CustomTextView
+        <com.summit.cherrity.customecomponent.CustomTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -95,4 +95,4 @@
     </RelativeLayout>
     
     
-</com.summit.service.comman.SlidingLinearLayout>
+</com.summit.cherrity.comman.SlidingLinearLayout>

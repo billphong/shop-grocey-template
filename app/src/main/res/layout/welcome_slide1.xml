@@ -18,7 +18,7 @@
             android:layout_margin="@dimen/_40sdp"
             android:src="@drawable/iv_intro_onw" />
 
-        <com.summit.service.customecomponent.CustomTextView
+        <com.summit.cherrity.customecomponent.CustomTextView
             android:id="@+id/tvTitleOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
             android:textSize="@dimen/_17sdp"
             app:font_name="UBUNTU-BOLD.TTF" />
 
-        <com.summit.service.customecomponent.CustomTextView
+        <com.summit.cherrity.customecomponent.CustomTextView
             android:id="@+id/tvDesOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

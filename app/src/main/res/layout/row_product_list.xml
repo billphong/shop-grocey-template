@@ -50,14 +50,14 @@
             android:background="@color/white"
             android:orientation="vertical">
 
-            <com.summit.service.customecomponent.CustomTextView
+            <com.summit.cherrity.customecomponent.CustomTextView
                 android:id="@+id/row_productlist_tvPrice"
                 style="@style/ganaral_primarystyle"
                 android:layout_gravity="center_horizontal"
                 app:font_name="UBUNTU-MEDIUM.TTF" />
 
 
-            <com.summit.service.customecomponent.CustomTextView
+            <com.summit.cherrity.customecomponent.CustomTextView
                 android:id="@+id/row_productlist_tvName"
                 style="@style/ganaral_greystyle"
                 android:layout_gravity="center_horizontal"
@@ -65,7 +65,7 @@
                 app:font_name="UBUNTU-MEDIUM.TTF"/>
 
 
-            <com.summit.service.customecomponent.CustomTextView
+            <com.summit.cherrity.customecomponent.CustomTextView
                 android:id="@+id/row_productlist_tvKg"
                 style="@style/ganaral_primarystyle"
                 android:layout_gravity="center_horizontal"
@@ -83,7 +83,7 @@
             android:layout_height="0.5dp"
             android:background="@color/signup_lable_color" />
 
-        <com.summit.service.customecomponent.CustomTextView
+        <com.summit.cherrity.customecomponent.CustomTextView
             android:id="@+id/row_produclist_tvAddtoCart"
             style="@style/ganaral_primarystyle"
             android:layout_gravity="center"
@@ -117,7 +117,7 @@
                 android:src="@drawable/minus" />
 
 
-            <com.summit.service.customecomponent.CustomTextView
+            <com.summit.cherrity.customecomponent.CustomTextView
                 android:id="@+id/row_productlist_tvTotalKg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

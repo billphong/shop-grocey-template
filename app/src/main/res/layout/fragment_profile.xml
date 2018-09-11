@@ -23,7 +23,7 @@
                 android:orientation="vertical">
 
 
-                <com.summit.service.customecomponent.CustomTextView
+                <com.summit.cherrity.customecomponent.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -60,7 +60,7 @@
                     app:cardCornerRadius="@dimen/_5sdp">
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         android:id="@+id/fragment_profile_tvName"
                         style="@style/profile_textview"
                         app:font_name="UBUNTU-BOLD.TTF" />
@@ -74,7 +74,7 @@
                     app:cardCornerRadius="@dimen/_5sdp">
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         android:id="@+id/fragment_profile_tvEmail"
                         style="@style/profile_textview"
                         app:font_name="UBUNTU-BOLD.TTF" />
@@ -88,7 +88,7 @@
                     app:cardCornerRadius="@dimen/_5sdp">
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         android:id="@+id/fragment_profile_tvPhone"
                         style="@style/profile_textview"
                         app:font_name="UBUNTU-BOLD.TTF" />
@@ -101,7 +101,7 @@
                     app:cardCornerRadius="@dimen/_5sdp">
 
 
-                    <com.summit.service.customecomponent.CustomTextView
+                    <com.summit.cherrity.customecomponent.CustomTextView
                         android:id="@+id/fragment_profile_tvAddress"
                         style="@style/profile_textview"
                         app:font_name="UBUNTU-BOLD.TTF" />

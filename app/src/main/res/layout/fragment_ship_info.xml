@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.summit.service.comman.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.summit.cherrity.comman.SlidingLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_ship_info_llContainer"
     android:layout_width="match_parent"
@@ -16,7 +16,7 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-            <com.summit.service.customecomponent.CustomEdittext
+            <com.summit.cherrity.customecomponent.CustomEdittext
                 android:id="@+id/fragment_ship_info_etName"
                 android:layout_marginTop="@dimen/_13sdp"
                 android:hint="@string/name"
@@ -24,7 +24,7 @@
                 style="@style/register_edittext"
                 app:font_name="UBUNTU-MEDIUM.TTF" />
 
-            <com.summit.service.customecomponent.CustomEdittext
+            <com.summit.cherrity.customecomponent.CustomEdittext
                 android:id="@+id/fragment_ship_info_etPhone"
                 android:layout_marginTop="@dimen/_13sdp"
                 android:hint="@string/shipPhone"
@@ -33,7 +33,7 @@
                 style="@style/register_edittext"
                 app:font_name="UBUNTU-MEDIUM.TTF" />
 
-            <com.summit.service.customecomponent.CustomEdittext
+            <com.summit.cherrity.customecomponent.CustomEdittext
                 android:id="@+id/fragment_ship_info_etAddress"
                 android:layout_marginTop="@dimen/_13sdp"
                 android:hint="@string/shipAddress"
@@ -41,7 +41,7 @@
                 style="@style/register_edittext"
                 app:font_name="UBUNTU-MEDIUM.TTF" />
 
-            <com.summit.service.customecomponent.CustomEdittext
+            <com.summit.cherrity.customecomponent.CustomEdittext
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="@dimen/_25sdp"
@@ -65,7 +65,7 @@
             android:background="@color/colorPrimary">
 
 
-            <com.summit.service.customecomponent.CustomTextView
+            <com.summit.cherrity.customecomponent.CustomTextView
                 android:id="@+id/fragment_ship_info_tvOrder"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -81,4 +81,4 @@
 
         </RelativeLayout>
 
-</com.summit.service.comman.SlidingLinearLayout>
+</com.summit.cherrity.comman.SlidingLinearLayout>
