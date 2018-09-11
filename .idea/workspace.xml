@@ -3027,6 +3027,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="78" column="13" lean-forward="false" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+          <folding>
+            <element signature="e#2348#2383#0" expanded="false" />
+            <element signature="e#2510#2551#0" expanded="false" />
+            <element signature="e#4313#4348#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
