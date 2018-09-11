@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Project name -->
-    <string name="app_name_new">Grocer</string>
+    <string name="app_name_new">Cherrity</string>
     <string name="settings">Cài đặt</string>
     <string name="check_connection">Vui lòng kiểm tra kết nối mạng</string>
 
