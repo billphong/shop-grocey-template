@@ -278,7 +278,7 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.Conne
                 userModel.setPhone("");
                 userModel.setEmail(email);
                 userModel.setName(personName);
-                userModel.setPassword("");
+                userModel.setPassword("abc123");
                 userModel.setBirthday(new Date());
 
                 DataApiHelpers.Post(this, Apis.USER_REGISTER_API, userModel, new VolleyCallback() {
