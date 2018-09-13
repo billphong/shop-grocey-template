@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.summit.cherrity.Activity.MenuActivity;
 import com.summit.cherrity.R;
-
+import com.summit.cherrity.helpers.TextViewHelpers;
 
 
 /**
@@ -57,7 +57,10 @@ public class AboutusFragment extends BaseFragment {
     public void initComponents(View rootView) {
 
         tvAboutUs=(TextView) rootView.findViewById(R.id.fragment_aboutus_tvData);
-        tvAboutUs.setText(getString(R.string.description_data));
+        //tvAboutUs.setText(getString(R.string.description_data));
+        TextViewHelpers.setTextHtml(tvAboutUs, "Tên: Nguyễn Văn Huy<br/>" +
+                " Điện thoại: 0915536899<br/>" +
+                " Email: ndhuy01@gmail.com ");
 
     }
 
@@ -74,7 +77,7 @@ public class AboutusFragment extends BaseFragment {
 
     public void initToolbar() {
 
-        ((MenuActivity) getActivity()).setUpToolbar(getString(R.string.nav_menu_about_us), false);
+        ((MenuActivity) getActivity()).setUpToolbar(getString(R.string.nav_menu_contact), false);
 
 
     }

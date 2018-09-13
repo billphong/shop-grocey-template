@@ -256,7 +256,7 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.Conne
     }
 
     private void handleSignInResult(Task<GoogleSignInAccount> result) {
-        Log.d(TAG, "handleSignInResult:" + result.isSuccessful());
+        Log.d(TAG, "handleSignInResult:" + result.isSuccessful() + " - " + result.toString());
         if (result.isSuccessful()) {
             try {
                 // Signed in successfully, show authenticated UI.
