@@ -172,10 +172,12 @@ public class ProductDetailsFragment extends BaseFragment {
                 tvSaleOff.setVisibility(View.VISIBLE);
                 tvSaleOff.setText(productListModel.getSaleOff());
             }
-            tvDescription.loadData(productListModel.getDescription(), "text/html", "UTF-8");
+            tvDescription.loadData(productListModel.getDescription(), "text/html; charset=utf-8", "UTF-8");
             tvDescription.getSettings().setLoadWithOverviewMode(true);
             tvDescription.getSettings().setUseWideViewPort(true);
+
             WebSettings webSettings = tvDescription.getSettings();
+            webSettings.setDefaultTextEncodingName("utf-8");
             webSettings.setDefaultFontSize((int)(getResources().getDimension(R.dimen._12sdp)));
             //TextViewHelpers.setTextHtml(tvDescription, productListModel.getDescription());
             totalBuyItem = productListModel.getTotalItem();

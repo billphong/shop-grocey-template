@@ -176,10 +176,10 @@ public class Utils {
     public static void addNextFragment(Activity mActivity, Fragment targetedFragment, Fragment shooterFragment, boolean isDownToUp, boolean isAddToBackStack) {
         FragmentTransaction transaction = null;//mActivity.getFragmentManager().beginTransaction();
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
             transaction = mActivity.getFragmentManager().beginTransaction();
-        else
-            transaction = shooterFragment.getChildFragmentManager().beginTransaction();
+//        else
+//            transaction = shooterFragment.getChildFragmentManager().beginTransaction();
 
         if (isDownToUp) {
             transaction.setCustomAnimations(R.animator.slide_fragment_vertical_right_in, R.animator.slide_fragment_vertical_left_out, R.animator.slide_fragment_vertical_left_in,
