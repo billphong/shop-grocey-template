@@ -281,7 +281,7 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.Conne
                 userModel.setPassword("abc123");
                 userModel.setBirthday(new Date());
 
-                DataApiHelpers.Post(this, Apis.USER_REGISTER_API, userModel, new VolleyCallback() {
+                DataApiHelpers.Post(this, Apis.USER_REGISTER_SOCIAL_API, userModel, new VolleyCallback() {
                     @Override
                     public void onSuccess(String result) {
                         LoadingDialog().dismiss();
