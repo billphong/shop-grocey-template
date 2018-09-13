@@ -105,13 +105,13 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.Conne
         etPassword = (EditText) findViewById(R.id.activity_login_etPassword);
         tvRegister = (TextView) findViewById(R.id.activity_login_tvSignUp);
         tvForgotPassword = (TextView) findViewById(R.id.activity_login_tvForgotPassword);
-        ivFacebook = (ImageView) findViewById(R.id.activity_login_ivFacebook);
+        //ivFacebook = (ImageView) findViewById(R.id.activity_login_ivFacebook);
         ivGoogle = (SignInButton) findViewById(R.id.activity_login_ivGoogle);
 
         rlLogin.setOnClickListener(this);
         tvRegister.setOnClickListener(this);
         tvForgotPassword.setOnClickListener(this);
-        ivFacebook.setOnClickListener(this);
+        //ivFacebook.setOnClickListener(this);
         ivGoogle.setOnClickListener(this);
 
 
@@ -217,9 +217,11 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.Conne
             Intent i = new Intent(getApplicationContext(), RegisterActivity.class);
             startActivity(i);
             overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
-        } else if (v == ivFacebook) {
-            Toast.makeText(getApplicationContext(), getString(R.string.login_with_facebook), Toast.LENGTH_SHORT).show();
-        } else if (v == ivGoogle) {
+        }
+//        else if (v == ivFacebook) {
+//            Toast.makeText(getApplicationContext(), getString(R.string.login_with_facebook), Toast.LENGTH_SHORT).show();
+//        }
+        else if (v == ivGoogle) {
             Toast.makeText(getApplicationContext(), getString(R.string.login_with_google_plus), Toast.LENGTH_SHORT).show();
             signIn();
         }
@@ -300,7 +302,11 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.Conne
                             finish();
                         } catch (IOException e) {
                             e.printStackTrace();
-                            Utils.snackbar(llContainer, result, true, LoginActivity.this);
+                            if(result != null && !result.isEmpty()){
+                                Utils.snackbar(llContainer, result, true, LoginActivity.this);
+                            }else {
+                                Utils.snackbar(llContainer, getString(R.string.error_anonymous), true, LoginActivity.this);
+                            }
                         }
 
                     }

@@ -43,130 +43,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1822">
-              <caret line="270" column="70" lean-forward="false" selection-start-line="270" selection-start-column="70" selection-end-line="270" selection-end-column="70" />
+            <state relative-caret-position="480">
+              <caret line="307" column="94" lean-forward="false" selection-start-line="307" selection-start-column="94" selection-end-line="307" selection-end-column="94" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#LoginActivity#0" expanded="false" />
                 <element signature="docComment;method#initComponents#0;class#LoginActivity#0" expanded="false" />
-                <element signature="method#initComponents#0;class#LoginActivity#0" expanded="false" />
                 <element signature="docComment;method#submitForm#0;class#LoginActivity#0" expanded="false" />
                 <element signature="method#submitForm#0;class#LoginActivity#0" expanded="false" />
-                <element signature="e#4935#4978#0" expanded="false" />
+                <element signature="e#4939#4982#0" expanded="false" />
                 <element signature="docComment;method#onClick#0;class#LoginActivity#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/MenuActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="236" column="34" lean-forward="false" selection-start-line="236" selection-start-column="34" selection-end-line="236" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_menu_new_drawer.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_menu_new_drawer.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="51" lean-forward="false" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductDetailsFragment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/ProductDetailsFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="681">
-              <caret line="178" column="95" lean-forward="true" selection-start-line="178" selection-start-column="95" selection-end-line="178" selection-end-column="95" />
-              <folding>
-                <element signature="docComment;class#ProductDetailsFragment#0" expanded="false" />
-                <element signature="method#onCreateView#0;class#ProductDetailsFragment#0" expanded="false" />
-                <element signature="method#initToolbar#0;class#ProductDetailsFragment#0" expanded="false" />
-                <element signature="method#onCreate#0;class#ProductDetailsFragment#0" expanded="false" />
-                <element signature="method#onCreateOptionsMenu#0;class#ProductDetailsFragment#0" expanded="false" />
-                <element signature="docComment;method#initComponents#0;class#ProductDetailsFragment#0" expanded="false" />
-                <element signature="method#initComponents#0;class#ProductDetailsFragment#0" expanded="false" />
-                <element signature="e#6534#6577#0" expanded="true" />
-                <element signature="method#setUpSliderImages#0;class#ProductDetailsFragment#0" expanded="false" />
-                <element signature="e#6851#6894#0" expanded="false" />
-                <element signature="method#onClick#0;class#ProductDetailsFragment#0" expanded="false" />
-                <element signature="method#addToCart#0;class#ProductDetailsFragment#0" expanded="false" />
-                <element signature="method#onHiddenChanged#0;class#ProductDetailsFragment#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fragment_product_detail.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_product_detail.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="121" column="58" lean-forward="false" selection-start-line="121" selection-start-column="58" selection-end-line="121" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AboutusFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/AboutusFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="79" column="66" lean-forward="false" selection-start-line="79" selection-start-column="66" selection-end-line="79" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fragment_aboutus.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_aboutus.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="e#945#960#0" expanded="true" />
-                <element signature="e#986#1012#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="116" column="34" lean-forward="false" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_login.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="787">
-              <caret line="137" column="69" lean-forward="false" selection-start-line="137" selection-start-column="69" selection-end-line="137" selection-end-column="69" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -2287,16 +2177,16 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_forgot_password.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/service/Activity/MenuActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/commons/Apis.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_menu_new_drawer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/AboutusFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_product_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/ProductDetailsFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/LoginActivity.java" />
       </list>
     </option>
   </component>
@@ -2618,7 +2508,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/LoginActivity.java</url>
-          <line>310</line>
+          <line>316</line>
           <properties />
           <option name="timeStamp" value="84" />
         </line-breakpoint>
@@ -2903,6 +2793,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="536">
           <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -3001,65 +2892,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1822">
-          <caret line="270" column="70" lean-forward="false" selection-start-line="270" selection-start-column="70" selection-end-line="270" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#LoginActivity#0" expanded="false" />
-            <element signature="docComment;method#initComponents#0;class#LoginActivity#0" expanded="false" />
-            <element signature="method#initComponents#0;class#LoginActivity#0" expanded="false" />
-            <element signature="docComment;method#submitForm#0;class#LoginActivity#0" expanded="false" />
-            <element signature="method#submitForm#0;class#LoginActivity#0" expanded="false" />
-            <element signature="e#4935#4978#0" expanded="false" />
-            <element signature="docComment;method#onClick#0;class#LoginActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/MenuActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="236" column="34" lean-forward="false" selection-start-line="236" selection-start-column="34" selection-end-line="236" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="787">
-          <caret line="137" column="69" lean-forward="false" selection-start-line="137" selection-start-column="69" selection-end-line="137" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_menu_new_drawer.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="51" lean-forward="false" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="116" column="34" lean-forward="false" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/AboutusFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="79" column="66" lean-forward="false" selection-start-line="79" selection-start-column="66" selection-end-line="79" selection-end-column="66" />
           <folding />
         </state>
       </provider>
@@ -3075,13 +2911,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_product_detail.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="121" column="58" lean-forward="false" selection-start-line="121" selection-start-column="58" selection-end-line="121" selection-end-column="58" />
+        <state relative-caret-position="425">
+          <caret line="139" column="37" lean-forward="false" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="116" column="34" lean-forward="false" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -3100,10 +2944,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/AboutusFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="79" column="66" lean-forward="false" selection-start-line="79" selection-start-column="66" selection-end-line="79" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_product_detail.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="121" column="58" lean-forward="false" selection-start-line="121" selection-start-column="58" selection-end-line="121" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/ProductDetailsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="681">
-          <caret line="178" column="95" lean-forward="true" selection-start-line="178" selection-start-column="95" selection-end-line="178" selection-end-column="95" />
+          <caret line="178" column="95" lean-forward="false" selection-start-line="178" selection-start-column="95" selection-end-line="178" selection-end-column="95" />
           <folding>
             <element signature="docComment;class#ProductDetailsFragment#0" expanded="false" />
             <element signature="method#onCreateView#0;class#ProductDetailsFragment#0" expanded="false" />
@@ -3118,6 +2981,33 @@
             <element signature="method#onClick#0;class#ProductDetailsFragment#0" expanded="false" />
             <element signature="method#addToCart#0;class#ProductDetailsFragment#0" expanded="false" />
             <element signature="method#onHiddenChanged#0;class#ProductDetailsFragment#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_menu_new_drawer.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="51" lean-forward="false" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="307" column="94" lean-forward="false" selection-start-line="307" selection-start-column="94" selection-end-line="307" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#LoginActivity#0" expanded="false" />
+            <element signature="docComment;method#initComponents#0;class#LoginActivity#0" expanded="false" />
+            <element signature="docComment;method#submitForm#0;class#LoginActivity#0" expanded="false" />
+            <element signature="method#submitForm#0;class#LoginActivity#0" expanded="false" />
+            <element signature="e#4939#4982#0" expanded="false" />
+            <element signature="docComment;method#onClick#0;class#LoginActivity#0" expanded="false" />
           </folding>
         </state>
       </provider>
