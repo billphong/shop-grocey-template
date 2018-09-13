@@ -18,13 +18,17 @@ import com.android.volley.VolleyError;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.Scope;
+import com.google.android.gms.tasks.Task;
 import com.summit.cherrity.GrocerApplication;
 import com.summit.cherrity.R;
 import com.summit.cherrity.asyns.VolleyCallback;
@@ -68,7 +72,7 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.Conne
     private String email;
     private String password;
 
-    GoogleApiClient mGoogleApiClient;
+    GoogleSignInClient mGoogleSignInClient;
     private static final int RC_SIGN_IN = 007;
 
 
@@ -83,10 +87,7 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.Conne
                 .requestEmail()
                 .build();
 
-        mGoogleApiClient = new GoogleApiClient.Builder(this)
-                .enableAutoManage(this, this)
-                .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
-                .build();
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
     }
 
 
@@ -232,87 +233,90 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.Conne
 
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {
-            GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
-            handleSignInResult(result);
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+            handleSignInResult(task);
         }
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        mGoogleApiClient.connect();
+        //mGoogleApiClient.connect();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        mGoogleApiClient.disconnect();
+        //mGoogleApiClient.disconnect();
     }
 
     private void signIn() {
-        Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
+        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }
 
-    private void handleSignInResult(GoogleSignInResult result) {
-        Log.d(TAG, "handleSignInResult:" + result.isSuccess());
-        if (result.isSuccess()) {
-            // Signed in successfully, show authenticated UI.
-            GoogleSignInAccount acct = result.getSignInAccount();
+    private void handleSignInResult(Task<GoogleSignInAccount> result) {
+        Log.d(TAG, "handleSignInResult:" + result.isSuccessful());
+        if (result.isSuccessful()) {
+            try {
+                // Signed in successfully, show authenticated UI.
+                GoogleSignInAccount acct = result.getResult(ApiException.class);
 
-            Log.e(TAG, "display name: " + acct.getDisplayName());
+                Log.e(TAG, "display name: " + acct.getDisplayName());
 
-            String personName = acct.getDisplayName();
-            String personPhotoUrl = acct.getPhotoUrl().toString();
-            final String email = acct.getEmail();
+                String personName = acct.getDisplayName();
+                String personPhotoUrl = acct.getPhotoUrl().toString();
+                final String email = acct.getEmail();
 
-            Log.e(TAG, "Name: " + personName + ", email: " + email
-                    + ", Image: " + personPhotoUrl);
+                Log.e(TAG, "Name: " + personName + ", email: " + email
+                        + ", Image: " + personPhotoUrl);
 
-            UserModel userModel = new UserModel();
-            userModel.setAddress("");
-            userModel.setPhone("");
-            userModel.setEmail(email);
-            userModel.setName(personName);
-            userModel.setPassword("");
-            userModel.setBirthday(new Date());
+                UserModel userModel = new UserModel();
+                userModel.setAddress("");
+                userModel.setPhone("");
+                userModel.setEmail(email);
+                userModel.setName(personName);
+                userModel.setPassword("");
+                userModel.setBirthday(new Date());
 
-            DataApiHelpers.Post(this, Apis.USER_REGISTER_API, userModel, new VolleyCallback() {
-                @Override
-                public void onSuccess(String result) {
-                    LoadingDialog().dismiss();
-                    Log.d("Register", result);
-                    try {
-                        ObjectMapper mapper = new ObjectMapper();
-                        mapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
-                        UserModel obj = mapper.readValue(result, UserModel.class);
-                        SqlDbHelpers db = new SqlDbHelpers(LoginActivity.this);
-                        db.addUser(obj);
-                        overridePendingTransition(R.anim.anim_left_in, R.anim.anim_right_out);
-                        Utils.hideKeyboard(LoginActivity.this);
-                        GrocerApplication.getmInstance().savePreferenceDataBoolean(getString(R.string.preferances_islogin), true);
-                        GrocerApplication.getmInstance().savePreferenceDataString(getString(R.string.preferances_userName), email);
-                        GrocerApplication.getmInstance().savePreferenceDataInt(getString(R.string.preferances_userId), obj.getID());
-                        Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
-                        startActivity(intent);
-                        finish();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                        Utils.snackbar(llContainer, result, true, LoginActivity.this);
+                DataApiHelpers.Post(this, Apis.USER_REGISTER_API, userModel, new VolleyCallback() {
+                    @Override
+                    public void onSuccess(String result) {
+                        LoadingDialog().dismiss();
+                        Log.d("Register", result);
+                        try {
+                            ObjectMapper mapper = new ObjectMapper();
+                            mapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
+                            UserModel obj = mapper.readValue(result, UserModel.class);
+                            SqlDbHelpers db = new SqlDbHelpers(LoginActivity.this);
+                            db.addUser(obj);
+                            overridePendingTransition(R.anim.anim_left_in, R.anim.anim_right_out);
+                            Utils.hideKeyboard(LoginActivity.this);
+                            GrocerApplication.getmInstance().savePreferenceDataBoolean(getString(R.string.preferances_islogin), true);
+                            GrocerApplication.getmInstance().savePreferenceDataString(getString(R.string.preferances_userName), email);
+                            GrocerApplication.getmInstance().savePreferenceDataInt(getString(R.string.preferances_userId), obj.getID());
+                            Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                            startActivity(intent);
+                            finish();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                            Utils.snackbar(llContainer, result, true, LoginActivity.this);
+                        }
+
                     }
 
-                }
-
-                @Override
-                public void onError(VolleyError error) {
-                    LoadingDialog().dismiss();
-                    if(error != null){
-                        String strErr = error.getMessage() == null ? getString(R.string.error_anonymous) : error.getMessage();
-                        Utils.snackbar(llContainer, strErr, true, LoginActivity.this);
+                    @Override
+                    public void onError(VolleyError error) {
+                        LoadingDialog().dismiss();
+                        if (error != null) {
+                            String strErr = error.getMessage() == null ? getString(R.string.error_anonymous) : error.getMessage();
+                            Utils.snackbar(llContainer, strErr, true, LoginActivity.this);
+                        }
                     }
-                }
-            });
-
+                });
+            }catch (Exception ex){
+                Log.d("LoginActivity", ex.getMessage());
+            }
         } else {
             // Signed out, show unauthenticated UI.
         }
@@ -331,7 +335,7 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.Conne
 
     @Override
     public void onConnectionSuspended(int i) {
-        mGoogleApiClient.connect();
+        //mGoogleApiClient.connect();
     }
 
     @Override
