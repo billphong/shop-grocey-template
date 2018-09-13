@@ -11,6 +11,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -51,7 +53,7 @@ public class ProductDetailsFragment extends BaseFragment {
     private TextView tvName;
     private TextView tvPrice;
     private TextView tvOldPrice;
-    private TextView tvDescription;
+    private WebView tvDescription;
     private TextView tvDiscount;
     private TextView tvSaleOff;
     private TextView lblSaleOff;
@@ -170,8 +172,12 @@ public class ProductDetailsFragment extends BaseFragment {
                 tvSaleOff.setVisibility(View.VISIBLE);
                 tvSaleOff.setText(productListModel.getSaleOff());
             }
-
-            TextViewHelpers.setTextHtml(tvDescription, productListModel.getDescription());
+            tvDescription.loadData(productListModel.getDescription(), "text/html", "UTF-8");
+            tvDescription.getSettings().setLoadWithOverviewMode(true);
+            tvDescription.getSettings().setUseWideViewPort(true);
+            WebSettings webSettings = tvDescription.getSettings();
+            webSettings.setDefaultFontSize((int)(getResources().getDimension(R.dimen._12sdp)));
+            //TextViewHelpers.setTextHtml(tvDescription, productListModel.getDescription());
             totalBuyItem = productListModel.getTotalItem();
         }
     }

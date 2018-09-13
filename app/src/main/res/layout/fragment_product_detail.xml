@@ -117,16 +117,16 @@
                         android:textColor="@color/rippelColor"
                         />
 
-                    <com.summit.cherrity.customecomponent.CustomTextView
+                    <WebView
                         android:id="@+id/fragment_product_details_tvDescription"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingTop="@dimen/_3sdp"
                         android:text="@string/description_data"
                         android:textColor="@color/signup_lable_color"
                         android:textSize="@dimen/_12sdp"
                         android:layout_marginTop="@dimen/_10sdp"
-                        app:font_name="UBUNTU-MEDIUM.TTF" />
+                         />
 
 
                 </LinearLayout>
