@@ -259,7 +259,7 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.Conne
 
     private void handleSignInResult(Task<GoogleSignInAccount> result) {
         Log.d(TAG, "handleSignInResult:" + result.isSuccessful() + " - " + result.toString());
-        if (result.isSuccessful()) {
+        //if (result.isSuccessful()) {
             try {
                 // Signed in successfully, show authenticated UI.
                 GoogleSignInAccount acct = result.getResult(ApiException.class);
@@ -320,12 +320,15 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.Conne
                         }
                     }
                 });
-            }catch (Exception ex){
+            }catch (Exception  ex){
                 Log.d("LoginActivity", ex.getMessage());
+                if(ex instanceof ApiException) {
+                    Log.w(TAG, "signInResult:failed code=" + ((ApiException)ex).getStatusCode());
+                }
             }
-        } else {
-            // Signed out, show unauthenticated UI.
-        }
+//        } else {
+//            // Signed out, show unauthenticated UI.
+//        }
     }
 
     @Override
