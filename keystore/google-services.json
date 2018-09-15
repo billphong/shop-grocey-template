@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "278489183814",
+    "firebase_url": "https://cherrity2-1536797438283.firebaseio.com",
+    "project_id": "cherrity2-1536797438283",
+    "storage_bucket": "cherrity2-1536797438283.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:278489183814:android:229d30439f9843f0",
+        "android_client_info": {
+          "package_name": "com.summit.cherrity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "278489183814-o5fpgfh2peqd003rss3t7r8qior9bd5a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8awnGPfpoAHsipAfbg-Xt-acIXk-T95w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
