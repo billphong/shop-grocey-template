@@ -464,7 +464,7 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
         // sorting orders
         String sortOrder =
                 COLUMN_PRODUCT_ORDER_USER_ID + " ASC";
-        String selection = COLUMN_PRODUCT_ORDER_USER_ID + " = ?";
+        String selection = COLUMN_PRODUCT_ORDER_USER_ID + " = ? OR " + COLUMN_PRODUCT_ORDER_USER_ID + " = 0";
         String[] selectionArgs = {Integer.toString(userId)};
 
         List<ProductOrderModel> prOrList = new ArrayList<ProductOrderModel>();
@@ -485,7 +485,9 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
             do {
                 ProductOrderModel prOr = productOrderFromCursor(cursor);
                 // Adding user record to list
-                prOrList.add(prOr);
+                if(!IsExist(prOrList, prOr.getProductID())) {
+                    prOrList.add(prOr);
+                }
             } while (cursor.moveToNext());
         }
         cursor.close();
@@ -493,6 +495,16 @@ public class SqlDbHelpers extends SQLiteOpenHelper {
 
         // return user list
         return prOrList;
+    }
+
+    private boolean IsExist(List<ProductOrderModel> ls, int proId){
+        for (ProductOrderModel model:
+             ls) {
+            if(model.getProductID() == proId){
+                return  true;
+            }
+        }
+        return false;
     }
 
     public void deleteProductOrder(int userId, int productId){

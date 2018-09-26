@@ -97,6 +97,9 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         if(userModel != null){
             tvName.setText(userModel.getName());
             tvEmail.setText(userModel.getEmail());
+        }else{
+            tvName.setText("");
+            tvEmail.setText("");
         }
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -302,8 +305,17 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
 
         if (v == rlProfile) {
             drawer.closeDrawer(GravityCompat.START);
-            mFragment = new ProfileFragment();
-            openFragment(mFragment);
+            String email = GrocerApplication.getmInstance().getSharedPreferences().getString(getString(R.string.preferances_userName), "");
+            if(email.equals("")){
+                Intent mMenuIntent = new Intent(MenuActivity.this, LoginActivity.class);
+                mMenuIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                mMenuIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(mMenuIntent);
+                overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
+            }else {
+                mFragment = new ProfileFragment();
+                openFragment(mFragment);
+            }
         }
     }
 

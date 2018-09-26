@@ -86,7 +86,7 @@ public class SplashActivity extends AppCompatActivity {
 
 
             if (isWelcome) {
-                if (isLogin) {
+//                if (isLogin) {
 
 
                     Intent mLoginIntent = new Intent(SplashActivity.this, MenuActivity.class);
@@ -95,12 +95,13 @@ public class SplashActivity extends AppCompatActivity {
                     finish();
 
 
-                } else {
-                    Intent mMenuIntent = new Intent(SplashActivity.this, LoginActivity.class);
-                    startActivity(mMenuIntent);
-                    overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
-                    finish();
-                }
+//                }
+//                else {
+//                    Intent mMenuIntent = new Intent(SplashActivity.this, LoginActivity.class);
+//                    startActivity(mMenuIntent);
+//                    overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
+//                    finish();
+//                }
 
 
             } else {

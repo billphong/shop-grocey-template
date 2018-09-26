@@ -1,5 +1,6 @@
 package com.summit.cherrity.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.summit.cherrity.Activity.LoginActivity;
 import com.summit.cherrity.Activity.MenuActivity;
 import com.summit.cherrity.GrocerApplication;
 import com.summit.cherrity.R;
@@ -136,9 +138,18 @@ public class CartListFragment extends BaseFragment {
     public void onClick(View v) {
 
         if (v == rlCheckOut) {
-            ShipInfoFragment cartFragment = new ShipInfoFragment();
-            cartFragment.setTargetFragment(CartListFragment.this, 222);
-            Utils.addNextFragment(getActivity(), cartFragment, CartListFragment.this, true);
+            int userId = GrocerApplication.getmInstance().getSharedPreferences().getInt(getString(R.string.preferances_userId), 0);
+            if(userId > 0) {
+                ShipInfoFragment cartFragment = new ShipInfoFragment();
+                cartFragment.setTargetFragment(CartListFragment.this, 222);
+                Utils.addNextFragment(getActivity(), cartFragment, CartListFragment.this, true);
+            } else{
+                Intent mMenuIntent = new Intent(this.getActivity(), LoginActivity.class);
+                mMenuIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                mMenuIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(mMenuIntent);
+                this.getActivity().overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
+            }
         }
     }
 

@@ -131,7 +131,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
 
         GrocerApplication.getmInstance().savePreferenceDataBoolean(getString(R.string.preferances_isWelcom), true);
-        Intent mMenuIntent = new Intent(WelcomeActivity.this, LoginActivity.class);
+        Intent mMenuIntent = new Intent(WelcomeActivity.this, MenuActivity.class);
         mMenuIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mMenuIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(mMenuIntent);
