@@ -217,6 +217,7 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.Conne
             Intent i = new Intent(getApplicationContext(), RegisterActivity.class);
             startActivity(i);
             overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
+            finish();
         }
 //        else if (v == ivFacebook) {
 //            Toast.makeText(getApplicationContext(), getString(R.string.login_with_facebook), Toast.LENGTH_SHORT).show();
@@ -297,8 +298,8 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.Conne
                             GrocerApplication.getmInstance().savePreferenceDataBoolean(getString(R.string.preferances_islogin), true);
                             GrocerApplication.getmInstance().savePreferenceDataString(getString(R.string.preferances_userName), email);
                             GrocerApplication.getmInstance().savePreferenceDataInt(getString(R.string.preferances_userId), obj.getID());
-                            Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
-                            startActivity(intent);
+//                            Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+//                            startActivity(intent);
                             finish();
                         } catch (IOException e) {
                             e.printStackTrace();

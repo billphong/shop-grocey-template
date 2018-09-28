@@ -111,7 +111,7 @@ public class Utils {
 
         for(int i=number.length();i>0;i--){
             Three++;
-            if(Three == 3){
+            if(Three == 3 && i > 0){
                 strB.insert(i-1, ".");
                 Three = 0;
             }
