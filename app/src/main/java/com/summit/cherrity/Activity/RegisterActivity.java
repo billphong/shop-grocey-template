@@ -194,11 +194,11 @@ public class RegisterActivity extends BaseActivity {
         Utils.hideKeyboard(RegisterActivity.this);
 
         if (v == tvSignIn) {
-
-            finish();
             Utils.hideKeyboard(RegisterActivity.this);
+            Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(i);
             overridePendingTransition(R.anim.anim_left_in, R.anim.anim_right_out);
-
+            finish();
         } else if (v == rlSignUp) {
 
             submitForm();

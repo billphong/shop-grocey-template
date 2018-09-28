@@ -257,6 +257,12 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        this.invalidateOptionsMenu();
+    }
+
     /**
      *  SetUp toolbar & Title & HomeIndicator Image & Navigation drawer lock
      */
