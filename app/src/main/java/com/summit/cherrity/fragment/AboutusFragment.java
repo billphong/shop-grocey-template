@@ -58,7 +58,7 @@ public class AboutusFragment extends BaseFragment {
 
         tvAboutUs=(TextView) rootView.findViewById(R.id.fragment_aboutus_tvData);
         //tvAboutUs.setText(getString(R.string.description_data));
-        TextViewHelpers.setTextHtml(tvAboutUs, "Tên: Nguyễn Văn Huy<br/>" +
+        TextViewHelpers.setTextHtml(tvAboutUs, "Cherrity<br/>" +
                 " Điện thoại: 0915536899<br/>" +
                 " Email: ndhuy01@gmail.com ");
 

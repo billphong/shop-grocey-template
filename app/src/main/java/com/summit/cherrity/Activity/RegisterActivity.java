@@ -159,8 +159,8 @@ public class RegisterActivity extends BaseActivity {
                             GrocerApplication.getmInstance().savePreferenceDataBoolean(getString(R.string.preferances_islogin), true);
                             GrocerApplication.getmInstance().savePreferenceDataString(getString(R.string.preferances_userName), emailAdd);
                             GrocerApplication.getmInstance().savePreferenceDataInt(getString(R.string.preferances_userId), obj.getID());
-                            Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
-                            startActivity(intent);
+//                            Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+//                            startActivity(intent);
                             finish();
                         } catch (IOException e) {
                             e.printStackTrace();

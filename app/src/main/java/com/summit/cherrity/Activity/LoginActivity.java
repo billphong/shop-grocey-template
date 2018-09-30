@@ -169,8 +169,8 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.Conne
                                 GrocerApplication.getmInstance().savePreferenceDataBoolean(getString(R.string.preferances_islogin), true);
                                 GrocerApplication.getmInstance().savePreferenceDataString(getString(R.string.preferances_userName), email);
                                 GrocerApplication.getmInstance().savePreferenceDataInt(getString(R.string.preferances_userId), obj.getID());
-                                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
-                                startActivity(intent);
+//                                Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+//                                startActivity(intent);
                                 finish();
                                 overridePendingTransition(R.anim.anim_right_in, R.anim.anim_left_out);
                             } catch (IOException e) {

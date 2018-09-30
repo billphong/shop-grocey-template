@@ -91,16 +91,7 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         tvName = headerLayout.findViewById(R.id.row_header_nameProfile);
         tvEmail = headerLayout.findViewById(R.id.row_header_emailProfile);
 
-        SqlDbHelpers db = new SqlDbHelpers(this);
-        String email = GrocerApplication.getmInstance().getSharedPreferences().getString(getString(R.string.preferances_userName), "");
-        UserModel userModel = email.equals("") ? db.getFirstUser() : db.getUser(email);
-        if(userModel != null){
-            tvName.setText(userModel.getName());
-            tvEmail.setText(userModel.getEmail());
-        }else{
-            tvName.setText("");
-            tvEmail.setText("");
-        }
+        initProfileView();
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.openDrawer, R.string.closeDrawer) {
@@ -125,6 +116,18 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+    private void initProfileView(){
+        SqlDbHelpers db = new SqlDbHelpers(this);
+        String email = GrocerApplication.getmInstance().getSharedPreferences().getString(getString(R.string.preferances_userName), "");
+        UserModel userModel = email.equals("") ? db.getFirstUser() : db.getUser(email);
+        if(userModel != null){
+            tvName.setText(userModel.getName());
+            tvEmail.setText(userModel.getEmail());
+        }else{
+            tvName.setText("");
+            tvEmail.setText("");
+        }
+    }
 
     /**
      *  Init toolbar & actionbar
@@ -260,7 +263,8 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onResume() {
         super.onResume();
-        this.invalidateOptionsMenu();
+//        this.invalidateOptionsMenu();
+        initProfileView();
     }
 
     /**
