@@ -123,9 +123,11 @@ public class MenuActivity extends AppCompatActivity implements NavigationView.On
         if(userModel != null){
             tvName.setText(userModel.getName());
             tvEmail.setText(userModel.getEmail());
+            navigationView.getMenu().findItem(R.id.nav_logout).setVisible(true);
         }else{
             tvName.setText("");
             tvEmail.setText("");
+            navigationView.getMenu().findItem(R.id.nav_logout).setVisible(false);
         }
     }
 

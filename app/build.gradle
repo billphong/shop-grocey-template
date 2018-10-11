@@ -6,7 +6,7 @@ android {
         applicationId "com.summit.cherrity"
         minSdkVersion 17
         targetSdkVersion 27
-        versionCode 3
+        versionCode 7
         versionName "1.0"
         multiDexEnabled true
     }
@@ -60,7 +60,6 @@ android {
             implementation 'com.google.android.gms:play-services-auth:15.0.1'
             implementation 'com.google.firebase:firebase-core:16.0.1'
             implementation 'com.google.android.gms:play-services-ads:15.0.0'
-
         }
 
 apply plugin: 'com.google.gms.google-services'

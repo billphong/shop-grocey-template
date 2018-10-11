@@ -8,6 +8,11 @@
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7802a520-ae99-48f4-b1f0-c0fe922ca8c9" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/build/classes/" />
@@ -32,59 +37,72 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="MenuActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MenuActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/MenuActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="262" column="37" lean-forward="false" selection-start-line="262" selection-start-column="37" selection-end-line="262" selection-end-column="37" />
+            <state relative-caret-position="254">
+              <caret line="125" column="78" selection-start-line="125" selection-start-column="78" selection-end-line="125" selection-end-column="78" />
               <folding>
-                <element signature="docComment;class#MenuActivity#0" expanded="false" />
-                <element signature="method#onCreate#0;class#MenuActivity#0" expanded="false" />
-                <element signature="docComment;method#initView#0;class#MenuActivity#0" expanded="false" />
-                <element signature="method#initView#0;class#MenuActivity#0" expanded="false" />
-                <element signature="e#3405#3445#0" expanded="true" />
-                <element signature="e#3906#3925#0" expanded="true" />
-                <element signature="e#3927#3947#0" expanded="true" />
-                <element signature="class#3855:4249" expanded="false" />
-                <element signature="docComment;method#initToolbar#0;class#MenuActivity#0" expanded="false" />
-                <element signature="method#initToolbar#0;class#MenuActivity#0" expanded="false" />
-                <element signature="method#onBackPressed#0;class#MenuActivity#0" expanded="false" />
-                <element signature="method#onCreateOptionsMenu#0;class#MenuActivity#0" expanded="false" />
-                <element signature="method#onOptionsItemSelected#0;class#MenuActivity#0" expanded="false" />
-                <element signature="e#5670#5728#0" expanded="false" />
-                <element signature="docComment;method#onNavigationItemSelected#0;class#MenuActivity#0" expanded="false" />
-                <element signature="method#onNavigationItemSelected#0;class#MenuActivity#0" expanded="false" />
-                <element signature="e#6951#6995#0" expanded="false" />
-                <element signature="docComment;method#share#0;class#MenuActivity#0" expanded="false" />
-                <element signature="method#share#0;class#MenuActivity#0" expanded="false" />
-                <element signature="e#8257#8290#0" expanded="true" />
-                <element signature="e#8361#8394#0" expanded="true" />
-                <element signature="e#8533#8568#0" expanded="true" />
-                <element signature="method#setUpToolbar#0;class#MenuActivity#0" expanded="false" />
-                <element signature="method#isNavDrawerLock#0;class#MenuActivity#0" expanded="false" />
-                <element signature="docComment;method#openFragment#0;class#MenuActivity#0" expanded="false" />
-                <element signature="method#openFragment#0;class#MenuActivity#0" expanded="false" />
-                <element signature="method#onClick#0;class#MenuActivity#0" expanded="false" />
-                <element signature="e#9854#9894#0" expanded="true" />
-                <element signature="docComment;method#openLogoutDialog#0;class#MenuActivity#0" expanded="false" />
-                <element signature="method#openLogoutDialog#0;class#MenuActivity#0" expanded="false" />
-                <element signature="e#10629#10661#0" expanded="true" />
-                <element signature="e#10691#10745#0" expanded="true" />
-                <element signature="e#10875#11681#0" expanded="true" />
-                <element signature="e#11680#11681#0" expanded="true" />
-                <element signature="e#11815#12091#0" expanded="true" />
-                <element signature="e#12090#12091#0" expanded="true" />
+                <element signature="docComment;class#MenuActivity#0" />
+                <element signature="docComment;method#initView#0;class#MenuActivity#0" />
+                <element signature="e#3438#3457#0" expanded="true" />
+                <element signature="e#3459#3479#0" expanded="true" />
+                <element signature="e#4197#4237#0" expanded="true" />
+                <element signature="docComment;method#initToolbar#0;class#MenuActivity#0" />
+                <element signature="method#onBackPressed#0;class#MenuActivity#0" />
+                <element signature="method#onCreateOptionsMenu#0;class#MenuActivity#0" />
+                <element signature="method#onOptionsItemSelected#0;class#MenuActivity#0" />
+                <element signature="docComment;method#onNavigationItemSelected#0;class#MenuActivity#0" />
+                <element signature="docComment;method#share#0;class#MenuActivity#0" />
+                <element signature="method#share#0;class#MenuActivity#0" />
+                <element signature="e#8518#8551#0" expanded="true" />
+                <element signature="e#8622#8655#0" expanded="true" />
+                <element signature="e#8794#8829#0" expanded="true" />
+                <element signature="method#isNavDrawerLock#0;class#MenuActivity#0" />
+                <element signature="docComment;method#openFragment#0;class#MenuActivity#0" />
+                <element signature="method#openFragment#0;class#MenuActivity#0" />
+                <element signature="e#10115#10155#0" expanded="true" />
+                <element signature="docComment;method#openLogoutDialog#0;class#MenuActivity#0" />
+                <element signature="e#10890#10922#0" expanded="true" />
+                <element signature="e#10952#11006#0" expanded="true" />
+                <element signature="e#11136#11942#0" expanded="true" />
+                <element signature="e#11941#11942#0" expanded="true" />
+                <element signature="e#12076#12352#0" expanded="true" />
+                <element signature="e#12351#12352#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_menu.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_menu_new_drawer.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_menu_new_drawer.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="MainFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/MainFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="77" column="64" lean-forward="false" selection-start-line="77" selection-start-column="64" selection-end-line="77" selection-end-column="64" />
-              <folding />
+            <state relative-caret-position="765">
+              <caret line="77" column="64" selection-start-line="77" selection-start-column="64" selection-end-line="77" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -92,52 +110,8 @@
       <file leaf-file-name="Apis.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/commons/Apis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductListFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/ProductListFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductListAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/adapter/ProductListAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1700">
-              <caret line="125" column="41" lean-forward="false" selection-start-line="125" selection-start-column="41" selection-end-line="125" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductItem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/model/product/ProductItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1088">
-              <caret line="94" column="24" lean-forward="false" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
-              <folding>
-                <element signature="e#2406#2407#0" expanded="true" />
-                <element signature="e#2473#2474#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/util/Utils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="113" column="34" lean-forward="false" selection-start-line="113" selection-start-column="34" selection-end-line="113" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="119">
+              <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -145,46 +119,54 @@
       <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="217" column="29" lean-forward="false" selection-start-line="216" selection-start-column="12" selection-end-line="217" selection-end-column="29" />
+            <state relative-caret-position="660">
+              <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
               <folding>
-                <element signature="docComment;class#LoginActivity#0" expanded="false" />
-                <element signature="docComment;method#initComponents#0;class#LoginActivity#0" expanded="false" />
-                <element signature="docComment;method#submitForm#0;class#LoginActivity#0" expanded="false" />
-                <element signature="method#submitForm#0;class#LoginActivity#0" expanded="false" />
-                <element signature="e#4939#4982#0" expanded="false" />
-                <element signature="docComment;method#onClick#0;class#LoginActivity#0" expanded="false" />
+                <element signature="docComment;class#LoginActivity#0" />
+                <element signature="docComment;method#initComponents#0;class#LoginActivity#0" />
+                <element signature="docComment;method#submitForm#0;class#LoginActivity#0" />
+                <element signature="method#submitForm#0;class#LoginActivity#0" />
+                <element signature="e#4939#4982#0" />
+                <element signature="docComment;method#onClick#0;class#LoginActivity#0" />
+                <element signature="method#handleSignInResult#0;class#LoginActivity#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegisterActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CartListFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/CartListFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2397">
+              <caret line="165" column="50" selection-start-line="165" selection-start-column="50" selection-end-line="165" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/RegisterActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="187" column="5" lean-forward="true" selection-start-line="187" selection-start-column="5" selection-end-line="187" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="2397">
+              <caret line="163" column="37" selection-start-line="163" selection-start-column="37" selection-end-line="163" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="row_product_list.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/row_product_list.xml">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="46" column="21" lean-forward="false" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
-              <folding>
-                <element signature="e#737#1841#0" expanded="false" />
-                <element signature="e#1851#3117#0" expanded="false" />
-                <element signature="e#3128#3285#0" expanded="false" />
-                <element signature="e#3295#3887#0" expanded="false" />
-                <element signature="e#3900#5612#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="DataApiHelpers.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/helpers/DataApiHelpers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="138" column="31" selection-start-line="138" selection-start-column="31" selection-end-line="138" selection-end-column="31" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -201,8 +183,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getPa</find>
-      <find>public</find>
       <find>{ get; set; }</find>
       <find>lio</find>
       <find>row_header_rlProfile</find>
@@ -231,6 +211,8 @@
       <find>img_splash</find>
       <find>_12sdp</find>
       <find>USER_REGISTER_API</find>
+      <find>nav_cart</find>
+      <find>cart</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -243,6 +225,7 @@
     <option name="KEY_STORE_PATH" value="D:\codes\android\keystore\cherrity\keystore_cherrity.jks" />
     <option name="KEY_ALIAS" value="key0" />
     <option name="REMEMBER_PASSWORDS" value="true" />
+    <option name="BUILD_TARGET_KEY" value="apk" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -250,7 +233,7 @@
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$" value="C:\Users\pcs454\.gradle\wrapper\dists\gradle-4.4-all\9br9xq1tocpiv8o6njlyu5op1\gradle-4.4" />
+        <entry key="$PROJECT_DIR$" value="C:\Users\Admin\.gradle\wrapper\dists\gradle-4.4-all\9br9xq1tocpiv8o6njlyu5op1\gradle-4.4" />
       </map>
     </option>
     <option name="myGradleVersions">
@@ -2272,9 +2255,6 @@
         </entry>
       </map>
     </option>
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
     <option name="projectSyncType">
       <map>
         <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
@@ -2320,47 +2300,36 @@
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_menu_new_drawer.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/AboutusFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_product_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/ProductDetailsFragment.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/WelcomeActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/commons/Apis.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/SplashActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/CartListFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/db/SqlDbHelpers.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/util/Utils.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/MenuActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/AboutusFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/RegisterActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/commons/Apis.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/MenuActivity.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-13" />
-    <option name="y" value="-13" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-14" />
+    <option name="y" value="-14" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="AndroidView" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
+    <navigator proportions="" version="1">
       <hideEmptyPackages AndroidView="true" />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -2410,25 +2379,26 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
-    <property name="device.picker.selection" value="Nexus_5X_API_26" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="android.project.structure.last.selected" value="SDK Location" />
-    <property name="android.project.structure.proportion" value="0.15" />
     <property name="DEBUGGABLE_DEVICE" value="Nexus_5X_API_26 [emulator-5554]" />
     <property name="DEBUGGABLE_PROCESS" value="com.summit.cherrity" />
-    <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="DEBUGGER_ID" value="Auto" />
     <property name="ExportApk.ApkPath" value="D:\codes\android\shop-grocey-template\app" />
-    <property name="ExportApk.Flavors" value="" />
     <property name="ExportApk.BuildType" value="release" />
+    <property name="ExportApk.Flavors" value="" />
     <property name="ExportApk.SignV1" value="true" />
     <property name="ExportApk.SignV2" value="true" />
+    <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="android.project.structure.last.selected" value="SDK Location" />
+    <property name="android.project.structure.proportion" value="0.15" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="device.picker.selection" value="Nexus_5X_API_27" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -2453,8 +2423,6 @@
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" />
@@ -2464,22 +2432,23 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
-      <envs />
       <patterns />
       <method>
+        <option name="Make" enabled="false" />
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="app" />
       <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
       <option name="CLEAR_LOGCAT" value="false" />
@@ -2516,34 +2485,16 @@
       </Native>
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sampled (Java)" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
@@ -2556,15 +2507,12 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
       <option name="USE_DEFAULT_REPORTERS" value="false" />
       <option name="PROPERTIES_FILE" />
-      <envs />
       <properties />
       <listeners />
     </configuration>
@@ -2583,24 +2531,9 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="shop-grocey-template" />
-      <envs />
-    </configuration>
     <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
     </configuration>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -2616,40 +2549,40 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-6" y="-6" width="1453" height="783" extended-state="6" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852387" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852387" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46392897" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17857143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3246951" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39557928" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3269817" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Build Variants" order="2" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5046595" side_tool="true" weight="0.2614679" />
+      <window_info anchor="right" id="Preview" order="4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32852387" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32963374" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Logcat" order="7" sideWeight="0.4953405" weight="0.2614679" />
+      <window_info id="Captures" order="2" weight="0.25" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18494624" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.4978678" weight="0.32415903" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32568806" />
+      <window_info anchor="right" id="Gradle" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39557928" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Assistant" order="4" weight="0.3297491" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3292683" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -2736,38 +2669,17 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-27/android/database/sqlite/SQLiteDatabase.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_welcome.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="28" column="17" lean-forward="false" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/welcome_slide3.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="31" column="40" lean-forward="false" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/commons/Processor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="2" selection-start-line="2" selection-end-line="3" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.volley/volley/1.1.1/3fb00d0da53c4e9f35a519da6e22bc2de7463816/volley-1.1.1-sources.jar!/com/android/volley/Request.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
-          <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -2781,36 +2693,29 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/dal/GetDataAsync.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="27" column="11" lean-forward="false" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/model/JsonReturn.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/helpers/DataApiHelpers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="138" column="31" lean-forward="false" selection-start-line="138" selection-start-column="31" selection-end-line="138" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.9.6/dad3a9fbbedf8781dfd138539cd82638ebad5678/jackson-databind-2.9.6-sources.jar!/com/fasterxml/jackson/databind/ObjectMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="29" />
+        <state>
+          <caret column="29" selection-start-column="22" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/ForgotPasswordActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="78" column="13" lean-forward="false" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+          <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_forgot_password.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="536">
-          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2819,9 +2724,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
+        <state />
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
@@ -2830,15 +2733,14 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-          <folding />
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/welcome_slide1.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
-          <caret line="37" column="48" lean-forward="false" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
+          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2850,7 +2752,7 @@
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/support-fragment/27.1.1/94732bda44fba11302c58e459b7c1f47e7521bf9/support-fragment-27.1.1-sources.jar!/android/support/v4/app/FragmentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
-          <caret line="742" column="16" lean-forward="false" selection-start-line="742" selection-start-column="16" selection-end-line="742" selection-end-column="16" />
+          <caret line="742" column="16" selection-start-line="742" selection-start-column="16" selection-end-line="742" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -2858,8 +2760,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="139" column="37" lean-forward="false" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="37" />
-          <folding />
+          <caret line="139" column="37" selection-start-line="139" selection-start-column="37" selection-end-line="139" selection-end-column="37" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2869,42 +2770,14 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
-          <caret line="116" column="34" lean-forward="false" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="34" />
-          <folding />
+          <caret line="116" column="34" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_aboutus.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/AboutusFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="79" column="66" lean-forward="false" selection-start-line="79" selection-start-column="66" selection-end-line="79" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_menu_new_drawer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="51" lean-forward="false" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="36" column="24" lean-forward="false" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2917,7 +2790,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_product_list.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
-          <caret line="13" column="59" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="59" />
+          <caret line="13" column="59" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="59" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2927,7 +2800,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_product_detail.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="694">
-          <caret line="119" column="28" lean-forward="false" selection-start-line="119" selection-start-column="21" selection-end-line="119" selection-end-column="28" />
+          <caret line="119" column="28" selection-start-line="119" selection-start-column="21" selection-end-line="119" selection-end-column="28" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2943,32 +2816,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/google-services.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-328">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="26" column="1" lean-forward="false" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-          <folding />
-        </state>
+        <state relative-caret-position="-328" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/WelcomeActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
-          <caret line="135" column="62" lean-forward="false" selection-start-line="135" selection-start-column="62" selection-end-line="135" selection-end-column="62" />
-          <folding />
+          <caret line="135" column="62" selection-start-line="135" selection-start-column="62" selection-end-line="135" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -2978,88 +2832,69 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
-          <caret line="63" column="47" lean-forward="false" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
-          <folding />
+          <caret line="63" column="47" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/SplashActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1105">
-          <caret line="78" column="17" lean-forward="false" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
-          <folding />
+          <caret line="78" column="17" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-27/android.jar!/android/app/Activity.class">
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/Sdk/platforms/android-27/android.jar!/android/app/Activity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
-          <caret line="784" column="16" lean-forward="false" selection-start-line="784" selection-start-column="16" selection-end-line="784" selection-end-column="16" />
+          <caret line="784" column="16" selection-start-line="784" selection-start-column="16" selection-end-line="784" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/db/SqlDbHelpers.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4845">
-          <caret line="489" column="17" lean-forward="false" selection-start-line="489" selection-start-column="17" selection-end-line="489" selection-end-column="17" />
+          <caret line="489" column="17" selection-start-line="489" selection-start-column="17" selection-end-line="489" selection-end-column="17" />
           <folding>
-            <element signature="docComment;method#SqlDbHelpers#0;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#addUser#0;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#getAllUser#0;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="method#getAllUser#0;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#updateUser#0;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="method#updateUser#0;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#deleteUser#0;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="method#deleteAllUser#0;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#checkUser#0;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="method#checkUser#0;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="docComment;method#checkUser#1;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="method#checkUser#1;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="method#userFromCursor#0;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="method#addProductOrder#0;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="method#updateProductOrder#0;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="method#deleteAllProductOrder#0;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="method#productOrderFromCursor#0;class#SqlDbHelpers#0" expanded="false" />
-            <element signature="method#contentValuesFromProductModel#0;class#SqlDbHelpers#0" expanded="false" />
+            <element signature="docComment;method#SqlDbHelpers#0;class#SqlDbHelpers#0" />
+            <element signature="docComment;method#addUser#0;class#SqlDbHelpers#0" />
+            <element signature="docComment;method#getAllUser#0;class#SqlDbHelpers#0" />
+            <element signature="method#getAllUser#0;class#SqlDbHelpers#0" />
+            <element signature="docComment;method#updateUser#0;class#SqlDbHelpers#0" />
+            <element signature="method#updateUser#0;class#SqlDbHelpers#0" />
+            <element signature="docComment;method#deleteUser#0;class#SqlDbHelpers#0" />
+            <element signature="method#deleteAllUser#0;class#SqlDbHelpers#0" />
+            <element signature="docComment;method#checkUser#0;class#SqlDbHelpers#0" />
+            <element signature="method#checkUser#0;class#SqlDbHelpers#0" />
+            <element signature="docComment;method#checkUser#1;class#SqlDbHelpers#0" />
+            <element signature="method#checkUser#1;class#SqlDbHelpers#0" />
+            <element signature="method#userFromCursor#0;class#SqlDbHelpers#0" />
+            <element signature="method#addProductOrder#0;class#SqlDbHelpers#0" />
+            <element signature="method#updateProductOrder#0;class#SqlDbHelpers#0" />
+            <element signature="method#deleteAllProductOrder#0;class#SqlDbHelpers#0" />
+            <element signature="method#productOrderFromCursor#0;class#SqlDbHelpers#0" />
+            <element signature="method#contentValuesFromProductModel#0;class#SqlDbHelpers#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/CartListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2006">
-          <caret line="142" column="27" lean-forward="false" selection-start-line="142" selection-start-column="27" selection-end-line="142" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/ShipInfoFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
-          <caret line="84" column="32" lean-forward="false" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
-          <folding />
+          <caret line="84" column="32" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/ProductListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="50" column="22" lean-forward="false" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="759">
+          <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/row_product_list.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="46" column="21" lean-forward="false" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
-          <folding>
-            <element signature="e#737#1841#0" expanded="false" />
-            <element signature="e#1851#3117#0" expanded="false" />
-            <element signature="e#3128#3285#0" expanded="false" />
-            <element signature="e#3295#3887#0" expanded="false" />
-            <element signature="e#3900#5612#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="693">
+          <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -3069,15 +2904,14 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/adapter/ProductListAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1700">
-          <caret line="125" column="41" lean-forward="false" selection-start-line="125" selection-start-column="41" selection-end-line="125" selection-end-column="41" />
-          <folding />
+          <caret line="125" column="41" selection-start-line="125" selection-start-column="41" selection-end-line="125" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/model/product/ProductItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
-          <caret line="94" column="24" lean-forward="false" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
+          <caret line="94" column="24" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
           <folding>
             <element signature="e#2406#2407#0" expanded="true" />
             <element signature="e#2473#2474#0" expanded="true" />
@@ -3087,93 +2921,160 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/util/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="113" column="34" lean-forward="false" selection-start-line="113" selection-start-column="34" selection-end-line="113" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="1445">
+          <caret line="113" column="34" selection-start-line="113" selection-start-column="34" selection-end-line="113" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/MainFragment.java">
+    <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="77" column="64" lean-forward="false" selection-start-line="77" selection-start-column="64" selection-end-line="77" selection-end-column="64" />
-          <folding />
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/AboutusFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="60" column="56" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/27.1.1/21d073509c5f8d25a1bf274067fa729a1fba8d75/appcompat-v7-27.1.1-sources.jar!/android/support/v7/app/AppCompatActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="127" column="16" selection-start-line="127" selection-start-column="16" selection-end-line="127" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state />
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/RegisterActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2397">
+          <caret line="163" column="37" selection-start-line="163" selection-start-column="37" selection-end-line="163" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/CartListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2397">
+          <caret line="165" column="50" selection-start-line="165" selection-start-column="50" selection-end-line="165" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/helpers/DataApiHelpers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="138" column="31" selection-start-line="138" selection-start-column="31" selection-end-line="138" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/commons/Apis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="31" lean-forward="false" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="119">
+          <caret line="7" column="56" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/MenuActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="262" column="37" lean-forward="false" selection-start-line="262" selection-start-column="37" selection-end-line="262" selection-end-column="37" />
-          <folding>
-            <element signature="docComment;class#MenuActivity#0" expanded="false" />
-            <element signature="method#onCreate#0;class#MenuActivity#0" expanded="false" />
-            <element signature="docComment;method#initView#0;class#MenuActivity#0" expanded="false" />
-            <element signature="method#initView#0;class#MenuActivity#0" expanded="false" />
-            <element signature="e#3405#3445#0" expanded="true" />
-            <element signature="e#3906#3925#0" expanded="true" />
-            <element signature="e#3927#3947#0" expanded="true" />
-            <element signature="class#3855:4249" expanded="false" />
-            <element signature="docComment;method#initToolbar#0;class#MenuActivity#0" expanded="false" />
-            <element signature="method#initToolbar#0;class#MenuActivity#0" expanded="false" />
-            <element signature="method#onBackPressed#0;class#MenuActivity#0" expanded="false" />
-            <element signature="method#onCreateOptionsMenu#0;class#MenuActivity#0" expanded="false" />
-            <element signature="method#onOptionsItemSelected#0;class#MenuActivity#0" expanded="false" />
-            <element signature="e#5670#5728#0" expanded="false" />
-            <element signature="docComment;method#onNavigationItemSelected#0;class#MenuActivity#0" expanded="false" />
-            <element signature="method#onNavigationItemSelected#0;class#MenuActivity#0" expanded="false" />
-            <element signature="e#6951#6995#0" expanded="false" />
-            <element signature="docComment;method#share#0;class#MenuActivity#0" expanded="false" />
-            <element signature="method#share#0;class#MenuActivity#0" expanded="false" />
-            <element signature="e#8257#8290#0" expanded="true" />
-            <element signature="e#8361#8394#0" expanded="true" />
-            <element signature="e#8533#8568#0" expanded="true" />
-            <element signature="method#setUpToolbar#0;class#MenuActivity#0" expanded="false" />
-            <element signature="method#isNavDrawerLock#0;class#MenuActivity#0" expanded="false" />
-            <element signature="docComment;method#openFragment#0;class#MenuActivity#0" expanded="false" />
-            <element signature="method#openFragment#0;class#MenuActivity#0" expanded="false" />
-            <element signature="method#onClick#0;class#MenuActivity#0" expanded="false" />
-            <element signature="e#9854#9894#0" expanded="true" />
-            <element signature="docComment;method#openLogoutDialog#0;class#MenuActivity#0" expanded="false" />
-            <element signature="method#openLogoutDialog#0;class#MenuActivity#0" expanded="false" />
-            <element signature="e#10629#10661#0" expanded="true" />
-            <element signature="e#10691#10745#0" expanded="true" />
-            <element signature="e#10875#11681#0" expanded="true" />
-            <element signature="e#11680#11681#0" expanded="true" />
-            <element signature="e#11815#12091#0" expanded="true" />
-            <element signature="e#12090#12091#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="217" column="29" lean-forward="false" selection-start-line="216" selection-start-column="12" selection-end-line="217" selection-end-column="29" />
+        <state relative-caret-position="660">
+          <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
           <folding>
-            <element signature="docComment;class#LoginActivity#0" expanded="false" />
-            <element signature="docComment;method#initComponents#0;class#LoginActivity#0" expanded="false" />
-            <element signature="docComment;method#submitForm#0;class#LoginActivity#0" expanded="false" />
-            <element signature="method#submitForm#0;class#LoginActivity#0" expanded="false" />
-            <element signature="e#4939#4982#0" expanded="false" />
-            <element signature="docComment;method#onClick#0;class#LoginActivity#0" expanded="false" />
+            <element signature="docComment;class#LoginActivity#0" />
+            <element signature="docComment;method#initComponents#0;class#LoginActivity#0" />
+            <element signature="docComment;method#submitForm#0;class#LoginActivity#0" />
+            <element signature="method#submitForm#0;class#LoginActivity#0" />
+            <element signature="e#4939#4982#0" />
+            <element signature="docComment;method#onClick#0;class#LoginActivity#0" />
+            <element signature="method#handleSignInResult#0;class#LoginActivity#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/RegisterActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/fragment/MainFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="187" column="5" lean-forward="true" selection-start-line="187" selection-start-column="5" selection-end-line="187" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="765">
+          <caret line="77" column="64" selection-start-line="77" selection-start-column="64" selection-end-line="77" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_menu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-429">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_menu_new_drawer.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/summit/cherrity/Activity/MenuActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="125" column="78" selection-start-line="125" selection-start-column="78" selection-end-line="125" selection-end-column="78" />
+          <folding>
+            <element signature="docComment;class#MenuActivity#0" />
+            <element signature="docComment;method#initView#0;class#MenuActivity#0" />
+            <element signature="e#3438#3457#0" expanded="true" />
+            <element signature="e#3459#3479#0" expanded="true" />
+            <element signature="e#4197#4237#0" expanded="true" />
+            <element signature="docComment;method#initToolbar#0;class#MenuActivity#0" />
+            <element signature="method#onBackPressed#0;class#MenuActivity#0" />
+            <element signature="method#onCreateOptionsMenu#0;class#MenuActivity#0" />
+            <element signature="method#onOptionsItemSelected#0;class#MenuActivity#0" />
+            <element signature="docComment;method#onNavigationItemSelected#0;class#MenuActivity#0" />
+            <element signature="docComment;method#share#0;class#MenuActivity#0" />
+            <element signature="method#share#0;class#MenuActivity#0" />
+            <element signature="e#8518#8551#0" expanded="true" />
+            <element signature="e#8622#8655#0" expanded="true" />
+            <element signature="e#8794#8829#0" expanded="true" />
+            <element signature="method#isNavDrawerLock#0;class#MenuActivity#0" />
+            <element signature="docComment;method#openFragment#0;class#MenuActivity#0" />
+            <element signature="method#openFragment#0;class#MenuActivity#0" />
+            <element signature="e#10115#10155#0" expanded="true" />
+            <element signature="docComment;method#openLogoutDialog#0;class#MenuActivity#0" />
+            <element signature="e#10890#10922#0" expanded="true" />
+            <element signature="e#10952#11006#0" expanded="true" />
+            <element signature="e#11136#11942#0" expanded="true" />
+            <element signature="e#11941#11942#0" expanded="true" />
+            <element signature="e#12076#12352#0" expanded="true" />
+            <element signature="e#12351#12352#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
